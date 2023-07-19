@@ -64,7 +64,7 @@ const RouteItem = (props : RouteItemPropsType) => {
                         theme={"light"}
                         interactive={true}
                         content={
-                            <div className={style.tooltipContent}>
+                            <div >
                                 <p className={style.routeDescription}>{props.routeData.info}</p>
                                 <p className={style.routeParams}>{props.routeData.params}</p>
                             </div>

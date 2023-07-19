@@ -165,7 +165,7 @@ const Help = () => {
                                 interactive={true}
                                 content={
                                     <div className={style.tooltipContent}>
-                                        <p className={style.routeDescription}>some info</p>
+                                        <p className={style.routeDescription}>some info some info</p>
                                         <p className={style.routeParams}>some info too</p>
                                     </div>
                                 }

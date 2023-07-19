@@ -47,7 +47,7 @@ const Routes = () => {
             img: route1,
             title: "БОГАТОЕ РАЗНООБРАЗИЕ",
             icon: attention,
-            info: "some text about route",
+            info: "some text about route hbuybubi bobuyb",
             params: "some params about route",
             dev: false
         },
