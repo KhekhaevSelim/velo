@@ -1,0 +1,80 @@
+import React, {useEffect, useState} from 'react';
+import style from "./RouteItem.module.css";
+import {RoutesDataType} from "../Routes";
+import 'react-tippy/dist/tippy.css';
+import Tippy from '@tippyjs/react';
+import 'tippy.js/dist/tippy.css';
+import 'tippy.js/themes/light.css';
+import 'tippy.js/animations/perspective.css';
+import {Ribbon, RibbonContainer} from "react-ribbons";
+type RouteItemPropsType = {
+    routeData : RoutesDataType
+}
+const RouteItem = (props : RouteItemPropsType) => {
+    const [offset, setOffset] = useState<any>([-140, 10]);
+    useEffect(() => {
+        const handleResize = () => {
+            const windowWidth = window.innerWidth;
+            let newOffset = [-140, 10];
+
+            if (windowWidth < 1130) {
+                newOffset = [-70, 10];
+            } else if (windowWidth < 1130){
+                newOffset = [-30, 10];
+            }
+
+            setOffset(newOffset);
+        };
+
+        handleResize(); // Вызываем handleResize() при первой загрузке
+        window.addEventListener('resize', handleResize);
+
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
+    return (
+        <div className={style.routeItem}>
+              <div className={style.imageContainer}>
+                  {props.routeData.dev ?
+                      <Ribbon
+                          side="left"
+                          type="corner"
+                          size="large"
+                          backgroundColor="#FD5900"
+                          color="#FFFFFF"
+                          fontFamily="sans"
+                          withStripes
+                      >
+                          <span style={{fontSize : "11px"}}>В РАЗРАБОТКЕ</span>
+                      </Ribbon>
+                  :
+                      ""
+                  }
+
+                <img src={props.routeData.img} alt="" className={style.routeImage} />
+              </div>
+            <div className={style.routeItemFooter}>
+                <span>{props.routeData.title}</span>
+                    <Tippy
+                        className={style.info}
+                        offset={offset}
+                        placement={"bottom"}
+                        animation={"perspective"}
+                        theme={"light"}
+                        interactive={true}
+                        content={
+                            <div className={style.tooltipContent}>
+                                <p className={style.routeDescription}>{props.routeData.info}</p>
+                                <p className={style.routeParams}>{props.routeData.params}</p>
+                            </div>
+                        }
+                    >
+                        <img src={props.routeData.icon} alt="" />
+                    </Tippy>
+            </div>
+        </div>
+    );
+};
+
+export default RouteItem;

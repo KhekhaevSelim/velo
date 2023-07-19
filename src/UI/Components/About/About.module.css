@@ -1,0 +1,444 @@
+.container {
+    background-color: var(--text-color);
+    min-height: 140vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.footer {
+    height: 90vh;
+    background-color: #111F28;
+    clip-path: polygon(51% 21%, 100% 0, 100% 99%, 0 99%, 0 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0;
+}
+
+.title h3 {
+    color: var(--main-color);
+    font-weight: 700;
+}
+
+.aboutContainer {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: start;
+}
+
+.left {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 35px;
+}
+
+.right {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 35px;
+}
+.imageContainer{
+    width: 100%;
+    height: 34vh;
+    display: flex;
+    justify-content: start;
+    gap: 20px;
+}
+.right img {
+    width: 50%;
+    min-width: 140px;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.footerContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+    margin-left: 40px;
+}
+.footer h3{
+    font-size: 40px;
+    font-weight: 700;
+    color: var(--text-color);
+}
+.footer span{
+    font-size: 40px;
+    font-weight: 700;
+    color: var(--main-color);
+}
+.footer h1{
+    font-size: 80px;
+    font-weight: 700;
+    color: var(--text-color);
+}
+.footer h1 span {
+    font-size: 80px;
+    font-weight: 700;
+    color: var(--main-color);
+}
+
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-color);
+    color: var(--text-color);
+    font-weight: 600;
+    font-size: 28px;
+    border-radius: 10px;
+    height: 50px;
+    width: 15vw;
+    min-width: 150px;
+    padding-bottom: 5px;
+    margin-top: 20px;
+    cursor: pointer;
+    box-shadow: 0 0 1rem var(--main-color);
+    transition: .5s ease;
+}
+.btn:hover{
+    box-shadow: none;
+}
+@media screen and (max-width: 3250px) {
+    .title h3 {
+        font-size: 50px;
+    }
+    .left h3 {
+        font-size: 40px;
+        font-weight: 700;
+        color: black;
+    }
+    .left span{
+        font-size: 40px;
+        font-weight: 700;
+        color: var(--main-color);
+    }
+    .left p{
+        font-size: 24px;
+        font-weight: 350;
+        color: black;
+    }
+    .left li {
+        font-size: 24px;
+        font-weight: 600;
+        color: black;
+        list-style: none;
+    }
+    .right h3 {
+        font-size: 40px;
+        font-weight: 700;
+        color: black;
+    }
+    .right span{
+        font-size: 40px;
+        font-weight: 700;
+        color: var(--main-color);
+    }
+    .right p{
+        font-size: 24px;
+        font-weight: 350;
+        color: black;
+    }
+    .right li {
+        font-size: 24px;
+        font-weight: 600;
+        color: black;
+        list-style: none;
+    }
+}
+@media screen and (max-width: 1800px) {
+
+    .title h3{
+        font-size: 40px;
+    }
+    .left h3 {
+        font-size: 35px;
+        font-weight: 700;
+        color: black;
+    }
+    .left span{
+        font-size: 35px;
+        font-weight: 700;
+        color: var(--main-color);
+    }
+    .left p{
+        font-size: 22px;
+        font-weight: 350;
+        color: black;
+    }
+    .left li {
+        font-size: 22px;
+        font-weight: 600;
+        color: black;
+        list-style: none;
+    }
+    .right h3 {
+        font-size: 35px;
+        font-weight: 700;
+        color: black;
+    }
+    .right span{
+        font-size: 35px;
+        font-weight: 700;
+        color: var(--main-color);
+    }
+    .right p{
+        font-size: 22px;
+        font-weight: 350;
+        color: black;
+    }
+    .right li {
+        font-size: 22px;
+        font-weight: 600;
+        color: black;
+        list-style: none;
+    }
+    .footer h3{
+        font-size: 30px;
+    }
+    .footer span{
+        font-size: 30px;
+    }
+    .footer h1{
+        font-size: 60px;
+    }
+    .footer h1 span {
+        font-size: 60px;
+    }
+}
+@media screen and (max-width: 1200px) {
+    .title h3{
+        font-size: 35px;
+    }
+    .left h3 {
+        font-size: 30px;
+        font-weight: 700;
+        color: black;
+    }
+    .left span{
+        font-size: 30px;
+        font-weight: 700;
+        color: var(--main-color);
+    }
+    .left p{
+        font-size: 20px;
+        font-weight: 350;
+        color: black;
+    }
+    .left li {
+        font-size: 20px;
+        font-weight: 600;
+        color: black;
+        list-style: none;
+    }
+    .right h3 {
+        font-size: 30px;
+        font-weight: 700;
+        color: black;
+    }
+    .right span{
+        font-size: 30px;
+        font-weight: 700;
+        color: var(--main-color);
+    }
+    .right p{
+        font-size: 20px;
+        font-weight: 350;
+        color: black;
+    }
+    .right li {
+        font-size: 20px;
+        font-weight: 600;
+        color: black;
+        list-style: none;
+    }
+    .footer h3{
+        font-size: 25px;
+    }
+    .footer span{
+        font-size: 25px;
+    }
+    .footer h1{
+        font-size: 50px;
+    }
+    .footer h1 span {
+        font-size: 50px;
+    }
+}
+
+
+
+@media screen and (max-width: 960px) {
+    .btn{
+        font-size: 24px;
+    }
+    .title h3{
+        font-size: 30px;
+    }
+    .left h3 {
+        font-size: 25px;
+        font-weight: 700;
+        color: black;
+    }
+    .left span{
+        font-size: 25px;
+        font-weight: 700;
+        color: var(--main-color);
+    }
+    .left p{
+        font-size: 18px;
+        font-weight: 350;
+        color: black;
+    }
+    .left li {
+        font-size: 18px;
+        font-weight: 600;
+        color: black;
+        list-style: none;
+    }
+    .footer h3{
+        font-size: 22px;
+    }
+    .footer span{
+        font-size: 22px;
+    }
+    .footer h1{
+        font-size: 32px;
+    }
+    .footer h1 span {
+        font-size: 35px;
+    }
+    .footerContainer{
+        margin-top: 150px;
+    }
+    .right h3 {
+        font-size: 25px;
+        font-weight: 700;
+        color: black;
+    }
+    .right span{
+        font-size: 25px;
+        font-weight: 700;
+        color: var(--main-color);
+    }
+    .right p{
+        font-size: 18px;
+        font-weight: 350;
+        color: black;
+    }
+    .right li {
+        font-size: 18px;
+        font-weight: 600;
+        color: black;
+        list-style: none;
+    }
+}
+
+
+
+/*mobile*/
+@media screen and (max-width: 760px) {
+    .btn{
+        font-size: 19px;
+        width: 10vw;
+    }
+  .aboutContainer{
+      flex-direction: column;
+      padding: 0 20px;
+  }
+    .left{
+        width: 100%;
+    }
+
+    .leftTop{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        width: 60%;
+    }
+    .leftBottom{
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        width: 100%;
+        text-align: right;
+    }
+    .right{
+        margin-top: 20px;
+        width: 100%;
+        align-items: end;
+        text-align: right;
+    }
+    .footerContainer{
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 620px){
+    .btn{
+        font-size: 17px;
+        width: 10vw;
+    }
+    .footer h3{
+        font-size: 20px;
+    }
+    .footer span{
+        font-size: 20px;
+    }
+    .footer h1{
+        font-size: 28px;
+    }
+    .footer h1 span {
+        font-size: 30px;
+    }
+    .footerContainer{
+        margin-top: 120px;
+    }
+}
+
+@media screen and (max-width: 520px){
+    .btn{
+        font-size: 16px;
+        width: 10vw;
+    }
+    .footer h3{
+        font-size: 18px;
+        text-align: center;
+    }
+    .footer span{
+        font-size: 18px;
+        text-align: center;
+    }
+    .footer h1{
+        font-size: 26px;
+    }
+    .footer h1 span {
+        font-size: 28px;
+    }
+    .footerContainer{
+        margin-top: 100px;
+    }
+    .container p, .container li{
+        font-size: 14px;
+    }
+    .container h3, .container span{
+        font-size: 18px;
+    }
+    .title h3{
+        font-size: 22px;
+    }
+}

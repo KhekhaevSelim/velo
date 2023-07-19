@@ -1,0 +1,87 @@
+.container{
+    background-color: #111F28;
+    min-height: 50vh;
+}
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header h3{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    color : var(--text-color);
+    font-weight: 700;
+    font-size: 50px;
+}
+.competitionsContainer{
+display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2,1fr);
+}
+.footer{
+    font-size: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px 80px;
+}
+.footer h3{
+    color: var(--text-color);
+    text-align: center;
+}
+.footer span{
+color: var(--main-color)
+}
+@media screen and (max-width: 3250px) {
+    .footer{
+        font-size: 40px;
+    }
+}
+@media screen and (max-width: 1800px) {
+    .footer{
+        font-size: 30px;
+    }
+}
+@media screen and (max-width: 1260px) {
+    .footer{
+        font-size: 20px;
+    }
+}
+@media screen and (max-width: 1000px) {
+    .footer{
+        font-size: 18px;
+    }
+}
+@media screen and (max-width: 900px) {
+    .footer{
+        font-size: 15px;
+    }
+}
+@media screen and (max-width: 1620px) {
+    .header h3{
+        font-size: 40px;
+    }
+}
+@media screen and (max-width: 1200px) {
+    .header h3 {
+        font-size: 35px;
+    }
+}
+@media screen and (max-width: 760px) {
+    .header h3{
+        font-size: 30px;
+    }
+    .competitionsContainer{
+        display: flex;
+        flex-direction: column;
+    }
+}
+@media screen and (max-width: 520px) {
+    .header h3{
+        font-size: 25px;
+    }
+    .footer{
+        margin: 43px 30px;
+    }
+}

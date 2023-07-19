@@ -1,0 +1,429 @@
+.container {
+    min-height: 150vh;
+    background-color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+
+.titleContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0 0 0;
+}
+
+.titleContainer h3 {
+    color: var(--main-color);
+    font-weight: 700;
+}
+
+.systemContainer {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    -webkit-box-shadow: 0px -1px 8px 2px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 0px -1px 8px 2px rgba(34, 60, 80, 0.2);
+    box-shadow: 0px -1px 8px 2px rgba(34, 60, 80, 0.2);
+}
+
+.systemContainer h3 {
+    color: var(--main-color);
+    font-weight: 700;
+    width: 80%;
+    padding: 25px 0;
+    border-bottom: solid;
+}
+
+
+.systemInfoContainer {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.systemInfoContainer p {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.systemInfoContainer ul {
+    padding: 10px 20px 40px
+}
+
+.equipmentContainer {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    -webkit-box-shadow: 0px -1px 8px 2px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 0px -1px 8px 2px rgba(34, 60, 80, 0.2);
+    box-shadow: 0px -1px 8px 2px rgba(34, 60, 80, 0.2);
+}
+
+.equipmentContainer h3 {
+    color: var(--main-color);
+    font-weight: 700;
+    width: 80%;
+    padding: 25px 0;
+    border-bottom: solid;
+}
+
+
+.equipmentInfoContainer {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.equipmentInfoContainer p {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.equipmentInfoContainer ul {
+    padding: 10px 20px 40px
+}
+
+.wrapper {
+    display: flex;
+    gap: 30px;
+    width: 80%;
+}
+
+.simulatorContainer {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    /*justify-content: center;*/
+    align-items: center;
+    border-radius: 15px;
+    -webkit-box-shadow: 0px -1px 8px 2px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 0px -1px 8px 2px rgba(34, 60, 80, 0.2);
+    box-shadow: 0px -1px 8px 2px rgba(34, 60, 80, 0.2);
+    padding: 0px 5%;
+}
+
+.simulatorContainer h3 {
+    height: 200px;
+    color: var(--main-color);
+    font-weight: 700;
+    width: 80%;
+    padding: 66px 0 30px 0;
+    border-bottom: solid;
+    line-height: 50px;
+}
+
+.simulatorContainer ul {
+    padding: 10px 20px 40px;
+    align-items: unset;
+    width: 85%;
+}
+
+.simulatorIconWrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.simulatorContainer li {
+    list-style: none;
+    font-weight: bold;
+    padding: 10px 0 10px 0;
+}
+
+.info {
+    width: 250px;
+    min-height: 100px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    display: flex;
+    /*justify-content: center;*/
+    align-items: center;
+}
+
+.filesContainer {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    -webkit-box-shadow: 0px -1px 8px 2px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 0px -1px 8px 2px rgba(34, 60, 80, 0.2);
+    box-shadow: 0px -1px 8px 2px rgba(34, 60, 80, 0.2);
+}
+
+.filesInfo {
+    padding: 10px 20px 40px;
+    align-items: unset;
+    width: 85%;
+}
+
+.filesContainer h3 {
+    height: 200px;
+    color: var(--main-color);
+    font-weight: 700;
+    width: 80%;
+    padding: 52px 0 30px 0;
+    border-bottom: solid;
+    line-height: 42px;
+}
+
+
+.questionsTitle {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 32px 0;
+}
+
+.questionsTitle h3 {
+    font-weight: 700;
+    color: var(--main-color);
+}
+
+.questionsContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    margin: 30px;
+}
+
+.questionItem {
+    width: 80%;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(217, 217, 217, 1);
+    display: flex;
+    flex-direction: column;
+}
+
+.question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.questionItem p {
+    font-weight: 600;
+}
+
+#plusIcon {
+    font-size: 30px;
+    color: var(--main-color);
+}
+
+.answerShow {
+    display: block;
+}
+
+.answerHidden {
+    display: none;
+}
+
+#answerTitle {
+    font-weight: 350;
+    color: var(--main-color);
+    margin: 15px 0;
+}
+
+#answerInfo {
+    font-weight: 350;
+    color: black;
+    margin: 15px 0;
+}
+
+.answerShow ul {
+    font-weight: 350;
+    color: black;
+    margin: 15px 0;
+}
+
+.answerShow ul li {
+    list-style: none;
+    margin: 15px 0;
+}
+
+.helpFooter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    text-align: center;
+    gap: 20px;
+    margin: 30px 0 50px 0;
+}
+
+.helpFooter h3 {
+    color: black;
+    font-weight: 700;
+}
+
+.helpFooter span {
+    color: var(--main-color);
+    font-weight: 700;
+}
+
+@media screen and (max-width: 3250px) {
+    .titleContainer h3 {
+        font-size: 50px;
+    }
+
+    .systemContainer h3, .equipmentContainer h3, .simulatorContainer h3, .filesContainer h3 {
+        font-size: 40px;
+    }
+
+    .filesContainer p {
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    .filesContainer span {
+        font-size: 20px;
+        font-weight: 350;
+    }
+
+    .questionsTitle h3 {
+        font-size: 50px;
+    }
+
+    .helpFooter h3, .helpFooter span {
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 1800px) {
+    .titleContainer h3 {
+        font-size: 32px;
+    }
+
+    .systemContainer h3, .equipmentContainer h3, .simulatorContainer h3, .filesContainer h3 {
+        font-size: 32px;
+    }
+
+    .filesContainer p {
+        font-size: 18px;
+        font-weight: 600;
+    }
+
+    .filesContainer span {
+        font-size: 18px;
+        font-weight: 350;
+    }
+
+    .questionsTitle h3 {
+        font-size: 32px;
+    }
+
+    .helpFooter h3, .helpFooter span {
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .titleContainer h3 {
+        font-size: 26px;
+    }
+
+    .systemContainer h3, .equipmentContainer h3, .simulatorContainer h3, .filesContainer h3 {
+        font-size: 26px;
+        padding: 15px 0;
+    }
+
+    .filesContainer h3 {
+        height: 148px;
+        line-height: 38px;
+    }
+
+    .simulatorContainer h3 {
+        height: 150px;
+        line-height: 45px;
+    }
+
+    .filesContainer p {
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    .filesContainer span {
+        font-size: 16px;
+        font-weight: 350;
+    }
+
+    .questionsTitle h3 {
+        font-size: 28px;
+    }
+
+    .helpFooter h3, .helpFooter span {
+        font-size: 22px;
+    }
+
+    .simulatorContainer {
+        gap: 10px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .systemInfoContainer, .equipmentInfoContainer {
+        flex-direction: column;
+        padding: 0;
+    }
+    .wrapper{
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .simulatorContainer h3, .filesContainer h3 {
+        height: auto;
+        line-height: 45px;
+    }
+}
+@media screen and (max-width: 760px){
+    .equipmentInfoContainer ul, .systemInfoContainer ul {
+        padding: 9px 20px 15px;
+    }
+    .container{
+        gap: 25px;
+    }
+    .systemContainer h3, .equipmentContainer h3, .simulatorContainer h3, .filesContainer h3 {
+        font-size: 22px;
+        padding: 15px 0;
+    }
+}
+@media screen and (max-width: 560px){
+    .container{
+        gap: 20px;
+    }
+    .systemContainer h3, .equipmentContainer h3, .simulatorContainer h3, .filesContainer h3 {
+        font-size: 18px;
+        padding: 15px 0;
+    }
+}
+@media screen and (max-width: 460px){
+    .systemContainer li, .equipmentContainer li, .simulatorContainer li, .filesContainer li{
+        font-size : 14px;
+    }
+    .container{
+        gap: 20px;
+    }
+    .filesContainer p {
+        font-size: 14px;
+    }
+    .filesContainer span {
+        font-size: 14px;
+    }
+    .systemContainer h3, .equipmentContainer h3, .simulatorContainer h3, .filesContainer h3 {
+        font-size: 16px;
+        padding: 15px 0;
+    }
+}

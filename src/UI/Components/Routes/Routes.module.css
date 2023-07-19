@@ -1,0 +1,129 @@
+.container{
+
+}
+
+.title{
+    top: 170px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 0 20px 0 20px;
+}
+.title h3{
+    color: var(--text-color);
+    font-size: 50px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+@media screen and (max-width: 640px) {
+    .title h3{
+        font-size: 32px;
+    }
+}
+@media screen and (max-width: 520px) {
+    .title h3{
+        font-size: 30px;
+    }
+}
+.routesContainer{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 40px;
+}
+.wrapper{
+
+}
+.staticItem{
+    padding: 0 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.staticItem p{
+    margin-top: 40%;
+    font-size: 20px;
+    font-weight: 700;
+    z-index: 1;
+}
+.staticItem span{
+    font-size: 20px;
+    color: rgba(253, 89, 0, 1);
+    font-weight: 700;
+    z-index: 1;
+}
+/* static item fonts media*/
+@media screen and (max-width: 3250px){
+    .staticItem p{
+        font-size: 24px;
+    }
+    .staticItem span{
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 1300px){
+    .staticItem p{
+        margin-top: 30%;
+        font-size: 21px;
+    }
+    .staticItem span{
+        font-size: 21px;
+    }
+}
+@media screen and (max-width: 1150px){
+    .staticItem{
+        padding: 0 5%;
+    }
+    .staticItem p{
+        margin-top: 25%;
+        font-size: 19px;
+    }
+    .staticItem span{
+        font-size: 19px;
+    }
+}
+@media screen and (max-width: 1075px){
+    .staticItem p{
+        font-size: 16px;
+    }
+    .staticItem span{
+        font-size: 16px;
+    }
+}
+@media screen and (max-width: 890px){
+    .staticItem p{
+        margin-top: 20%;
+        font-size: 14px;
+    }
+    .staticItem span{
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 620px) {
+    .routesContainer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        flex-wrap: wrap;
+        padding: 40px;
+    }
+    .wrapper{
+        background-color: #FFFFFF;
+    }
+}
+
+
+
+
+
+
+
+
+

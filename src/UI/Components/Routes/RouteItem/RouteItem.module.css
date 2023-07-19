@@ -1,0 +1,192 @@
+
+
+.routeItem {
+    width: 100%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.routeImage {
+    height: 100%;
+    object-fit: cover;
+
+}
+
+.imageContainer {
+    height: 100%;
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+}
+
+.ribbon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #08769b;
+    box-shadow: 0 0 0 999px #08769b;
+    clip-path: inset(0 -100%);
+    transform-origin: 100% 0;
+    transform: translate(100%, -100%) rotate(-45deg);
+
+}
+
+.routeItem img {
+    width: 100%;
+    border-radius: 8px 8px 0 0;
+
+}
+
+.routeItemFooter {
+    background-color: white;
+    border-radius: 0 0 8px 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    -webkit-box-shadow: 0px 7px 8px 7px rgba(34, 60, 80, 0.07);
+    -moz-box-shadow: 0px 7px 8px 7px rgba(34, 60, 80, 0.07);
+    box-shadow: 0px 7px 8px 7px rgba(34, 60, 80, 0.07);
+    z-index: 2;
+}
+
+.routeItemFooter span {
+    font-weight: 600;
+    font-size: 22px;
+    color: var(--main-color);
+    z-index: 1;
+}
+
+.routeItemFooter img {
+    width: 20px;
+    z-index: 1;
+}
+
+/*.triangle{*/
+/*    width: 13%;*/
+/*    clip-path: polygon(50% 70%, 0% 100%, 100% 100%);*/
+/*    background-color: #ffffff;*/
+/*    position: absolute;*/
+/*    top: -39%;*/
+/*    right: 2%;*/
+/*    height: 40%;*/
+/*    -webkit-box-shadow: 0px 0px 8px 5px rgba(34, 60, 80, 0.2);*/
+/*    -moz-box-shadow: 0px 0px 8px 5px rgba(34, 60, 80, 0.2);*/
+/*    box-shadow: 0px 0px 8px 5px rgba(34, 60, 80, 0.2);*/
+/*}*/
+.info {
+    width: 500px;
+    /*position: absolute;*/
+    /*top: 88%;*/
+    /*left: 7%;*/
+    border-radius: 15px;
+    background-color: white;
+    height: 200%;
+    -webkit-box-shadow: 0px 0px 8px 5px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 0px 0px 8px 5px rgba(34, 60, 80, 0.2);
+    box-shadow: 0px 0px 8px 5px rgba(34, 60, 80, 0.2);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 1;
+}
+
+.tooltipContent {
+    width: 25vw;
+}
+
+.routeDescription {
+    font-size: 23px;
+    color: black;
+    padding: 0;
+    margin: 0;
+    line-height: 0;
+}
+
+.routeParams {
+    font-size: 18px;
+    color: var(--main-color);
+    padding: 0;
+    margin: 20px 0 0 0;
+    line-height: 0;
+}
+
+@media screen and (max-width: 2080px) {
+    .routeDescription {
+        font-size: 20px;
+    }
+
+    .routeParams {
+        font-size: 15px;
+    }
+}
+
+/*tooltip media*/
+@media screen and (max-width: 1130px) {
+    .info {
+        width: 25vw;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .routeDescription {
+        font-size: 17px;
+    }
+
+    .routeParams {
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width: 1075px) {
+    .routeDescription {
+        font-size: 14px;
+    }
+
+    .routeParams {
+        font-size: 11px;
+    }
+}
+
+@media screen and (max-width: 890px) {
+    .routeDescription {
+        font-size: 10px;
+    }
+
+    .routeParams {
+        font-size: 8px;
+    }
+}
+
+
+/*route footer fonts media*/
+@media screen and (max-width: 1075px) {
+    .routeItemFooter span {
+        font-size: 13px;
+    }
+
+    .routeItemFooter img {
+        width: 12px;
+    }
+}
+
+@media screen and (max-width: 890px) {
+    .routeItemFooter span {
+        font-size: 11px;
+    }
+
+    .routeItemFooter img {
+        width: 12px;
+    }
+}
+@media screen and (max-width: 620px) {
+    .routeItem{
+        width: 80%;
+    }
+    .imageContainer{
+        display: flex;
+    }
+}

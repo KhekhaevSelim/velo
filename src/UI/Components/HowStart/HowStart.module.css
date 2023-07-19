@@ -1,0 +1,253 @@
+.container{
+    height: 135vh;
+}
+.backgroundLayer {
+    width: 100%;
+    height: 100%;
+}
+
+.topSection {
+    height: 25%;
+    background-color: #111F28;
+}
+
+.photoSection {
+    height: 75%;
+    background-color: #111F28;
+    background-image: url("../../../assets/image/bg-image-2.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+.photoSection img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.bottomSection {
+    height: 30%;
+    background-color: #FFFFFF;
+    clip-path: polygon(0 66%, 100% 7%, 100% 100%, 0% 100%);
+    position: relative;
+    top: -20%;
+}
+
+.container img{
+    width: 100%;
+    object-fit: cover;
+    /*height: 220vh;*/
+}
+.title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 10% 20px 50px 20px;
+}
+.title h3{
+    color: var(--text-color);
+    font-size: 50px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.title p{
+    color: var(--text-color);
+    font-size: 20px;
+    font-weight: 350;
+    text-align: center;
+}
+
+@media screen and (max-width: 640px) {
+    .title h3{
+        font-size: 40px;
+    }
+    .title p{
+        font-size: 18px;
+    }
+}
+@media screen and (max-width: 520px) {
+    .title h3{
+        font-size: 30px;
+    }
+    .title p{
+        font-size: 14px;
+    }
+}
+.shapesContainer{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: stretch;
+}
+.square1 {
+    clip-path: polygon(0% 0%, 100% 0%, 91% 100%, 0% 100%);
+    width: 32%;
+    background-color: #ffffff;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 0 5px 0 0;
+}
+.square2 {
+    clip-path: polygon(9% 0, 100% 0, 91% 100%, 0% 100%);
+    width: 32%;
+    background-color: #ffffff;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 0 5px 0 5px;
+}
+.square3 {
+    clip-path: polygon(9% 0, 100% 0, 100% 100%, 0% 100%);
+    width: 32%;
+    background-color: #ffffff;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 0 0 0 5px;
+}
+
+.square1 h3,.square2 h3,.square3 h3 {
+    position: relative;
+    text-align: center;
+    color: var(--main-color);
+    font-size: 50px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+
+.square1 p,.square2 p,.square3 p{
+    position: relative;
+    color: rgba(17, 31, 40, 1);
+    font-size: 20px;
+    font-weight: 350;
+    text-align: center;
+}
+
+
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-color);
+    color: var(--text-color);
+    font-weight: 600;
+    font-size: 22px;
+    border-radius: 10px;
+    height: 40px;
+   width: 200px;
+    padding-bottom: 5px;
+    margin-top: 20px;
+    cursor: pointer;
+    box-shadow: 0 0 1rem var(--main-color);
+    transition: .5s ease;
+    position: relative;
+}
+.btn:hover{
+    box-shadow: none;
+}
+@media screen and (max-width: 1800px) {
+    .title h3 {
+        font-size: 40px;
+    }
+}
+@media screen and (max-width: 1300px) {
+    .title h3{
+        font-size: 36px;
+    }
+    .title p{
+        font-size: 18px;
+    }
+    .square1 h3, .square2 h3, .square3 h3{
+        font-size: 40px;
+    }
+    .square1 p,.square2 p, .square3 p{
+        font-size: 18px;
+    }
+    .btn{
+        font-size: 18px;
+        width: 180px;
+    }
+}
+@media screen and (max-width: 874px) {
+    .square1 h3,.square2 h3, .square3 h3{
+        font-size: 30px;
+    }
+    .square1 p,.square2 p, .square3 p{
+        font-size: 14px;
+    }
+    .btn{
+        font-size: 16px;
+        width: 160px;
+    }
+}
+@media screen and (max-width: 720px) {
+    .title h3{
+        font-size: 32px;
+    }
+    .title p{
+        font-size: 16px;
+    }
+    .square1 h3,.square2 h3, .square3 h3{
+        font-size: 28px;
+    }
+    .square1 p,.square2 p, .square3 p{
+        font-size: 13px;
+    }
+    .btn{
+        font-size: 14px;
+        width: 140px;
+    }
+}
+@media screen and (max-width: 620px) {
+    .shapesContainer{
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+        align-items: center;
+    }
+    .square1, .square2, .square3{
+        clip-path: polygon(9% 0, 100% 0, 91% 100%, 0% 100%);
+        border-radius: 0;
+        width: 90%;
+    }
+    .container{
+        min-height: 100vh;
+        height: auto;
+    }
+    .square1, .square2, .square3{
+        clip-path: none;
+        width: 67%;
+        border-radius: 15px;
+    }
+    .bottomSection {
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 860px){
+    /*.container{*/
+    /*    height: 115vh;*/
+    /*}*/
+/*.bottomSection{*/
+/*    height: 21%;*/
+/*}*/
+    .photoSection{
+        height: 57%;
+    }
+}

@@ -1,0 +1,157 @@
+
+.container{
+    margin-top: 25%;
+    display: flex;
+    /* position: relative; */
+    gap: 30px;
+    flex-direction: column;
+}
+
+.header{
+    height: 10vh;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.header p{
+  font-size: 50px;
+    font-weight: 700;
+    color: black;
+}
+.header span{
+    font-size: 20px;
+    font-weight: 350;
+    color: black;
+}
+.trainsContainer{
+    height: 85vh;
+    background-image: url("../../../assets/image/bg-image-1.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* filter: brightness(70%); */
+    padding: 5% 10%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 40px;
+    position: relative;
+}
+.footer{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    gap: 20px;
+    position: absolute;
+    bottom: 11px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.footer h3{
+    width: 50%;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 700;
+    color: var(--text-color);
+}
+.footer span{
+    font-size: 40px;
+    font-weight: 700;
+    color: var(--main-color);
+}
+/*@media screen and (max-width: 1790px){*/
+/*    .footer h3{*/
+/*        font-size: 35px;*/
+/*    }*/
+/*    .footer span{*/
+/*        font-size: 35px;*/
+/*    }*/
+/*}*/
+/*@media screen and (max-height: 1164px){*/
+/*    .footer h3{*/
+/*        font-size: 30px;*/
+/*    }*/
+/*    .footer span{*/
+/*        font-size: 30px;*/
+/*    }*/
+/*}*/
+@media screen and (max-width: 2166px) {
+    .footer h3 {
+        font-size: 25px;
+    }
+
+    .footer span {
+        font-size: 25px;
+    }
+
+    .header p {
+        font-size: 40px;
+    }
+
+    .header span {
+        font-size: 18px;
+    }
+}
+@media screen and (max-width: 1600px){
+    .footer h3{
+        font-size: 20px;
+    }
+    .footer span{
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 1075px) {
+    .header p {
+        font-size: 35px;
+    }
+
+    .header span {
+        font-size: 16px;
+    }
+}
+@media screen and (max-width: 1340px) {
+    .trainsContainer{
+        gap: 20px;
+    }
+}
+@media screen and (max-width: 1060px){
+    .footer h3{
+        font-size: 18px;
+    }
+    .footer span{
+        font-size: 18px;
+    }
+}
+@media screen and (max-width: 760px) {
+    .trainsContainer{
+        min-height: 100vh;
+        height: auto;
+        align-items: center;
+        gap: 45px;
+    }
+    .footer h3 {
+        width: 100%;
+    }
+    .footer{
+        display: block;
+        text-align: center;
+        position: relative;
+    }
+    .header p {
+        font-size: 32px;
+    }
+
+    .header span {
+        font-size: 14px;
+        text-align: center;
+        padding: 0 20px;
+    }
+}
+@media screen and (max-width: 520px) {
+    .header p {
+        font-size: 30px;
+    }
+}
