@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/velo/static/css/main.ab667dd4.css",
-    "main.js": "/velo/static/js/main.673d4318.js",
+    "main.css": "/velo/static/css/main.9c1c49e0.css",
+    "main.js": "/velo/static/js/main.d00937e3.js",
     "static/media/bg-image-1.svg": "/velo/static/media/bg-image-1.d6d2daa37c9a1d56645f128e8138ef85.svg",
     "static/media/route4.bmp": "/velo/static/media/route4.76cc438b955cdd5201df.bmp",
     "static/media/bg-image3.bmp": "/velo/static/media/bg-image3.cc141870bdc68ce35191.bmp",
@@ -18,11 +18,11 @@
     "static/media/competitions3.jpg": "/velo/static/media/competitions3.b84a572fed80eaeb015e.jpg",
     "index.html": "/velo/index.html",
     "static/media/attention.svg": "/velo/static/media/attention.ab05ca4ff508522195bc69af57e852b7.svg",
-    "main.ab667dd4.css.map": "/velo/static/css/main.ab667dd4.css.map",
-    "main.673d4318.js.map": "/velo/static/js/main.673d4318.js.map"
+    "main.9c1c49e0.css.map": "/velo/static/css/main.9c1c49e0.css.map",
+    "main.d00937e3.js.map": "/velo/static/js/main.d00937e3.js.map"
   },
   "entrypoints": [
-    "static/css/main.ab667dd4.css",
-    "static/js/main.673d4318.js"
+    "static/css/main.9c1c49e0.css",
+    "static/js/main.d00937e3.js"
   ]
 }
