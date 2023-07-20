@@ -150,7 +150,7 @@
     border-radius: 10px;
     height: 40px;
    width: 200px;
-    padding-bottom: 5px;
+    padding-top: 4px;
     margin-top: 20px;
     cursor: pointer;
     box-shadow: 0 0 1rem var(--main-color);

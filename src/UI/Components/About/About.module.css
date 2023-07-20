@@ -112,7 +112,7 @@ border-radius: 10px;
 height: 50px;
 width: 15vw;
 min-width: 150px;
-padding-bottom: 5px;
+padding-top: 4px;
 margin-top: 20px;
 cursor: pointer;
 box-shadow: 0 0 1rem var(--main-color);
@@ -121,7 +121,10 @@ transition: .5s ease;
 .btn:hover{
 box-shadow: none;
 }
-@media screen and (max-width: 3250px) {
+@media screen and (max-height: 3250px) {
+    .footer{
+height: 150vh;
+    }
 .title h3 {
     font-size: 50px;
 }
@@ -228,6 +231,17 @@ box-shadow: none;
     font-size: 60px;
 }
 }
+@media screen and (max-height: 1746px) {
+.footer {
+    height: 90vh;
+}
+}
+@media screen and (max-height: 1440px) {
+    .footer {
+        height: 135vh;
+    }
+}
+
 @media screen and (max-width: 1200px) {
 .title h3{
     font-size: 35px;
