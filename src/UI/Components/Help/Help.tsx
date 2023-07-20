@@ -121,7 +121,7 @@ const Help = () => {
                         <p>
                             Дополнительное
                         </p>
-                        <ul style={{maxWidth : "490px"}}>
+                        <ul style={{maxWidth : "423px"}}>
                             <li>Переходник ANT USB-Stick для подключения по протоколу ANT</li>
                             <li>ANT/BLE пульсометр</li>
                         </ul>

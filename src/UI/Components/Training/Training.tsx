@@ -42,26 +42,28 @@ const Training = () => {
             </div>
 
             <div className={style.wrapper}>
-                <div className={style.trainsContainer} id={"training"}>
 
-                    {trainingData.length > 0 ? trainingData.map(t => {
-                            return (
-                                <TrainsItem key={t.num} trainsData={t}/>
-                            )
-                        })
-                        :
-                        ""
-                    }
-                    <div className={style.footer}>
-                        <h3>
-                            Загружай свои тренировки в приложения Garmin, Strava, Training Peaks и соц. сети,
-                        </h3>
-                        <span>
+                    <div className={style.trainsContainer} id={"training"}>
+                        <div className={style.wrapWrapper}>
+                        {trainingData.length > 0 ? trainingData.map(t => {
+                                return (
+                                    <TrainsItem key={t.num} trainsData={t}/>
+                                )
+                            })
+                            :
+                            ""
+                        }
+                        <div className={style.footer}>
+                            <h3>
+                                Загружай свои тренировки в приложения Garmin, Strava, Training Peaks и соц. сети,
+                            </h3>
+                            <span>
                     И пусть все удивятся
-                </span>
+                        </span>
+                        </div>
                     </div>
                     </div>
-                </div>
+            </div>
         </div>
     );
 };

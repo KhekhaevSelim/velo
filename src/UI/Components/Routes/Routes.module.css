@@ -34,7 +34,7 @@
     padding: 40px;
 }
 .wrapper{
-
+    max-width: 1440px;
 }
 .staticItem{
     padding: 0 10%;

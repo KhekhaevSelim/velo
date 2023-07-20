@@ -16,32 +16,34 @@ const SendQuestion = () => {
     });
     return (
         <div className={style.container}>
-            <div className={style.formContainer}>
-                <div className={style.formTitle}>
-                    <h4>
-                        Остались вопросы?
-                    </h4>
-                    <span>
+            <div className={style.wrapper}>
+                <div className={style.formContainer}>
+                    <div className={style.formTitle}>
+                        <h4>
+                            Остались вопросы?
+                        </h4>
+                        <span>
                        Заполните форму обратной связи, наш менеджер свяжется с вами в ближайшее время
                    </span>
+                    </div>
+                    <form onSubmit={formik.handleSubmit} className={style.form}>
+                        <input
+                            type="text"
+                            placeholder={"Ваше имя"}
+                            {...formik.getFieldProps("firstName")}
+                        />
+                        <input
+                            type="email"
+                            placeholder={"Ваш e-mail"}
+                            {...formik.getFieldProps("email")}
+                        />
+                        <textarea
+                            placeholder={"Опишите Ваш вопрос"}
+                            {...formik.getFieldProps("message")}
+                        />
+                        <button type="submit" className={style.btn}>ОТПРАВИТЬ</button>
+                    </form>
                 </div>
-                <form onSubmit={formik.handleSubmit} className={style.form}>
-                    <input
-                        type="text"
-                        placeholder={"Ваше имя"}
-                        {...formik.getFieldProps("firstName")}
-                    />
-                    <input
-                        type="email"
-                        placeholder={"Ваш e-mail"}
-                        {...formik.getFieldProps("email")}
-                    />
-                    <textarea
-                        placeholder={"Опишите Ваш вопрос"}
-                        {...formik.getFieldProps("message")}
-                    />
-                    <button type="submit" className={style.btn}>ОТПРАВИТЬ</button>
-                </form>
             </div>
         </div>
     );

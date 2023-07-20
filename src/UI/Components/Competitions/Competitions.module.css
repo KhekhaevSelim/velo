@@ -1,6 +1,13 @@
 .container{
     background-color: #111F28;
     min-height: 50vh;
+    display: flex;
+    justify-content: center;
+}
+.wrapper{
+    width: 100%;
+    height: 100%;
+    max-width: 1440px;
 }
 .header{
     display: flex;

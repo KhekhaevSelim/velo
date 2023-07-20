@@ -251,3 +251,16 @@
         height: 57%;
     }
 }
+
+@media screen and (min-height: 1000px) {
+    .bottomSection{
+        height: 45%;
+        top: -43%;
+    }
+    .container{
+      height: 100vh;
+    }
+    .topSection{
+        height: 33%;
+    }
+}

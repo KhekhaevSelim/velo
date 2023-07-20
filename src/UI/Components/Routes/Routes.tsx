@@ -92,7 +92,6 @@ const Routes = () => {
             </div>
             <div className={style.wrapper}>
                 <div className={style.routesContainer}>
-
                     {
                         routesData.length > 0 ? routesData.map((r, index) => {
                                 return (
