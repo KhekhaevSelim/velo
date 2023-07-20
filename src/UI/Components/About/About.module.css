@@ -41,6 +41,12 @@
     align-items: start;
     gap: 35px;
 }
+.leftTop h3, .leftTop p {
+    margin-bottom: 10px;
+}
+.leftBottom h3,.leftBottom span,.leftBottom p {
+    margin-bottom: 10px;
+}
 
 .right {
     width: 40%;
@@ -48,6 +54,9 @@
     flex-direction: column;
     align-items: start;
     gap: 35px;
+}
+.right ul li {
+    margin: 10px 0;
 }
 .imageContainer{
     width: 100%;
@@ -380,8 +389,8 @@
     .right{
         margin-top: 20px;
         width: 100%;
-        align-items: end;
-        text-align: right;
+        align-items: start;
+        text-align: left;
     }
     .footerContainer{
         margin-left: 0;

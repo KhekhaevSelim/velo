@@ -40,7 +40,10 @@ const Training = () => {
                     WattAttack предоставляет несколько вариантов создания тренировок
                 </span>
             </div>
+
+            <div className={style.wrapper}>
                 <div className={style.trainsContainer} id={"training"}>
+
                     {trainingData.length > 0 ? trainingData.map(t => {
                             return (
                                 <TrainsItem key={t.num} trainsData={t}/>
@@ -56,6 +59,7 @@ const Training = () => {
                         <span>
                     И пусть все удивятся
                 </span>
+                    </div>
                     </div>
                 </div>
         </div>

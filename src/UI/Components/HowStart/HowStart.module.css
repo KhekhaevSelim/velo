@@ -216,7 +216,6 @@
 @media screen and (max-width: 620px) {
     .shapesContainer{
         flex-direction: column;
-        gap: 20px;
         width: 100%;
         align-items: center;
     }
@@ -224,6 +223,7 @@
         clip-path: polygon(9% 0, 100% 0, 91% 100%, 0% 100%);
         border-radius: 0;
         width: 90%;
+        margin: 10px 0;
     }
     .container{
         min-height: 100vh;

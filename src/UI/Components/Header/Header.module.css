@@ -249,18 +249,17 @@
         display: none;
     }
     .mobileNavPart {
-        padding: 40px;
+        padding: 12px 5px;
         width: 100%;
         position: absolute;
         display: flex;
-        gap: 10px;
+        justify-content: space-around;
     }
     .mobileNavFul{
-        padding: 40px 60px 40px 60px;
+        padding: 12px 20px;
         width: 100%;
         position: absolute;
         display: flex;
-        gap: 10px;
     }
     .mobileNavPart a {
         font-size: 24px;
@@ -327,7 +326,8 @@
         font-size: 22px;
     }
     .mobileNavFul a {
-        font-size: 22px;
+        font-size: 12px;
+        padding: 5px 0;
     }
     .btn{
 

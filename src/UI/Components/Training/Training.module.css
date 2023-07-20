@@ -25,11 +25,18 @@
     font-weight: 350;
     color: black;
 }
-.trainsContainer{
-    height: 85vh;
+.wrapper{
     background-image: url("../../../assets/image/bg-image-1.svg");
     background-repeat: no-repeat;
     background-size: cover;
+    background-color: transparent;
+}
+.trainsContainer{
+    height: 85vh;
+    /*background-image: url("../../../assets/image/bg-image-1.svg");*/
+    /*background-repeat: no-repeat;*/
+    /*background-size: cover;*/
+    background-color: #111f28b2;
     /* filter: brightness(70%); */
     padding: 5% 10%;
     display: flex;
@@ -136,6 +143,7 @@
         width: 100%;
     }
     .footer{
+        margin-top: 120px;
         display: block;
         text-align: center;
         position: relative;
