@@ -25,12 +25,12 @@
 }
 .formTitle{
     margin: 0px 0 20px 0;
-    gap: 10px;
     display: flex;
     flex-direction: column;
     padding: 0 15%;
 }
 .formTitle h4{
+    margin-bottom: 10px;
     color: var(--text-color);
     font-weight: 700;
 }
@@ -42,20 +42,20 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
     width: 100%;
 }
 .form input{
     width: 80%;
     border-radius: 10px;
     padding: 15px;
-
+    margin: 10px 0;
 }
 .form textarea{
     width: 80%;
     border-radius: 10px;
     padding: 15px;
     resize: none;
+    margin: 10px 0;
 }
 .btn{
     width: 80%;
@@ -72,6 +72,7 @@
     cursor: pointer;
     box-shadow: 0 0 1rem var(--main-color);
     transition: .5s ease;
+    margin: 10px 0;
 }
 .btn:hover{
     box-shadow: none;
@@ -138,6 +139,6 @@
         padding: 8px;
     }
     .formTitle{
-        gap: 0;
+
     }
 }
