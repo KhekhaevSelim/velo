@@ -1,11 +1,11 @@
 .trainsItem{
     width: 50%;
     height: 40%;
+    margin-bottom: 15px;
 }
 .top{
     display: flex;
     align-items: center;
-    gap: 20px;
 }
 .top span{
     display: flex;
@@ -23,6 +23,7 @@
     font-size: 35px;
     font-weight: 700;
     color: var(--text-color);
+    margin-left: 15px;
 }
 
 .bottom{
@@ -109,5 +110,6 @@
 @media screen and (max-width: 760px) {
     .trainsItem{
         width: 100%;
+        margin-bottom: 40px;
     }
 }

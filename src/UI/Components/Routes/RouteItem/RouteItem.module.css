@@ -1,11 +1,11 @@
 
 
 .routeItem {
-    width: 100%;
-    height: 60%;
+    width: 90%;
+    height: 53%;
     display: flex;
     flex-direction: column;
-
+    margin: 10px 0;
 }
 
 .routeImage {
