@@ -1,17 +1,32 @@
 import React, {useEffect, useState} from 'react';
 import style from './Header.module.css';
-import {NavLink} from "react-router-dom";
+import {NavLink, useLocation} from "react-router-dom";
 import bg from "../../../assets/image/bg-image-1.svg"
 
 function Header() {
+    /**
+     хук для условного рендеринга иконки меню
+     */
     const [isActiveMenu, setIsActiveMenu] = useState<boolean>(false);
+    /**
+     * хук для условного рендеринга активного и неактивного мобильного меню
+     */
     const [isActiveNav, setIsActiveNav] = useState<boolean>(false);
+
+    /**
+     * функции для данмического изменения внешнего вида и иконки мобильного меню  + блокировки скролла
+     */
     const handleClickMenu = () => {
         setIsActiveMenu(!isActiveMenu)
         setIsActiveNav(!isActiveNav)
-        // document.body.classList.toggle("no-scroll", !isActiveNav);
     }
-
+    const handleClickLink = () => {
+        setIsActiveMenu(!isActiveMenu)
+        setIsActiveNav(!isActiveNav)
+    }
+    /**
+     * хук для блокировки и разблокировки скролла при активном мобильном меню
+     */
     useEffect(() => {
         if (isActiveNav) {
             document.documentElement.classList.add("no-scroll");
@@ -19,10 +34,19 @@ function Header() {
             document.documentElement.classList.remove("no-scroll");
         }
     }, [isActiveNav]);
-    const handleClickLink = () => {
-        setIsActiveMenu(!isActiveMenu)
-        setIsActiveNav(!isActiveNav)
-    }
+
+    /**
+     * комбинация из двух хуков для автоматического скролла до нужного раздела из компонента логинизации/регистрации/восстановления пароля
+     */
+    const location = useLocation();
+
+    useEffect(() => {
+        const section = document.getElementById(location.hash.slice(1,location.hash.length));
+        if (section) {
+            section.scrollIntoView({ behavior: "smooth" });
+        }
+    }, [location.hash]);
+
     return (
 
         <header className={style.home}>
@@ -30,6 +54,9 @@ function Header() {
                 <img src={bg} alt=""/>
             </div>
             {
+                /**
+                 * условный рендеринг мобильного меню : свернутое и развернутое при клике по иконке меню
+                 */
                 isActiveNav ?
                     <nav className={style.mobileNavFul}>
                         <div className={style.mobileNavHeader}>
@@ -55,6 +82,9 @@ function Header() {
                            onClick={handleClickMenu}></i>
                     </nav>
             }
+            {/**
+            * Меню для десктопных устройств, отображается пока не заработает медиа запрос
+            */}
             <nav className={style.navbar} id={style.home}>
                 <div className={style.wrapper}>
                     <a href="#howStart">КАК НАЧАТЬ</a>
