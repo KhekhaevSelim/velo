@@ -37,7 +37,7 @@ const AuthHeader = () => {
                         </div>
                         <NavLink to="/#howStart" onClick={handleClickLink}>КАК НАЧАТЬ</NavLink>
                         <NavLink to="/#routes" onClick={handleClickLink}>МАРШРУТЫ</NavLink>
-                        <NavLink to="/#trains" onClick={handleClickLink}>ТРЕНИРОВКИ</NavLink>
+                        <NavLink to="/#training" onClick={handleClickLink}>ТРЕНИРОВКИ</NavLink>
                         <NavLink to="/#about" onClick={handleClickLink}>О НАС</NavLink>
                         <NavLink to="/#help" onClick={handleClickLink}>ПОМОЩЬ</NavLink>
                         <NavLink to={"/login"}>ВОЙТИ</NavLink>

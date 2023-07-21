@@ -76,6 +76,7 @@
     align-items: start;
     color: black;
     z-index: 9999;
+    background-color: white;
 }
 
 .mobileNavHeader{

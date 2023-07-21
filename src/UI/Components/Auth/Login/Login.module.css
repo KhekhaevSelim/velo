@@ -67,26 +67,39 @@
 
 .footer {
     width: 399px;
-    height: 50px;
     display: flex;
     justify-content: space-between;
+    height: 17px;
 }
 
 .registerLink {
     color: #FD6E20;
     font-size: 15px;
     font-weight: 350;
+    border-bottom: solid #FD6E20 1px;
 }
 
 .recoverLink {
 color: #B7B7B7;
     font-size: 15px;
     font-weight: 350;
+    border-bottom: solid #B7B7B7 1px;
 }
 
 @media screen and (max-width: 760px) {
     .form input, .btn {
         width: 310px;
     }
-
+    .footer {
+        width: 310px;
+        height: 14px;
+    }
+.recoverLink{
+    font-size: 13px;
+    white-space: nowrap;
+}
+.registerLink{
+    font-size: 13px;
+    white-space: nowrap;
+}
 }
