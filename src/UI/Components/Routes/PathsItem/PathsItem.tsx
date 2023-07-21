@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
-import style from "./RouteItem.module.css";
-import {RoutesDataType} from "../Routes";
+import style from "./PathsItem.module.css";
+import {RoutesDataType} from "../Paths";
 import 'react-tippy/dist/tippy.css';
 import Tippy from '@tippyjs/react';
 import 'tippy.js/dist/tippy.css';
@@ -10,7 +10,7 @@ import {Ribbon, RibbonContainer} from "react-ribbons";
 type RouteItemPropsType = {
     routeData : RoutesDataType
 }
-const RouteItem = (props : RouteItemPropsType) => {
+const PathsItem = (props : RouteItemPropsType) => {
     const [offset, setOffset] = useState<any>([-140, 10]);
     useEffect(() => {
         const handleResize = () => {
@@ -77,4 +77,4 @@ const RouteItem = (props : RouteItemPropsType) => {
     );
 };
 
-export default RouteItem;
+export default PathsItem;

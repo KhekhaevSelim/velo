@@ -1,12 +1,12 @@
 import React, {useEffect, useState} from 'react';
-import style from "./Routes.module.css"
+import style from "./Paths.module.css"
 import route1 from "../../../assets/image/route1.jpeg"
 import route2 from "../../../assets/image/route2.jpeg"
 import route3 from "../../../assets/image/route3.jpeg"
 import route4 from "../../../assets/image/route4.bmp"
 import route5 from "../../../assets/image/route5.png"
 import attention from "../../../assets/icons/attention.svg"
-import RouteItem from "./RouteItem/RouteItem";
+import PathsItem from "./PathsItem/PathsItem";
 import {Ribbon} from "react-ribbons";
 import Tippy from "@tippyjs/react";
 import {render} from "@testing-library/react";
@@ -19,7 +19,7 @@ export type RoutesDataType = {
     params: string
     dev: boolean
 }
-const Routes = () => {
+const Paths = () => {
     const [offset, setOffset] = useState<any>([-140, 10]);
     useEffect(() => {
         const handleResize = () => {
@@ -95,7 +95,7 @@ const Routes = () => {
                     {
                         routesData.length > 0 ? routesData.map((r, index) => {
                                 return (
-                                    <RouteItem key={index} routeData={r}/>
+                                    <PathsItem key={index} routeData={r}/>
                                 )
                             })
                             :
@@ -112,4 +112,4 @@ const Routes = () => {
     );
 };
 
-export default Routes;
+export default Paths;

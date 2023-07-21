@@ -6,7 +6,7 @@ import route3 from "../../../assets/image/route3.jpeg"
 import route4 from "../../../assets/image/route4.bmp"
 import route5 from "../../../assets/image/route5.png"
 import attention from "../../../assets/icons/attention.svg"
-import Routes from "../Routes/Routes";
+import Paths from "../Routes/Paths";
 
 export type RoutesDataType = {
     img: string
@@ -95,7 +95,7 @@ const HowStart = () => {
                             <button className={style.btn}>ВОЙТИ</button>
                         </div>
                     </div>
-                    <Routes/>
+                    <Paths/>
                 </div>
                 <div className={style.bottomSection}></div>
             </div>
