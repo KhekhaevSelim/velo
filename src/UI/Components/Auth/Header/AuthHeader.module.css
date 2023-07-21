@@ -160,7 +160,7 @@
         display: flex;
     }
     .mobileNavPart a {
-        font-size: 24px;
+        font-size: 18px;
         font-weight: 600;
         color: black;
         text-align: center;
@@ -176,14 +176,14 @@
         color: var(--main-color);
     }
     .mobileNavFul a {
-        font-size: 24px;
+        font-size: 20px;
         font-weight: 600;
         color: black;
         text-align: center;
         transition: 300ms;
     }
     .mobileNavHeader h3{
-        font-size: 30px;
+        font-size: 35px;
     }
     .mobileNavFul a:nth-child(8) {
         color: var(--main-color);
@@ -209,10 +209,10 @@
         left: 9px;
     }
     .mobileNavPart a {
-        font-size: 22px;
+        font-size: 18px;
     }
     .mobileNavFul a {
-        font-size: 12px;
+        font-size: 18px;
         padding: 5px 0;
     }
 
@@ -230,7 +230,7 @@
         font-size: 18px;
     }
     .mobileNavHeader h3{
-        font-size: 26px;
+        font-size: 35px;
     }
 }
 
@@ -242,25 +242,25 @@
     }
 
     .mobileNavPart a {
-        font-size: 14px;
+        font-size: 18px;
     }
     .mobileNavFul a {
-        font-size: 14px;
+        font-size: 18px;
     }
     .mobileNavHeader h3{
-        font-size: 20px;
+        font-size: 35px;
     }
 }
 @media screen and (max-width: 420px) {
 
     .mobileNavPart a {
-        font-size: 12px;
+        font-size: 18px;
     }
     .mobileNavFul a {
-        font-size: 12px;
+        font-size: 18px;
     }
     .mobileNavHeader h3{
-        font-size: 16px;
+        font-size: 35px;
     }
 }
 @media screen and (max-height: 1380px) {
