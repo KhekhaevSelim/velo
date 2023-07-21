@@ -1,75 +1,49 @@
-import React, {useState} from 'react';
+import React from 'react';
 import style from "./Login.module.css";
-import {Link, NavLink} from "react-router-dom";
+import {NavLink} from "react-router-dom";
+import AuthHeader from "../Header/AuthHeader";
+import { useFormik} from "formik";
 
 const Login = () => {
-    /**
-     хук для условного рендеринга иконки меню
-     */
-    const [isActiveMenu, setIsActiveMenu] = useState<boolean>(false);
-    /**
-     * хук для условного рендеринга активного и неактивного мобильного меню
-     */
-    const [isActiveNav, setIsActiveNav] = useState<boolean>(false);
-    /**
-     * функции для данмического изменения внешнего вида и иконки мобильного меню
-     */
-    const handleClickMenu = () => {
-        setIsActiveMenu(!isActiveMenu)
-        setIsActiveNav(!isActiveNav)
-    }
-    const handleClickLink = () => {
-        setIsActiveMenu(!isActiveMenu)
-        setIsActiveNav(!isActiveNav)
-    }
+    const formik = useFormik({
+        initialValues: {
+            email: '',
+            password: ''
+        },
+        onSubmit: values => {
+            alert(JSON.stringify(values, null, 2));
+            formik.resetForm()
+        },
+    });
+
     return (
         <div className={style.container}>
-            {
-                /**
-                 * условный рендеринг мобильного меню : свернутое и развернутое при клике по иконке меню
-                 */
-                isActiveNav ?
-                    <nav className={style.mobileNavFul}>
-                        <div className={style.mobileNavHeader}>
-                            <h3>WattAttack</h3>
-                            <i className={`bx ${isActiveMenu ? "bx-x" : "bx-menu"}`} id={style.menuIcon}
-                               onClick={handleClickMenu}></i>
-                        </div>
-                        <NavLink to="/#howStart" onClick={handleClickLink}>КАК НАЧАТЬ</NavLink>
-                        <NavLink to="/#routes" onClick={handleClickLink}>МАРШРУТЫ</NavLink>
-                        <NavLink to="/#trains" onClick={handleClickLink}>ТРЕНИРОВКИ</NavLink>
-                        <NavLink to="/#about" onClick={handleClickLink}>О НАС</NavLink>
-                        <NavLink to="/#help" onClick={handleClickLink}>ПОМОЩЬ</NavLink>
-                        <NavLink to={"/login"}>ВОЙТИ</NavLink>
-                        <NavLink to={"/download"}>СКАЧАТЬ</NavLink>
-
-                    </nav>
-                    :
-                    <nav className={style.mobileNavPart}>
-                        <NavLink to={"/#howStart"}>КАК НАЧАТЬ</NavLink>
-                        <NavLink to={"/login"}>ВОЙТИ</NavLink>
-                        <NavLink to={"/download"}>СКАЧАТЬ</NavLink>
-                        <i className={`bx ${isActiveMenu ? "bx-x" : "bx-menu"}`} id={style.menuIcon}
-                           onClick={handleClickMenu}></i>
-                    </nav>
-            }
-            {/**
-             * Меню для десктопных устройств, отображается пока не заработает медиа запрос
-             */}
-            <nav className={style.navbar} id={style.home}>
-                <div className={style.wrapper}>
-                    <NavLink to="/#howStart" onClick={handleClickLink}>КАК НАЧАТЬ</NavLink>
-                    <NavLink to="/#routes" onClick={handleClickLink}>МАРШРУТЫ</NavLink>
-                    <NavLink to="/#trains" onClick={handleClickLink}>ТРЕНИРОВКИ</NavLink>
-                    <NavLink to="/#about" onClick={handleClickLink}>О НАС</NavLink>
-                    <NavLink to="/#help" onClick={handleClickLink}>ПОМОЩЬ</NavLink>
-                    <NavLink to={"/login"}>ВОЙТИ</NavLink>
-                    <NavLink to={"/download"}>СКАЧАТЬ</NavLink>
+            <AuthHeader/>
+            <div className={style.loginContainer}>
+                <div className={style.loginFormContainer}>
+                    <h3>Авторизация</h3>
+                    <form onSubmit={formik.handleSubmit} className={style.form}>
+                        <input
+                            type="email"
+                            placeholder={"Ваш e-mail"}
+                            {...formik.getFieldProps("email")}
+                        />
+                        <input
+                        type="password"
+                        placeholder={"Пароль"}
+                        {...formik.getFieldProps("password")}
+                    />
+                        <button type="submit" className={style.btn}>ВОЙТИ</button>
+                    </form>
+                    <div className={style.footer}>
+                        <NavLink to={"/register"} className={style.registerLink}>Нет аккаунта?
+                            Зарегистрируйтесь</NavLink>
+                        <NavLink to={"/recoverPassword"} className={style.recoverLink}>Забыли пароль?</NavLink>
+                    </div>
                 </div>
-            </nav>
-
+            </div>
         </div>
-    );
+    )
 };
 
 export default Login;

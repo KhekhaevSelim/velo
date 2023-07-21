@@ -14,10 +14,10 @@ function App() {
             <Routes>
                 <Route path={"/"} element={<VeloSite/>}/>
                 <Route path={"/velo"} element={<VeloSite/>}/>
-                <Route path={"login"} element={<Login/>}/>
-                <Route path={"register"} element={<Register/>}/>
-                <Route path={"recoverPassword"} element={<RecoverPassword/>}/>
-                <Route path={"setNewPassword"} element={<SetNewPassword/>}/>
+                <Route path={"/login"} element={<Login/>}/>
+                <Route path={"/register"} element={<Register/>}/>
+                <Route path={"/recoverPassword"} element={<RecoverPassword/>}/>
+                <Route path={"/setNewPassword"} element={<SetNewPassword/>}/>
             </Routes>
         </div>
 
