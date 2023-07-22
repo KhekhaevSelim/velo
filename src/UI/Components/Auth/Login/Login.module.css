@@ -24,7 +24,7 @@
 
 .loginFormContainer h3 {
     color: var(--main-color);
-    font-size: 50px;
+    font-size: 42px;
     font-weight: 700;
     margin-bottom: 20px;
 }
@@ -36,19 +36,32 @@
     width: 100%;
 }
 
-.form input {
-    border: solid 1px #B7B7B7;
-    width: 399px;
-    border-radius: 10px;
-    padding: 15px;
-    margin: 10px 0;
-}
 .input{
     border: solid 1px #B7B7B7;
     width: 399px;
     border-radius: 10px;
     padding: 15px;
     margin: 10px 0;
+    display: flex;
+    align-items: center;
+}
+
+.errorInput{
+    border: solid 1px #D49F9F;
+    width: 399px;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+}
+.errorMessage{
+    width: 399px;
+    padding-left: 18px;
+    display: flex;
+    justify-content: start;
+    color: #D49F9F;
+    font-size: 10px;
 }
 .btn {
     height: 53px;
@@ -87,7 +100,7 @@ color: #B7B7B7;
 }
 
 @media screen and (max-width: 760px) {
-    .form input, .btn {
+    .errorInput, .input, .btn {
         width: 310px;
     }
     .footer {
@@ -102,4 +115,8 @@ color: #B7B7B7;
     font-size: 13px;
     white-space: nowrap;
 }
+    .errorMessage{
+        width: 310px;
+        padding-left: 18px;
+    }
 }
