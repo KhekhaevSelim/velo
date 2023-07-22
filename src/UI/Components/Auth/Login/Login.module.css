@@ -151,7 +151,7 @@ color: #B7B7B7;
     height: 310px;
     position: absolute;
     z-index: 9999;
-    top: 48%;
+    top: 47%;
     left: 50%;
     background-color: white;
     transform: translateX(-50%) translateY(-50%);
@@ -212,7 +212,7 @@ color: #B7B7B7;
     }
     .recoverModal{
         width: 340px;
-        height: 280px;
+        height: 290px;
     }
     .closeIcon{
         width: 29px;

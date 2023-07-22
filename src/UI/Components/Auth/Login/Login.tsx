@@ -88,6 +88,9 @@ const Login = () => {
         onSubmit: values => {
             alert(JSON.stringify(values, null, 2));
             formik2.resetForm()
+            setTimeout(()=> {
+
+            })
         },
         validate: (values) => {
             const errors: any = {};
