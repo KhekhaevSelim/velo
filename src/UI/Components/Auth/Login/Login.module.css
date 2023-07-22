@@ -186,6 +186,7 @@ color: #B7B7B7;
     }
     .recoverBtn{
         width: 295px;
+        font-size: 21px;
     }
     .recoverInput, .recoverErrorInput{
         width: 295px;
