@@ -1,9 +1,9 @@
-import React, {useState} from 'react';
+import React, {MouseEventHandler, useEffect, useRef, useState} from 'react';
 import style from "./Login.module.css";
 import {NavLink} from "react-router-dom";
 import AuthHeader from "../Header/AuthHeader";
 import {useFormik} from "formik";
-
+import closeIcon from "../../../../assets/icons/+.svg";
 
 
 
@@ -16,7 +16,24 @@ type ErrorsType = {
     password: string
 }
 const Login = () => {
+    /**
+     * локальный стейт для тогглинга мадалки восстановления пароля
+     */
+    const [showRecoverModal, setShowRecoverModal] = useState<boolean>(false)
 
+    /**
+     * функция для отображения мадолки восстановления пароля
+     */
+    const showModal = () => {
+        debugger
+        setShowRecoverModal(true)
+    }
+    /**
+     * функция для закрытия модалки
+     */
+    const closeModal = () => {
+        setShowRecoverModal(false)
+    }
     /**
      * локальный стейт для тогглинга иконки скрытия пароля
      */
@@ -46,7 +63,6 @@ const Login = () => {
             password: ''
         },
         onSubmit: values => {
-            debugger
             alert(JSON.stringify(values, null, 2));
             formik.resetForm()
         },
@@ -62,6 +78,27 @@ const Login = () => {
             if (!values.password) {
                 errors.password = "Пожалуйста, введите пароль";
             }
+            return errors;
+        }
+    });
+
+    const formik2 = useFormik({
+        initialValues: {
+            emailRecoverPassword: ''
+        },
+        onSubmit: values => {
+            debugger
+            alert(JSON.stringify(values, null, 2));
+            formik2.resetForm()
+        },
+        validate: (values) => {
+            const errors: any = {};
+
+            if (!values.emailRecoverPassword) {
+                errors.emailRecoverPassword = "Пожалуйста, введите обязательное поле e-mail";
+            } else if (!isValidEmail(values.emailRecoverPassword)) {
+                errors.emailRecoverPassword = "Пожалуйста, введите корректный e-mail";
+            }
             console.log(errors)
             return errors;
         }
@@ -69,6 +106,38 @@ const Login = () => {
 
     return (
         <div className={style.container}>
+            <div className={ showRecoverModal ? style.recoverModalBg : style.hiddenRecoverModalBg} onClick={closeModal}>
+                <div className={style.recoverModal} onClick={(e)=> e.stopPropagation()}>
+                    <h3>ВОССТАНОВЛЕНИЕ ПАРОЛЯ</h3>
+                    <form onSubmit={formik2.handleSubmit} className={style.form}>
+                        {/**
+                         * данный инпут имеет изначально display : none, поэтому мы напрямую передает value и обработчики событий
+                         **/
+                        }
+                    <input
+                        id={"emailRecoverPassword"}
+                        type="email"
+                        placeholder={"Ваш e-mail"}
+                        value={formik2.values.emailRecoverPassword}
+                        onChange={formik2.handleChange}
+                        onBlur={formik2.handleBlur}
+
+                        className={
+                            formik2.touched.emailRecoverPassword && formik2.errors.emailRecoverPassword
+                                ? style.recoverErrorInput
+                                : style.recoverInput
+                        }
+                    />
+                    {formik2.touched.emailRecoverPassword && formik2.errors.emailRecoverPassword && (
+                        <div className={style.errorMessage}>
+                            {formik2.errors.emailRecoverPassword}
+                        </div>
+                    )}
+                        <button type="submit" className={style.recoverBtn} style={{marginTop : "10px"}}>ВОССТАНОВИТЬ</button>
+                    </form>
+                    <img src={closeIcon} alt={"close"} onClick={closeModal} className={style.closeIcon}/>
+                </div>
+            </div>
             <AuthHeader/>
             <div className={style.loginContainer}>
                 <div className={style.loginFormContainer}>
@@ -113,7 +182,7 @@ const Login = () => {
                     <div className={style.footer}>
                         <NavLink to={"/register"} className={style.registerLink}>Нет аккаунта?
                             Зарегистрируйтесь</NavLink>
-                        <NavLink to={"/recoverPassword"} className={style.recoverLink}>Забыли пароль?</NavLink>
+                        <a href={"#recoverPassword"} className={style.recoverLink} onClick={showModal}>Забыли пароль?</a>
                     </div>
                 </div>
             </div>

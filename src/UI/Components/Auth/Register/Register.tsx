@@ -1,8 +1,9 @@
-import React, {useState} from 'react';
+import React, {ChangeEvent, useState} from 'react';
 import style from "./Register.module.css";
 import AuthHeader from "../Header/AuthHeader";
 import {useFormik} from "formik";
 import {NavLink} from "react-router-dom";
+import closeIcon from "../../../../assets/icons/+.svg";
 
 
 type ErrorsType = {
@@ -11,7 +12,24 @@ type ErrorsType = {
     confirmPassword : string
 }
 const Register = () => {
+    /**
+     * локальный стейт для тогглинга мадалки восстановления пароля
+     */
+    const [showRecoverModal, setShowRecoverModal] = useState<boolean>(false)
 
+    /**
+     * функция для отображения мадолки восстановления пароля
+     */
+    const showModal = () => {
+        debugger
+        setShowRecoverModal(true)
+    }
+    /**
+     * функция для закрытия модалки
+     */
+    const closeModal = () => {
+        setShowRecoverModal(false)
+    }
     /**
      * локальный стейт для тогглинга иконки скрытия пароля
      */
@@ -30,6 +48,11 @@ const Register = () => {
         const emailRegex = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
         return emailRegex.test(email);
     };
+
+    const handleCheckboxChange = (event : ChangeEvent<HTMLInputElement>) => {
+        const { checked } = event.target;
+        formik.setFieldValue('isChecked', checked);
+    };
     /**
      * хук обработки формы, отправки данных, валидации
      */
@@ -37,7 +60,8 @@ const Register = () => {
         initialValues: {
             email: '',
             password: '',
-            confirmPassword : ''
+            confirmPassword : '',
+            isChecked : false
         },
         onSubmit: values => {
             alert(JSON.stringify(values, null, 2));
@@ -55,16 +79,72 @@ const Register = () => {
             if (!values.password) {
                 errors.password = "Пожалуйста, введите пароль";
             }
-            if (values.confirmPassword && values.password !== values.confirmPassword) {
+            if(!values.confirmPassword){
+                errors.confirmPassword = "Пожалуйста, подтвердите пароль";
+            } else if (values.confirmPassword && values.password !== values.confirmPassword) {
                 errors.confirmPassword = "Пароли не совпадают. Попробуйте еще раз";
             }
-            console.log(errors)
+            if(!values.isChecked){
+                errors.isChecked = "error"
+            }
             return errors;
         },
     });
+    const formik2 = useFormik({
+        initialValues: {
+            emailRecoverPassword: ''
+        },
+        onSubmit: values => {
+            debugger
+            alert(JSON.stringify(values, null, 2));
+            formik2.resetForm()
+        },
+        validate: (values) => {
+            const errors: any = {};
 
+            if (!values.emailRecoverPassword) {
+                errors.emailRecoverPassword = "Пожалуйста, введите обязательное поле e-mail";
+            } else if (!isValidEmail(values.emailRecoverPassword)) {
+                errors.emailRecoverPassword = "Пожалуйста, введите корректный e-mail";
+            }
+            console.log(errors)
+            return errors;
+        }
+    });
     return (
         <div className={style.container}>
+            <div className={ showRecoverModal ? style.recoverModalBg : style.hiddenRecoverModalBg} onClick={closeModal}>
+                <div className={style.recoverModal} onClick={(e)=> e.stopPropagation()}>
+                    <h3>ВОССТАНОВЛЕНИЕ ПАРОЛЯ</h3>
+                    <form onSubmit={formik2.handleSubmit} className={style.form}>
+                        {/**
+                         * данный инпут имеет изначально display : none, поэтому мы напрямую передает value и обработчики событий
+                         **/
+                        }
+                        <input
+                            id={"emailRecoverPassword"}
+                            type="email"
+                            placeholder={"Ваш e-mail"}
+                            value={formik2.values.emailRecoverPassword}
+                            onChange={formik2.handleChange}
+                            onBlur={formik2.handleBlur}
+
+                            className={
+                                formik2.touched.emailRecoverPassword && formik2.errors.emailRecoverPassword
+                                    ? style.recoverErrorInput
+                                    : style.recoverInput
+                            }
+                        />
+                        {formik2.touched.emailRecoverPassword && formik2.errors.emailRecoverPassword && (
+                            <div className={style.errorMessage}>
+                                {formik2.errors.emailRecoverPassword}
+                            </div>
+                        )}
+                        <button type="submit" className={style.recoverBtn} style={{marginTop : "10px"}}>ВОССТАНОВИТЬ</button>
+                    </form>
+                    <img src={closeIcon} alt={"close"} onClick={closeModal} className={style.closeIcon}/>
+                </div>
+            </div>
             <AuthHeader/>
             <div className={style.registerContainer}>
                 <div className={style.registerFormContainer}>
@@ -104,7 +184,7 @@ const Register = () => {
                                 {formik.errors.password}
                             </div>
                         )}
-                        <div className={formik.touched.password && formik.errors.password
+                        <div className={formik.errors.password
                             ? style.errorInput
                             : style.input}>
                             <input
@@ -123,11 +203,20 @@ const Register = () => {
                                 {formik.errors.confirmPassword}
                             </div>
                         )}
+                        <div className={style.approval}>
+                            <label htmlFor="" className={style.customCheckBox}>
+                                <input checked={formik.values.isChecked}
+                                       onChange={handleCheckboxChange}
+                                       type="checkbox" className={style.hiddenInput}/>
+                                <span className={style.checkBoxIcon}></span>
+                            </label>
+                            <NavLink to={"/login"} className={style.loginLink} style={{marginLeft : "10px"}}>Согласен на обработку персональных данных</NavLink>
+                        </div>
                         <button type="submit" className={style.btn}>РЕГИСТРАЦИЯ</button>
                     </form>
                     <div className={style.footer}>
                         <NavLink to={"/login"} className={style.loginLink}>Уже зарегистрированы? Войти</NavLink>
-                        <NavLink to={"/recoverPassword"} className={style.recoverLink}>Забыли пароль?</NavLink>
+                        <a href={"#recoverPassword"} className={style.recoverLink} onClick={showModal}>Забыли пароль?</a>
                     </div>
                 </div>
             </div>
