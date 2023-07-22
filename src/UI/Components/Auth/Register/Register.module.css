@@ -239,11 +239,11 @@
         width: 310px;
     }
     .recoverModal h3{
-        font-size: 22px;
+        font-size: 21px;
         margin: 40px 0 0 0;
     }
     .recoverModal{
-        width: 330px;
+        width: 340px;
         height: 280px;
     }
     .closeIcon{
@@ -256,7 +256,7 @@
         width: 310px;
     }
     .recoverModal h3{
-        font-size: 21px;
+        font-size: 20px;
     }
     .btn{
         font-size: 26px;
