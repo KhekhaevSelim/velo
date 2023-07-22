@@ -207,15 +207,27 @@ color: #B7B7B7;
         padding-left: 18px;
     }
     .recoverModal h3{
-        font-size: 22px;
+        font-size: 21px;
         margin: 40px 0 0 0;
     }
     .recoverModal{
-        width: 310px;
-        height: 260px;
+        width: 340px;
+        height: 280px;
     }
     .closeIcon{
         width: 29px;
         height: 29px;
     }
+    .btn{
+        font-size: 26px;
+    }
+}
+@media screen and (max-width: 350px) {
+    .recoverModal{
+        width: 310px;
+    }
+    .recoverModal h3{
+        font-size: 20px;
+    }
+
 }

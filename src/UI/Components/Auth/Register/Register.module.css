@@ -250,6 +250,9 @@
         width: 29px;
         height: 29px;
     }
+    .btn{
+        font-size: 26px;
+    }
 }
 @media screen and (max-width: 350px) {
     .recoverModal{
@@ -258,7 +261,5 @@
     .recoverModal h3{
         font-size: 20px;
     }
-    .btn{
-        font-size: 26px;
-    }
+
 }
