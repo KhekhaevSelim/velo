@@ -4,7 +4,7 @@ import AuthHeader from "../Header/AuthHeader";
 import {useFormik} from "formik";
 import {NavLink} from "react-router-dom";
 import closeIcon from "../../../../assets/icons/+.svg";
-
+import {useNavigate} from "react-router-dom"
 
 type ErrorsType = {
     email: string
@@ -12,6 +12,24 @@ type ErrorsType = {
     confirmPassword : string
 }
 const Register = () => {
+    const navigate = useNavigate()
+    /**
+     * локальный стейт для тогглинга мадалки восстановления пароля .. заглушка, пока нет бэка
+     */
+    const [showNewPassModal, setShowNewPassModal] = useState<boolean>(false)
+
+    /**
+     * функция для отображения мадолки восстановления пароля ... заглушка, пока нет бэка
+     */
+    const showModal2 = () => {
+        setShowNewPassModal(true)
+    }
+    /**
+     * функция для закрытия модалки
+     */
+    const closeModal2 = () => {
+        setShowNewPassModal(false)
+    }
     /**
      * локальный стейт для тогглинга мадалки восстановления пароля
      */
@@ -96,6 +114,10 @@ const Register = () => {
         onSubmit: values => {
             alert(JSON.stringify(values, null, 2));
             formik2.resetForm()
+            setTimeout(()=> {
+                closeModal()
+                showModal2()
+            })
         },
         validate: (values) => {
             const errors: any = {};
@@ -109,8 +131,85 @@ const Register = () => {
             return errors;
         }
     });
+    const formik3 = useFormik({
+        initialValues: {
+            newPassword: '',
+            confirmNewPass : ''
+        },
+        onSubmit: values => {
+            alert(JSON.stringify(values, null, 2));
+            formik2.resetForm()
+            closeModal2()
+            navigate("/login")
+        },
+        validate: (values) => {
+            const errors: any = {};
+
+            if (!values.newPassword) {
+                errors.newPassword = "Пожалуйста, введите пароль";
+            }
+            if(!values.confirmNewPass){
+                errors.confirmNewPass = "Пожалуйста, подтвердите пароль";
+            } else if (values.confirmNewPass && values.newPassword !== values.confirmNewPass) {
+                errors.confirmNewPass = "Пароли не совпадают. Попробуйте еще раз";
+            }
+            console.log(errors)
+            return errors;
+        }
+    });
     return (
         <div className={style.container}>
+            <div className={ showNewPassModal ? style.recoverModalBg : style.hiddenRecoverModalBg} onClick={closeModal2}>
+                <div className={style.recoverModal} onClick={(e)=> e.stopPropagation()}>
+                    <h3>ВОССТАНОВЛЕНИЕ ПАРОЛЯ</h3>
+                    <form onSubmit={formik3.handleSubmit} className={style.form}>
+                        {/**
+                         * данный инпут имеет изначально display : none, поэтому мы напрямую передает value и обработчики событий
+                         **/
+                        }
+                        <input
+                            id={"newPassword"}
+                            type="password"
+                            placeholder={"Введите новый пароль"}
+                            value={formik3.values.newPassword}
+                            onChange={formik3.handleChange}
+                            onBlur={formik3.handleBlur}
+
+                            className={
+                                formik3.touched.newPassword && formik3.errors.newPassword
+                                    ? style.recoverErrorInput
+                                    : style.recoverInput
+                            }
+                        />
+                        {formik3.touched.newPassword && formik3.errors.newPassword && (
+                            <div className={style.errorMessage}>
+                                {formik3.errors.newPassword}
+                            </div>
+                        )}
+                        <input
+                            id={"confirmNewPass"}
+                            type="password"
+                            placeholder={"Введите новый пароль"}
+                            value={formik3.values.confirmNewPass}
+                            onChange={formik3.handleChange}
+                            onBlur={formik3.handleBlur}
+
+                            className={
+                                formik3.touched.confirmNewPass && formik3.errors.confirmNewPass
+                                    ? style.recoverErrorInput
+                                    : style.recoverInput
+                            }
+                        />
+                        {formik3.touched.confirmNewPass && formik3.errors.confirmNewPass && (
+                            <div className={style.errorMessage}>
+                                {formik3.errors.confirmNewPass}
+                            </div>
+                        )}
+                        <button type="submit" className={style.recoverBtn} style={{marginTop : "10px"}}>ВОССТАНОВИТЬ</button>
+                    </form>
+                    <img src={closeIcon} alt={"close"} onClick={closeModal2} className={style.closeIcon}/>
+                </div>
+            </div>
             <div className={ showRecoverModal ? style.recoverModalBg : style.hiddenRecoverModalBg} onClick={closeModal}>
                 <div className={style.recoverModal} onClick={(e)=> e.stopPropagation()}>
                     <h3>ВОССТАНОВЛЕНИЕ ПАРОЛЯ</h3>
