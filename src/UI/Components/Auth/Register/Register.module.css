@@ -243,11 +243,22 @@
         margin: 40px 0 0 0;
     }
     .recoverModal{
-        width: 310px;
-        height: 260px;
+        width: 330px;
+        height: 280px;
     }
     .closeIcon{
         width: 29px;
         height: 29px;
+    }
+}
+@media screen and (max-width: 350px) {
+    .recoverModal{
+        width: 310px;
+    }
+    .recoverModal h3{
+        font-size: 21px;
+    }
+    .btn{
+        font-size: 26px;
     }
 }

@@ -25,7 +25,6 @@ const Login = () => {
      * функция для отображения мадолки восстановления пароля
      */
     const showModal = () => {
-        debugger
         setShowRecoverModal(true)
     }
     /**
@@ -87,7 +86,6 @@ const Login = () => {
             emailRecoverPassword: ''
         },
         onSubmit: values => {
-            debugger
             alert(JSON.stringify(values, null, 2));
             formik2.resetForm()
         },
