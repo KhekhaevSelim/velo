@@ -160,7 +160,7 @@ const Register = () => {
     return (
         <div className={style.container}>
             <div className={ showNewPassModal ? style.recoverModalBg : style.hiddenRecoverModalBg} onClick={closeModal2}>
-                <div className={style.recoverModal} onClick={(e)=> e.stopPropagation()}>
+                <div className={style.recoverModal} style={{height : '330px'}} onClick={(e)=> e.stopPropagation()}>
                     <h3>ВОССТАНОВЛЕНИЕ ПАРОЛЯ</h3>
                     <form onSubmit={formik3.handleSubmit} className={style.form}>
                         {/**
