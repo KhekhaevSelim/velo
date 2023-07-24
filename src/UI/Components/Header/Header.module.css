@@ -19,7 +19,7 @@
 }
 
 .navbar {
-    padding: 40px 20px;
+    padding: 60px 20px;
     width: 100%;
     position: absolute;
     display: flex;
@@ -135,23 +135,25 @@
     margin-bottom: 0;
     font-size: 130px;
     font-weight: 700;
-    animation: floatText 3s ease-in-out infinite;
+    line-height: 100px;
+    /*animation: floatText 3s ease-in-out infinite;*/
 }
-@keyframes floatText {
-    0%{
-        transform: translateY(0);
-    }
-    50%{
-        transform: translateY(-1rem);
-    }
-    100%{
-        transform: translateY(0);
-    }
-}
+/*@keyframes floatText {*/
+/*    0%{*/
+/*        transform: translateY(0);*/
+/*    }*/
+/*    50%{*/
+/*        transform: translateY(-1rem);*/
+/*    }*/
+/*    100%{*/
+/*        transform: translateY(0);*/
+/*    }*/
+/*}*/
 .heading p{
     color: var(--text-color);
     font-size: 32px;
     font-weight: 400;
+    text-align: center;
 }
 .btn{
     display: flex;
@@ -161,12 +163,12 @@
     color: var(--text-color);
     font-weight: 600;
     font-size: 28px;
-    border-radius: 10px;
-    height: 50px;
-    width: 15vw;
-    min-width: 200px;
+    border-radius: 8px;
+    height: 53px;
+    width: 233px;
+    /* min-width: 200px; */
     padding-top: 2px;
-    margin-top: 20px;
+    margin-top: 38px;
     cursor: pointer;
     box-shadow: 0 0 1rem var(--main-color);
     transition: .5s ease;
@@ -174,23 +176,8 @@
 .btn:hover{
     box-shadow: none;
 }
-@media screen and (max-width: 3250px) {
-    .heading h1{
-        font-size: 130px;
-    }
-}
-@media screen and (max-width: 2650px) {
-    .heading h1{
-        font-size: 110px;
-    }
-}
-@media screen and (max-width: 2150px) {
-    @media screen and (max-width: 2150px) {
-        .heading h1{
-            font-size: 95px;
-        }
-    }
-}
+
+
 
 @media screen and (max-width: 1920px) {
     .navbar a {
@@ -199,12 +186,6 @@
     .navbarActive a {
         font-size: 28px;
     }
-    .btn{
-        font-size: 26px;
-    }
-        .heading h1{
-            font-size: 90px;
-        }
 }
 @media screen and (max-width: 1470px) {
     .navbar a {
@@ -213,12 +194,7 @@
     .navbarActive a {
         font-size: 24px;
     }
-    .btn{
-        font-size: 24px;
-    }
-    .heading h1{
-        font-size: 85px;
-    }
+
 }
 @media screen and (max-width: 1280px) {
     .navbar a {
@@ -227,12 +203,7 @@
     .navbarActive a {
         font-size: 20px;
     }
-    .btn{
-        font-size: 22px;
-    }
-    .heading h1{
-        font-size: 80px;
-    }
+
 }
 @media screen and (max-width: 940px) {
     .navbar a {
@@ -241,11 +212,17 @@
     .navbarActive a {
         font-size: 18px;
     }
-    .btn{
-        font-size: 20px;
-    }
+
     .heading h1{
-        font-size: 70px;
+        font-size: 100px;
+        line-height: 80px;
+    }
+    .heading{
+        margin-top: 42vh;
+
+    }
+    .heading p {
+        font-size: 25px;
     }
 }
 @media screen and (max-width: 760px) {
@@ -256,7 +233,7 @@
         display: none;
     }
     .mobileNavPart {
-        padding: 12px 5px;
+        padding: 30px 5px;
         width: 100%;
         position: absolute;
         display: flex;
@@ -267,9 +244,10 @@
         width: 100%;
         position: absolute;
         display: flex;
+        font-size: 20px ;
     }
     .mobileNavPart a {
-        font-size: 18px;
+        font-size: 20px;
         font-weight: 600;
         color: var(--text-color);
         text-align: center;
@@ -292,7 +270,7 @@
         transition: 300ms;
     }
     .mobileNavHeader h3{
-        font-size: 30px;
+        font-size: 35px;
     }
     .mobileNavFul a:nth-child(8) {
         color: var(--main-color);
@@ -309,12 +287,19 @@
         /*top: 13px;*/
         /*left: 5px;*/
     }
-    .btn{
-        font-size: 18px;
-    }
-    .heading h1{
-        font-size: 65px;
-    }
+.btn {
+    margin-top: 32px;
+}
+.heading h1{
+    font-size: 50px;
+    line-height: 50px;
+}
+.heading{
+    margin-top: 50vh;
+}
+.heading p{
+    font-size: 15px;
+}
 }
 
 @media screen and (max-width: 820px) {
@@ -323,46 +308,12 @@
         top: 9px;
         left: 9px;
     }
-    .heading h1{
-        font-size: 60px;
-    }
-    .heading p{
-        font-size: 22px;
-    }
-    .mobileNavPart a {
-        font-size: 22px;
-    }
-    .mobileNavFul a {
-        font-size: 12px;
-        padding: 5px 0;
-    }
-    .btn{
-
-    }
 }
 @media screen and (max-width: 620px) {
     #menuIcon{
         font-size: 35px;
         top: 13px;
         left: 5px;
-    }
-    .heading h1{
-        font-size: 50px;
-    }
-    .heading p{
-        font-size: 20px;
-    }
-    .mobileNavPart a {
-        font-size: 18px;
-    }
-    .mobileNavFul a {
-        font-size: 18px;
-    }
-    .mobileNavHeader h3{
-        font-size: 35px;
-    }
-    .btn{
-        font-size: 16px;
     }
 }
 
@@ -372,47 +323,9 @@
         top: 13px;
         left: 5px;
     }
-    .heading h1 {
-        font-size: 40px;
-    }
-
-    .heading p {
-        font-size: 16px;
-    }
-
-    .mobileNavPart a {
-        font-size: 18px;
-    }
-    .mobileNavFul a {
-        font-size: 18px;
-    }
-    .mobileNavHeader h3{
-        font-size: 35px;
-    }
-    .btn{
-        font-size: 14px;
-        height: 40px;
-    }
 }
 @media screen and (max-width: 420px) {
-    .heading h1{
-        font-size: 30px;
-    }
-    .heading p{
-        font-size: 14px;
-    }
-    .mobileNavPart a {
-        font-size: 18px;
-    }
-    .mobileNavFul a {
-        font-size: 18px;
-    }
-    .mobileNavHeader h3{
-        font-size: 35px;
-    }
-    .btn{
-        min-width: 130px;
-    }
+
 }
 @media screen and (max-height: 1380px) {
     #menuIcon{
@@ -425,4 +338,9 @@
     /*.navbarActive a {*/
     /*    font-size: 12px;*/
     /*}*/
+}
+@media screen and (max-height: 780px) {
+    .heading {
+        margin-top: 32vh;
+    }
 }
