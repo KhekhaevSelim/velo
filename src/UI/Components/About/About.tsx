@@ -61,8 +61,8 @@ const About = () => {
                         </div>
                         <div className={style.right}>
                             <div className={style.imageContainer}>
-                                <img src={about1} alt=""/>
-                                <img src={about2} alt=""/>
+                                <img src={about1} alt="" style={{marginRight : "8px"}}/>
+                                <img src={about2} alt="" style={{marginLeft : "8px"}}/>
                             </div>
                             <h3>
                                 ЧТО ВЫ ПОЛУЧИТЕ
@@ -100,17 +100,20 @@ const About = () => {
                         <h3>
                             И ДАЖЕ ОЖИДАНИЯ ВАШЕГО ТРЕНЕРА
                         </h3>
-                        <h1>
-                            НА СТАРТ...
-                        </h1>
-                        <h1>
-                            ВНИМАНИЕ...
-                        </h1>
-                        <h1>
+                        <div className={style.startText}>
+                            <h1>
+                                НА СТАРТ...
+                            </h1>
+                            <h1>
+                                ВНИМАНИЕ...
+                            </h1>
+                            <h1>
                     <span>
                         WattAttack!
                     </span>
-                        </h1>
+                            </h1>
+                        </div>
+
                         <button className={style.btn}>ПОГНАЛИ!</button>
                     </div>
                 </div>

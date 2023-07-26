@@ -66,7 +66,7 @@ const Training = () => {
                             <h3>
                                 Загружай свои тренировки
                             </h3>
-                            <h3>
+                            <h3 style={{marginBottom : "7px"}}>
                                 в приложения Garmin, Strava, Training Peaks и соц. сети,
                             </h3>
                             <span>
