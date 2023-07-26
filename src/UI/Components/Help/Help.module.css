@@ -369,6 +369,7 @@ li {
 @media screen and (max-width: 760px) {
     .systemContainer h3, .equipmentContainer h3, .simulatorContainer h3, .filesContainer h3{
         font-size: 20px;
+        width: 90%;
     }
     .systemContainer p, .systemContainer li, .equipmentContainer p, .equipmentContainer li, .simulatorContainer li, .filesContainer p, .filesContainer span{
         font-size: 10px;
@@ -387,6 +388,15 @@ li {
     }
     .filesContainer h3{
         margin-top: 25px;
+    }
+    .systemInfoContainer ul, .equipmentInfoContainer ul {
+        padding: 10px 20px 10px;
+    }
+    .simulatorContainer ul{
+        width: 97%;
+    }
+    .filesInfo{
+        width: 97%;
     }
 }
 
