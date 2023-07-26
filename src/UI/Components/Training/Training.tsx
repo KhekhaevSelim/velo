@@ -53,17 +53,30 @@ const Training = () => {
                             :
                             ""
                         }
+                    {/*    <div className={style.footer}>*/}
+                    {/*        <h3>*/}
+                    {/*            Загружай свои тренировки в приложения Garmin, Strava, Training Peaks и соц. сети,*/}
+                    {/*        </h3>*/}
+                    {/*        <span>*/}
+                    {/*И пусть все удивятся*/}
+                    {/*    </span>*/}
+                    {/*    </div>*/}
+                    </div>
                         <div className={style.footer}>
                             <h3>
-                                Загружай свои тренировки в приложения Garmin, Strava, Training Peaks и соц. сети,
+                                Загружай свои тренировки
+                            </h3>
+                            <h3>
+                                в приложения Garmin, Strava, Training Peaks и соц. сети,
                             </h3>
                             <span>
                     И пусть все удивятся
                         </span>
                         </div>
                     </div>
-                    </div>
+
             </div>
+
         </div>
     );
 };

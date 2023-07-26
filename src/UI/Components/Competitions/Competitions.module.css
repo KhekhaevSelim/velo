@@ -15,80 +15,68 @@
     align-items: center;
 }
 .header h3{
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-top: 110px;
+    margin-bottom: 30px;
     color : var(--text-color);
     font-weight: 700;
     font-size: 50px;
 }
 .competitionsContainer{
-display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    flex-wrap: wrap;
     grid-template-rows: repeat(2,1fr);
+    justify-content: center;
 }
 .footer{
     font-size: 40px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 50px 80px;
+    margin: 40px 0 110px 0;
 }
 .footer h3{
     color: var(--text-color);
     text-align: center;
 }
 .footer span{
-color: var(--main-color)
+color: var(--main-color);
+    margin-top: 21px;
 }
-@media screen and (max-width: 3250px) {
-    .footer{
-        font-size: 40px;
-    }
-}
-@media screen and (max-width: 1800px) {
-    .footer{
-        font-size: 30px;
-    }
-}
-@media screen and (max-width: 1260px) {
+
+@media screen and (max-width: 1200px) {
     .footer{
         font-size: 20px;
+        margin-bottom: 80px;
     }
-}
-@media screen and (max-width: 1000px) {
-    .footer{
-        font-size: 18px;
+    .footer span{
+        margin-top: 10px;
     }
-}
-@media screen and (max-width: 900px) {
-    .footer{
-        font-size: 15px;
+    .footer h3{
+        font-size: 20px;
     }
-}
-@media screen and (max-width: 1620px) {
     .header h3{
-        font-size: 40px;
+        margin-top: 80px;
     }
 }
-@media screen and (max-width: 1200px) {
-    .header h3 {
-        font-size: 35px;
-    }
-}
+
 @media screen and (max-width: 760px) {
-    .header h3{
-        font-size: 30px;
-    }
     .competitionsContainer{
         display: flex;
         flex-direction: column;
+        align-items: center;
     }
-}
-@media screen and (max-width: 520px) {
     .header h3{
-        font-size: 25px;
+        font-size: 41px;
+        margin-top: 60px;
+        margin-bottom: 10px;
     }
     .footer{
-        margin: 43px 30px;
+        margin: 35px 37px 45px 37px;
     }
+     .footer span{
+         text-align: center;
+     }
+}
+@media screen and (max-width: 370px) {
+
 }

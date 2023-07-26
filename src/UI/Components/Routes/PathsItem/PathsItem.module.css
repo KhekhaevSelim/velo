@@ -1,11 +1,11 @@
 
 
 .routeItem {
-    width: 90%;
-    height: 53%;
+    width: 385px;
+    height: 364px;
     display: flex;
     flex-direction: column;
-    margin: 10px 0;
+    margin: 17px;
 }
 
 .routeImage {
@@ -54,7 +54,7 @@
 
 .routeItemFooter span {
     font-weight: 600;
-    font-size: 22px;
+    font-size: 26px;
     color: var(--main-color);
     z-index: 1;
 }
@@ -115,6 +115,49 @@
     line-height: 0;
 }
 
+@media screen and (max-width: 1320px) {
+    .routeItem{
+        width: 320px;
+        height: 182px;
+    }
+    .routeItemFooter span{
+        font-size: 21px;
+    }
+}
+@media screen and (max-width: 1116px) {
+    .routeItem{
+        width: 290px;
+        height: 152px;
+    }
+    .routeItemFooter span{
+        font-size: 19px;
+    }
+}
+@media screen and (max-width: 1030px) {
+    .routeItem{
+        width: 204px;
+        height: 201px;
+    }
+    .routeItemFooter span{
+        font-size: 12px;
+    }
+    .routeItemFooter img{
+        width: 9px;
+    }
+}
+@media screen and (max-width: 760px) {
+.routeItem{
+    width: 255px;
+    height: 188px;
+    margin: 15px 0;
+}
+    .routeItemFooter span {
+        font-size: 15px;
+    }
+    .routeItemFooter img{
+        width: 13px;
+    }
+}
 @media screen and (max-width: 2080px) {
     .routeDescription {
         font-size: 20px;
@@ -165,31 +208,8 @@
     }
 }
 
-
-/*route footer fonts media*/
-@media screen and (max-width: 1075px) {
-    .routeItemFooter span {
-        font-size: 13px;
-    }
-
-    .routeItemFooter img {
-        width: 12px;
-    }
-}
-
-@media screen and (max-width: 890px) {
-    .routeItemFooter span {
-        font-size: 11px;
-    }
-
-    .routeItemFooter img {
-        width: 12px;
-    }
-}
 @media screen and (max-width: 620px) {
-    .routeItem{
-        width: 80%;
-    }
+
     .imageContainer{
         display: flex;
     }

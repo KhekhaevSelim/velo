@@ -1,115 +1,135 @@
-.competitionsItem{
+.competitionsItem {
     display: flex;
-    width: 100%;
+    width: 584px;
+    height: 370px;
     flex-direction: column;
-    padding: 20px;
-    align-items: center;
+    padding: 10px 20px;
+    align-items: start;
     position: relative;
 }
-.competitionsItem img{
-    width: 60%;
-    height: 100%;
+
+.competitionsItem img {
+    /*width: 60%;*/
+    /*height: 100%;*/
+    width: 385px;
+    height: 290px;
     border-radius: 15px 15px 0 0;
     object-fit: cover;
     min-height: 160px;
 }
 
-.footer{
-    width: 60%;
+.footer {
+    /*width: 60%;*/
+    height: 80px;
+    width: 385px;
     background-color: var(--text-color);
     border-radius: 0 0 15px 15px;
     padding: 10px;
     text-align: center;
-}
-.footer h3{
-    color: var(--main-color);
-    font-weight: 700;
-    font-size: 40px;
-}
-.info{
-    background-color: white;
-    width: 40%;
-    height: auto;
-    border-radius: 10px;
-    padding: 20px;
-    position: absolute;
-    top: 15%;
-    right: 5%;
-    font-weight: 600;
-    -webkit-box-shadow: 0px 7px 8px 7px rgba(34, 60, 80, 0.07);
-    -moz-box-shadow: 0px 7px 8px 7px rgba(34, 60, 80, 0.07);
-    box-shadow: 0px 7px 8px 7px rgba(34, 60, 80, 0.07);
-}
-@media screen and (max-width: 3250px){
-    /*.info {*/
-    /*    font-size: 24px;*/
-    /*}*/
-}
-@media screen and (max-width: 2440px){
-    /*.info {*/
-    /*    font-size: 22px;*/
-    /*}*/
-}
-@media screen and (max-width: 2220px){
-.info {
-    font-size: 18px;
-}
-}
-@media screen and (max-width: 1680px){
-    .info {
-        font-size: 16px;
-    }
-    .footer h3{
-        font-size: 30px;
-    }
-}
-@media screen and (max-width: 1490px){
-    .info {
-        font-size: 14px;
-        width: 50%;
-        right: 3%;
-    }
-    .footer h3{
-        font-size: 25px;
-    }
-}
-@media screen and (max-width: 1260px){
-    .info {
-        font-size: 12px;
-        padding: 10px;
-    }
-    .footer h3{
-        font-size: 20px;
-    }
-}
-@media screen and (max-width: 1000px){
-    .info {
-        font-size: 11px;
-        padding: 10px;
-    }
-    .footer h3{
-        font-size: 18px;
-    }
-}
-@media screen and (max-width: 900px){
-    .footer h3{
-        font-size: 16px;
-    }
-}
-@media screen and (max-width: 760px) {
-    .competitionsItem{
-        align-items: unset;
-    }
-    .footer h3{
-        font-size: 15px;
-    }
-}
-@media screen and (max-width: 420px) {
-    .footer h3{
-        font-size: 14px;
-    }
-.info{
-    font-size: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
+.footer h3 {
+    color: var(--main-color);
+    font-weight: 700;
+    font-size: 32px;
+}
+
+.info {
+    background-color: white;
+    /* width: 40%; */
+    height: auto;
+    /* max-height: 232px; */
+    width: 290px;
+    border-radius: 10px;
+    padding: 25px 40px;
+    position: absolute;
+    top: 29px;
+    left: 293px;
+    font-weight: 300;
+    box-shadow: 0px 7px 8px 7px rgba(34, 60, 80, 0.07);
+    font-size: 17px;
+}
+
+@media screen and (max-width: 1200px) {
+    .footer h3, .footer span {
+        font-size: 20px;
+    }
+    .competitionsItem img {
+        width: 242px;
+        height: 185px;
+    }
+    .footer{
+        height: 40px;
+        width: 242px;
+    }
+    .info{
+        width: 185px;
+        height: 116px;
+        left: 170px;
+        top: 17px;
+        font-size: 10px;
+        padding: 12px 25px;
+    }
+    .competitionsItem{
+        width: 400px;
+        height: 248px;
+    }
+}
+
+@media screen and (max-width: 799px) {
+    .competitionsItem{
+        width: 362px;
+    }
+}
+/*@media screen and (max-width: 940px) {*/
+/*    .footer h3, .footer span {*/
+/*        font-size: 20px;*/
+/*    }*/
+/*    .competitionsItem img {*/
+/*        width: 192px;*/
+/*        height: 145px;*/
+/*    }*/
+/*    .footer{*/
+/*        height: 40px;*/
+/*        width: 192px;*/
+/*    }*/
+/*    .info{*/
+/*        width: 145px;*/
+/*        height: 116px;*/
+/*        left: 146px;*/
+/*        top: 14px;*/
+/*        font-size: 10px;*/
+/*        padding: 12px 25px;*/
+/*    }*/
+/*}*/
+
+@media screen and (max-width: 760px) {
+    .competitionsItem {
+        align-items: unset;
+    }
+
+}
+@media screen and (max-width: 370px) {
+.competitionsItem{
+    width: 292px;
+    height: 185px;
+    margin: 20px;
+}
+    .competitionsItem img{
+        width: 192px;
+    }
+    .footer{
+        width: 192px;
+    }
+    .footer h3{
+        font-size: 17px;
+    }
+
+    .info{
+        width: 164px;
+        left: 124px;
+    }
 }

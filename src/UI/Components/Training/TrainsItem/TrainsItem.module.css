@@ -11,19 +11,19 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 110px;
+    width: 106px;
     background-color: var(--main-color);
     font-size: 50px;
     font-weight: 700;
     color: var(--text-color);
-    height: 110px;
-    clip-path: circle(50% at 50% 50%);
+    height: 101px;
+    clip-path: circle(44% at 50% 50%);
 }
 .top h3{
-    font-size: 35px;
+    font-size: 40px;
     font-weight: 700;
     color: var(--text-color);
-    margin-left: 21px;
+    margin-left: 40px;
 }
 
 .bottom{
@@ -37,79 +37,50 @@
     font-size: 20px;
     font-weight: 350;
 }
-@media screen and (max-width: 1790px){
-    .top span{
-        min-width: 126px;
-        font-size: 40px;
-        min-height: 126px;
-    }
-    .top h3{
-        font-size: 30px;
-    }
-    .bottom{
-        left: 140px;
-    }
-}
-@media screen and (max-width: 2166px){
-    .top span{
-        min-width: 103px;
-        font-size: 35px;
-        min-height: 100px;
-    }
-    .top h3{
-        font-size: 25px;
-    }
-    .bottom{
-        left: 140px;
-    }
-}
-@media screen and (max-width: 1340px){
-    .top span{
-        width: 64px;
-        min-width: 66px;
-        font-size: 28px;
-        height: 65px;
-        min-height: 65px;
-    }
-    .top h3{
-        font-size: 22px;
-    }
-    .bottom span {
-        font-size: 18px;
-    }
-    .bottom{
-        left: 83px;
-    }
-}
-@media screen and (max-width: 1060px){
-    .top span{
-        width: 64px;
-        min-width: 66px;
-        font-size: 24px;
-        height: 65px;
-        min-height: 65px;
-    }
+@media screen and (max-width: 1530px) {
     .top h3{
         font-size: 20px;
+        margin-left: 30px;
     }
-    .bottom span {
-        font-size: 16px;
-    }
-}
-@media screen and (max-width: 860px){
     .top span{
-        font-size: 22px;
+        font-size: 30px;
+        width: 70px;
+        height: 70px;
     }
-    .top h3{
-        font-size: 18px;
+    .bottom{
+        left: 102px;
     }
     .bottom span {
         font-size: 15px;
     }
 }
+@media screen and (max-width: 880px) {
+    .bottom {
+        left: 93px;
+    }
+}
+
 @media screen and (max-width: 760px) {
     .trainsItem{
         width: 100%;
         margin-bottom: 40px;
+    }
+    .bottom{
+        left: 69px;
+    }
+    .top h3{
+        margin-left: 15px;
+    }
+    .top span {
+        width: 57px;
+    }
+}
+@media screen and (max-width: 468px){
+    .top span {
+        width: 52px;
+        height: 50px;
+    }
+    .bottom{
+        left: 55px;
     }
 }

@@ -8,6 +8,7 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
+    margin-top: 80px;
     padding: 0 20px 0 20px;
 }
 .title h3{
@@ -16,20 +17,11 @@
     font-weight: 700;
     margin-bottom: 10px;
 }
-@media screen and (max-width: 640px) {
-    .title h3{
-        font-size: 32px;
-    }
-}
-@media screen and (max-width: 520px) {
-    .title h3{
-        font-size: 30px;
-    }
-}
 .routesContainer{
     display: grid;
-    grid-template-columns: repeat(3,1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(3,410px);
+    text-align: center;
+    grid-template-rows: repeat(2, 394px);
     flex-wrap: wrap;
     padding: 40px;
 }
@@ -45,77 +37,74 @@
 }
 .staticItem p{
     margin-top: 40%;
-    font-size: 20px;
+    font-size: 40px;
     font-weight: 700;
     z-index: 1;
 }
 .staticItem span{
-    font-size: 20px;
+    font-size: 40px;
     color: rgba(253, 89, 0, 1);
     font-weight: 700;
     z-index: 1;
 }
-/* static item fonts media*/
-@media screen and (max-width: 3250px){
-    .staticItem p{
-        font-size: 24px;
-    }
-    .staticItem span{
-        font-size: 24px;
-    }
-}
 
-@media screen and (max-width: 1300px){
-    .staticItem p{
-        margin-top: 30%;
-        font-size: 21px;
-    }
-    .staticItem span{
-        font-size: 21px;
-    }
-}
-@media screen and (max-width: 1150px){
-    .staticItem{
-        padding: 0 5%;
-    }
-    .staticItem p{
-        margin-top: 25%;
-        font-size: 19px;
-    }
-    .staticItem span{
-        font-size: 19px;
-    }
-}
-@media screen and (max-width: 1075px){
-    .staticItem p{
-        font-size: 16px;
-    }
-    .staticItem span{
-        font-size: 16px;
-    }
-}
-@media screen and (max-width: 890px){
-    .staticItem p{
-        margin-top: 20%;
-        font-size: 14px;
-    }
-    .staticItem span{
-        font-size: 14px;
-    }
-}
 
-@media screen and (max-width: 620px) {
+
+
+@media screen and (max-width: 1320px) {
+    .routesContainer{
+        grid-template-columns: repeat(3,345px);
+        grid-template-rows: repeat(2, 329px);
+    }
+    .staticItem p, .staticItem span{
+        font-size: 30px;
+    }
+    .staticItem p {
+        margin-top: 10%;
+    }
+
+}
+@media screen and (max-width: 1116px) {
+    .routesContainer{
+        grid-template-columns: repeat(3,315px);
+        grid-template-rows: repeat(2, 299px);
+    }
+}
+@media screen and (max-width: 1030px) {
+    .routesContainer{
+        grid-template-columns: repeat(3,232px);
+        grid-template-rows: repeat(2, 212px);
+    }
+    .staticItem p, .staticItem span{
+        font-size: 20px;
+    }
+    .staticItem p {
+        margin-top: 34%;
+    }
+
+}
+@media screen and (max-width: 760px) {
+    .title {
+        margin-top: 50px;
+    }
     .routesContainer{
         display: flex;
         flex-direction: column;
         align-items: center;
         flex-wrap: wrap;
-        padding: 40px;
+        padding: 0 40px;
+        width: 100vw;
     }
     .wrapper{
         background-color: #FFFFFF;
     }
 }
+/* static item fonts media*/
+
+
+
+
+
 
 
 
