@@ -43,17 +43,19 @@
     text-align: center;
 }
 .formTitle{
-    margin: 0px 0 20px 0;
+    margin: 0 0 20px 0;
     display: flex;
     flex-direction: column;
-    padding: 0 15%;
+    padding: 0 5%;
 }
 .formTitle h4{
+    font-size: 50px;
     margin-bottom: 10px;
     color: var(--text-color);
     font-weight: 700;
 }
 .formTitle span{
+    font-size: 20px;
     color: var(--text-color);
     font-weight: 350;
 }
@@ -64,21 +66,23 @@
     width: 100%;
 }
 .form input{
-    width: 80%;
+    width: 441px;
+    height: 50px;
     border-radius: 10px;
     padding: 15px;
     margin: 10px 0;
 }
 .form textarea{
-    width: 80%;
+    width: 441px;
+    height: 80px;
     border-radius: 10px;
     padding: 15px;
     resize: none;
     margin: 10px 0;
 }
 .btn{
-    width: 80%;
-    height: 15%;
+    width: 441px;
+    height: 50px;
     border-radius: 10px;
     padding: 5px 0 5px 0;
     display: flex;
@@ -96,35 +100,9 @@
 .btn:hover{
     box-shadow: none;
 }
-@media screen and (max-width: 3250px){
-    .formTitle h4{
-        font-size: 30px;
-    }
-    .formTitle span {
-       font-size: 20px;
-    }
-}
-@media screen and (max-width: 1800px){
-    .formTitle h4{
-        font-size: 26px;
-    }
-    .formTitle span {
-        font-size: 18px;
-    }
-    .btn{
-        font-size: 22px;
-    }
-}
+
+
 @media screen and (max-width: 1200px){
-    .formTitle h4{
-        font-size: 22px;
-    }
-    .formTitle span {
-        font-size: 15px;
-    }
-    .btn{
-        font-size: 18px;
-    }
     .form input, .form textarea{
         padding: 8px;
     }
@@ -134,9 +112,12 @@
         justify-content: center;
     }
     .formContainer{
-
         width: 70%;
         height: 70%;
+        margin-right: 0;
+    }
+    .wrapper {
+        justify-content: center;
     }
 }
 @media screen and (max-width: 760px){
@@ -146,19 +127,29 @@
         border-radius: 0;
         margin-right: 0;
     }
-    .formTitle h4{
-        font-size: 18px;
-    }
-    .formTitle span {
-        font-size: 13px;
-    }
-    .btn{
-        font-size: 15px;
-    }
     .form input, .form textarea{
         padding: 8px;
     }
     .formTitle{
-
+        padding: 0 10px;
     }
+    .formTitle h4{
+        font-size: 30px;
+    }
+    .formTitle span{
+        font-size: 15px;
+    }
+.form input{
+    width: 310px;
+    height: 50px;
+}
+.form textarea {
+    width: 310px;
+    height: 80px;
+}
+.btn {
+    width: 310px;
+    height: 50px;
+    font-size: 24px;
+}
 }
