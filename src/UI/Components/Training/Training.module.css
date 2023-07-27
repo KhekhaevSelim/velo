@@ -1,9 +1,9 @@
 
 .container{
-    margin-top: 30%;
-    display: flex;
-    /* position: relative; */
-    flex-direction: column;
+    /*margin-top: 30%;*/
+    /*display: flex;*/
+    /*!* position: relative; *!*/
+    /*flex-direction: column;*/
 }
 
 .header{

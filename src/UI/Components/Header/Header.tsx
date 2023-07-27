@@ -51,7 +51,7 @@ function Header() {
 
         <header className={style.home}>
             <div className={style.homeImg}>
-                <img src={bg} alt=""/>
+                {/*<img src={bg} alt=""/>*/}
             </div>
             {
                 /**

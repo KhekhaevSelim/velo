@@ -1,5 +1,7 @@
 .container{
-    height: 135vh;
+    /*!*height: 135vh;*!*/
+    /*min-height: 100vh;*/
+    /*background: linear-gradient(172deg, #111F28 74%, white 50%);*/
 }
 .backgroundLayer {
     width: 100%;
@@ -15,6 +17,7 @@
 .photoSection {
     height: 75%;
     background-color: #111F28;
+
     background-image: url("../../../assets/image/bg-image-2.svg");
     background-size: cover;
     background-position: center;
