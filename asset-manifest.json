@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/velo/static/css/main.9d4660cb.css",
-    "main.js": "/velo/static/js/main.0c63608a.js",
-    "static/media/bg-image-1.svg": "/velo/static/media/bg-image-1.d6d2daa37c9a1d56645f128e8138ef85.svg",
+    "main.css": "/velo/static/css/main.314f02ec.css",
+    "main.js": "/velo/static/js/main.a17a2337.js",
+    "static/media/bg-image-1.svg": "/velo/static/media/bg-image-1.d6d2daa37c9a1d56645f.svg",
     "static/media/route4.bmp": "/velo/static/media/route4.76cc438b955cdd5201df.bmp",
     "static/media/bg-image3.bmp": "/velo/static/media/bg-image3.cc141870bdc68ce35191.bmp",
     "static/media/aboutImage2.jpg": "/velo/static/media/aboutImage2.c8a51968d2e3d550dfe9.jpg",
     "static/media/route5.png": "/velo/static/media/route5.b58920cbd2d4014f528c.png",
-    "static/media/bg-image-2.svg": "/velo/static/media/bg-image-2.89d37168d7bfa6eb1c16.svg",
+    "static/media/bg-image-2.svg": "/velo/static/media/bg-image-2.085ff1e1018f80ec1cd1.svg",
     "static/media/aboutImage1.png": "/velo/static/media/aboutImage1.25de1639eae9ee99dfd3.png",
     "static/media/competitions2.jpeg": "/velo/static/media/competitions2.409a21a4afd2db02890a.jpeg",
     "static/media/competitions1.jpg": "/velo/static/media/competitions1.7b46b2bdfad367ec823d.jpg",
@@ -19,11 +19,11 @@
     "index.html": "/velo/index.html",
     "static/media/attention.svg": "/velo/static/media/attention.ab05ca4ff508522195bc69af57e852b7.svg",
     "static/media/+.svg": "/velo/static/media/+.a7c0ef3b4e3b9839eaafbcc8cd1091c2.svg",
-    "main.9d4660cb.css.map": "/velo/static/css/main.9d4660cb.css.map",
-    "main.0c63608a.js.map": "/velo/static/js/main.0c63608a.js.map"
+    "main.314f02ec.css.map": "/velo/static/css/main.314f02ec.css.map",
+    "main.a17a2337.js.map": "/velo/static/js/main.a17a2337.js.map"
   },
   "entrypoints": [
-    "static/css/main.9d4660cb.css",
-    "static/js/main.0c63608a.js"
+    "static/css/main.314f02ec.css",
+    "static/js/main.a17a2337.js"
   ]
 }
