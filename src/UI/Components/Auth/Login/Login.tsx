@@ -1,6 +1,6 @@
 import React, {MouseEventHandler, useEffect, useRef, useState} from 'react';
 import style from "./Login.module.css";
-import {NavLink} from "react-router-dom";
+import {NavLink, useNavigate} from "react-router-dom";
 import AuthHeader from "../Header/AuthHeader";
 import {useFormik} from "formik";
 import closeIcon from "../../../../assets/icons/+.svg";
@@ -16,6 +16,7 @@ type ErrorsType = {
     password: string
 }
 const Login = () => {
+    const navigate = useNavigate()
     /**
      * локальный стейт для тогглинга мадалки восстановления пароля .. заглушка, пока нет бэка
      */
@@ -79,9 +80,9 @@ const Login = () => {
             password: ''
         },
         onSubmit: values => {
-            alert(JSON.stringify(values, null, 2));
+            navigate("/cabinet")
             formik.resetForm()
-
+            
         },
         validate: (values) => {
             const errors: any = {};

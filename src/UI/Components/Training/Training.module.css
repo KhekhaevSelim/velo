@@ -14,6 +14,7 @@
     justify-content: center;
     align-items: center;
     margin-bottom: 10px;
+    margin-top: 103px;
 }
 .header p{
   font-size: 50px;
@@ -44,7 +45,7 @@
     max-width: 1250px;
 }
 .trainsContainer{
-    height: 85vh;
+    height: 100vh;
     /*background-image: url("../../../assets/image/bg-image-1.svg");*/
     /*background-repeat: no-repeat;*/
     /*background-size: cover;*/
@@ -107,10 +108,14 @@
 @media screen and (max-width: 500px) {
 
 }
-
+@media screen and (max-width: 960px) {
+    .header{
+        margin-top: 65px;
+    }
+}
 @media screen and (max-width: 760px) {
     .header{
-        margin-top: 0;
+        margin-top: 60px;
         margin-bottom: 22px;
     }
     .trainsContainer{

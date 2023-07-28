@@ -1,0 +1,505 @@
+.container {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.wrapper {
+    width: 1195px;
+    height: auto;
+}
+
+.navBar{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.navItem{
+    color: #111f28;
+    font-size: 26px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1px;
+    position: relative;
+    white-space: nowrap;
+    width: fit-content;
+    margin: 60px 52px 40px 0;
+}
+.navBar a:nth-child(7) {
+    color: var(--main-color);
+    margin-right: 0;
+}
+.navItem:hover{
+    color: var(--main-color);
+    font-size: 26px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1px;
+    position: relative;
+    white-space: nowrap;
+    width: fit-content;
+    margin: 60px 52px 40px 0;
+}
+.wrapper:last-of-type {
+    margin-right: 0;
+}
+.navLine{
+    width: 100%;
+    height: auto;
+    background-color:  #111f28;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.line{
+    width: 100%;
+    height: 72px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 14px 0 13px 0;
+}
+
+.line h1{
+    color: white;
+    font-size: 42px;
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: normal;
+    text-align: center;
+    white-space: nowrap; 
+}
+.lineRight{
+    display: flex;
+    flex-direction: column;
+}
+.lineRightTop{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 280px;
+}
+.lineBtns img:nth-child(1){
+    margin-right: 10px;
+}
+.name {
+    color: #ffffff;
+    font-family: "Bahnschrift-SemiLightSemiCondensed", Helvetica;
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+.email {
+    color: #888888;
+    font-family: "Bahnschrift-SemiLightSemiCondensed", Helvetica;
+    font-size: 13px;
+    font-weight: 300;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+.content{
+    background-color: #ffffff;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+.contentFlexBox{
+    display: flex;
+    justify-content: space-between;
+}
+.personalData{
+    width: 242px;
+    display: flex;
+    flex-direction: column;
+}
+.title{
+    display: flex;
+    align-items: center;
+}
+.personalData .title p {
+    color: #111f28;
+    font-family: "Bahnschrift-SemiCondensed", Helvetica;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+    margin: 20px 15px 0 0;
+}
+.personalData .title img{
+    width: 15px;
+    height: 15px;
+    margin: 24px 0 4px 0;
+}
+.personalData input{
+    border: 1px solid;
+    border-color: #a6a6a6;
+    border-radius: 8px;
+    display: flex;
+    overflow: hidden;
+    padding: 10px 20px;
+    width: 242px;
+    color: #a6a6a6;
+    font-family: "Bahnschrift-SemiLightSemiCondensed", Helvetica;
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+    margin: 10px 0;
+}
+.password{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0 0 0;
+}
+
+.password span:nth-child(1){
+    color: #111f28;
+    font-family: "Bahnschrift-SemiCondensed", Helvetica;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+.password span:nth-child(2){
+    color: #a6a6a6;
+    font-family: "Bahnschrift-SemiLightSemiCondensed", Helvetica;
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+.btn{
+    width: 243px;
+    height: 38px;
+    background-color: var(--main-color);
+    border-radius: 8px;
+    color: #ffffff;
+    font-family: "Bahnschrift-SemiBoldCondensed", Helvetica;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: normal;
+    text-align: center;
+    white-space: nowrap;
+}
+.clubData{
+    width: 242px;
+    display: flex;
+    flex-direction: column;
+}
+.clubData .title p {
+    color: #111f28;
+    font-family: "Bahnschrift-SemiCondensed", Helvetica;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+    margin: 20px 15px 0 0;
+}
+.clubData .title img{
+    width: 15px;
+    height: 15px;
+    margin: 24px 0 4px 0;
+}
+.clubData input{
+    border: 1px solid;
+    border-color: #a6a6a6;
+    border-radius: 8px;
+    display: flex;
+    overflow: hidden;
+    padding: 10px 20px;
+    width: 242px;
+    color: #a6a6a6;
+    font-family: "Bahnschrift-SemiLightSemiCondensed", Helvetica;
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+    margin: 10px 0;
+}
+
+.binding{
+    display: flex;
+    align-items: center;
+    margin: 10px 15px 10px 0;
+}
+
+.binding span {
+    color: #111f28;
+    font-family: "Bahnschrift-SemiCondensed", Helvetica;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+   margin: 0 15px 0 0 ;
+}
+.binding img{
+    width: 15px;
+    height: 15px;
+    margin: 3px 0 4px 0;
+}
+
+.boxContainer{
+    display: flex;
+    justify-content: start;
+}
+
+.boxContainer div:nth-child(3){
+    margin-right: 0;
+}
+
+
+.boxWrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin : 0 10px 11px 0;
+}
+
+.box1 {
+    background-image: url("../../../assets/image/strava.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #111f28;
+    border-radius: 8px;
+    height: 62px;
+    width: 62px;
+    
+}
+.ellipse1{
+    width: 28px;
+    height: 28px;
+    background-image: url("../../../assets/icons/ellipse.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 11px 0 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box2{
+    background-image: url("../../../assets/image/garmin.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #111f28;
+    border-radius: 8px;
+    height: 62px;
+    width: 62px;
+    
+}
+.ellipse2{
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-color : #69B04F;
+    margin: 11px 0 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box3{
+    background-image: url("../../../assets/image/trainingPeaks.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #111f28;
+    border-radius: 8px;
+    height: 62px;
+    width: 62px;
+    
+}
+.ellipse3{
+    width: 28px;
+    height: 28px;
+    background-image: url("../../../assets/icons/ellipse3.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: rotate(45deg);
+    margin: 11px 0 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rateData{
+    width: 242px;
+    display: flex;
+    flex-direction: column;
+}
+
+.rateData .title{
+display: flex;
+justify-content: space-between;
+padding: 0 15px 0 0;
+}
+
+.rateData .title p {
+    color: #111f28;
+    font-family: "Bahnschrift-SemiCondensed", Helvetica;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+    margin: 20px 15px 0 0;
+}
+.rateData .title img{
+    width: 15px;
+    height: 15px;
+    margin: 24px 15px 4px 0;
+}
+
+.rateFinishDate{
+    color: #a6a6a6;
+    font-family: "Bahnschrift-SemiLightSemiCondensed", Helvetica;
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+    margin: 20px 15px 0 0;
+}
+
+.rateInput{
+    border: 1px solid;
+    border-color: #111F28;
+    border-radius: 8px;
+    display: flex;
+    overflow: hidden;
+    padding: 10px 20px;
+    width: 242px;
+    color: #111F28;
+    font-family: "Bahnschrift-SemiLightSemiCondensed", Helvetica;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+    margin: 10px 0;
+}
+.rateData input::placeholder{
+    color: #111F28;
+}
+.approval{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+.customCheckBox{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+}
+.hiddenInput{
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+.checkBoxIcon{
+    width: 15px;
+    height: 15px;
+    border: 2px solid #ccc;
+    border-radius: 3px;
+    display: inline-block;
+    background-color: white;
+    margin: 12px 8px 10px 0;
+}
+.customCheckBox input:checked + .checkBoxIcon {
+    background-color: var(--main-color);
+    border: none;
+}
+.autoRenewal{
+    font-family: "Bahnschrift-SemiLightSemiCondensed", Helvetica;
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+    color: var(--main-color);
+}
+.pushNotify{
+    display: block;
+    font-family: "Bahnschrift-SemiCondensed", Helvetica;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+    color: #111F28;
+    margin: 41px 0 1px 0;
+}
+.pushNotifyText{
+    color: #111f28;
+    font-family: "Bahnschrift-SemiLightSemiCondensed", Helvetica;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.phoneNumInput{
+        border: 1px solid;
+        border-color: #a6a6a6;
+        border-radius: 8px;
+        display: flex;
+        overflow: hidden;
+        padding: 10px 20px;
+        width: 242px;
+        color: #a6a6a6;
+        font-family: "Bahnschrift-SemiLightSemiCondensed", Helvetica;
+        font-size: 14px;
+        font-weight: 300;
+        letter-spacing: 0;
+        line-height: normal;
+        white-space: nowrap;
+        margin: 10px 0;
+}
+.emailNotifySetting{
+    width: 380px;
+    display: flex;
+    flex-direction: column;
+}
+.emailNotifySetting .title p {
+    color: #111f28;
+    font-family: "Bahnschrift-SemiCondensed", Helvetica;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+    margin: 20px 15px 0 0;
+}
+.btnsContainer{
+    width: 380px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.btnsContainer .btn{
+    margin: 5px 0;
+}
+.btnsContainer button:nth-child(1){
+    margin-top: 137px;
+}
+.btnsContainer button:nth-child(3){
+    margin-bottom: 0;
+}
