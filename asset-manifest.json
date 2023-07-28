@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/velo/static/css/main.314f02ec.css",
-    "main.js": "/velo/static/js/main.a17a2337.js",
+    "main.css": "/velo/static/css/main.de3ff16f.css",
+    "main.js": "/velo/static/js/main.d42d95aa.js",
     "static/media/bg-image-1.svg": "/velo/static/media/bg-image-1.d6d2daa37c9a1d56645f.svg",
     "static/media/route4.bmp": "/velo/static/media/route4.76cc438b955cdd5201df.bmp",
     "static/media/bg-image3.bmp": "/velo/static/media/bg-image3.cc141870bdc68ce35191.bmp",
@@ -15,15 +15,24 @@
     "static/media/competitions4.jpg": "/velo/static/media/competitions4.7cde320ae788c0510f52.jpg",
     "static/media/route2.jpeg": "/velo/static/media/route2.200b6d6eb2ff33ae60f9.jpeg",
     "static/media/route3.jpeg": "/velo/static/media/route3.b77094a2c07f8e3d3812.jpeg",
+    "static/media/garmin.svg": "/velo/static/media/garmin.4a71edca40369f8dca1d.svg",
     "static/media/competitions3.jpg": "/velo/static/media/competitions3.b84a572fed80eaeb015e.jpg",
+    "static/media/strava.svg": "/velo/static/media/strava.ea29dfcb1c0b03cf1856.svg",
+    "static/media/trainingPeaks.svg": "/velo/static/media/trainingPeaks.8b2ce04cd5e1fc1eea87.svg",
+    "static/media/notifyIcon.svg": "/velo/static/media/notifyIcon.baad9b3093ea1b6c3bad362287a2ec30.svg",
+    "static/media/exitIcon.svg": "/velo/static/media/exitIcon.5b53dfd6c0f598ccbd980aceedb1594d.svg",
     "index.html": "/velo/index.html",
+    "static/media/Close_MD.svg": "/velo/static/media/Close_MD.56edbc1dd45272514ce86b809f459da0.svg",
     "static/media/attention.svg": "/velo/static/media/attention.ab05ca4ff508522195bc69af57e852b7.svg",
     "static/media/+.svg": "/velo/static/media/+.a7c0ef3b4e3b9839eaafbcc8cd1091c2.svg",
-    "main.314f02ec.css.map": "/velo/static/css/main.314f02ec.css.map",
-    "main.a17a2337.js.map": "/velo/static/js/main.a17a2337.js.map"
+    "static/media/done.svg": "/velo/static/media/done.6973757a43e415be7e484ab351381346.svg",
+    "static/media/ellipse.svg": "/velo/static/media/ellipse.6a9b17048a26df9bd5c0.svg",
+    "static/media/ellipse3.svg": "/velo/static/media/ellipse3.90a7e62923b88b566d70.svg",
+    "main.de3ff16f.css.map": "/velo/static/css/main.de3ff16f.css.map",
+    "main.d42d95aa.js.map": "/velo/static/js/main.d42d95aa.js.map"
   },
   "entrypoints": [
-    "static/css/main.314f02ec.css",
-    "static/js/main.a17a2337.js"
+    "static/css/main.de3ff16f.css",
+    "static/js/main.d42d95aa.js"
   ]
 }
