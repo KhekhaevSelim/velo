@@ -197,6 +197,7 @@
     line-height: normal;
     text-align: center;
     white-space: nowrap;
+    cursor: pointer;
 }
 .clubData{
     width: 242px;
@@ -299,7 +300,7 @@
 .box2{
     background-image: url("../../../assets/image/garmin.svg");
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center 21px;
     background-color: #111f28;
     border-radius: 8px;
     height: 62px;
