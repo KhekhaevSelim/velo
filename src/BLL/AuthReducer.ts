@@ -1,6 +1,6 @@
 import { ThunkAction } from "redux-thunk"
 import { AppRootStateType } from "./Store"
-import { APItodolist, CreateUserArgType } from "../DAL/Api"
+import { APItodolist, CreateUserArgType, GetUserArgType } from "../DAL/Api"
 
 export type InitialStateType = {
     id : string
@@ -22,20 +22,19 @@ export const setUserProfileAC = (userData : any) => {
 
 
 
-export const getUserProfile = () : ThunkAction<void, AppRootStateType, unknown, ProfileActionsTypes> => {
+export const getUserProfile = (getUserData : GetUserArgType) : ThunkAction<void, AppRootStateType, unknown, ProfileActionsTypes> => {
     return async (dispatch) => {
-       let response = await APItodolist.getUserProfile()
+       let response = await APItodolist.getUserProfile(getUserData)
           dispatch(setUserProfileAC(response.data))
 }}
 
 
-export const createUserProfile = (userData : CreateUserArgType) : ThunkAction<void, AppRootStateType, unknown, ProfileActionsTypes> => {
+export const createUserProfile = (createUserData : CreateUserArgType) : ThunkAction<void, AppRootStateType, unknown, ProfileActionsTypes> => {
     return async (dispatch) => {
-       let response = await APItodolist.createUserProfile(userData)
+       let response = await APItodolist.createUserProfile(createUserData)
           dispatch(setUserProfileAC(response.data))
 }}
 
 // ActionCreator types
 export type ProfileActionsTypes = ReturnType<typeof setUserProfileAC>
 
-//Thunk types

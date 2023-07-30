@@ -379,7 +379,7 @@ padding: 0 15px 0 0;
     margin: 20px 15px 0 0;
 }
 
-.rateInput{
+/* .rateInput{
     border: 1px solid;
     border-color: #111F28;
     border-radius: 8px;
@@ -398,7 +398,7 @@ padding: 0 15px 0 0;
 }
 .rateData input::placeholder{
     color: #111F28;
-}
+} */
 .approval{
     display: flex;
     justify-content: start;

@@ -1,12 +1,59 @@
 import React from 'react';
-import style from "./Cabinet.module.css"
+import style from "./Cabinet.module.css";
 import {NavLink} from "react-router-dom";
-import notify from "../../../assets/icons/notifyIcon.svg"
-import exit from "../../../assets/icons/exitIcon.svg"
-import attention from "../../../assets/icons/attention.svg"
-import close from "../../../assets/icons/Close_MD.svg"
-import done from "../../../assets/icons/done.svg"
+import notify from "../../../assets/icons/notifyIcon.svg";
+import exit from "../../../assets/icons/exitIcon.svg";
+import attention from "../../../assets/icons/attention.svg";
+import close from "../../../assets/icons/Close_MD.svg";
+import done from "../../../assets/icons/done.svg";
+import Select from 'react-select';
+
 const Cabinet = () => {
+  /**
+   * костамизируем селект из библиотеки 'react-select' под наш дизайн
+   */
+  const customStyles = {
+    control: (provided : any, state : any) => ({
+      ...provided,
+      borderRadius: 8,
+      borderColor: state.isFocused ? '#ea5521' : '#ccc',
+      boxShadow: state.isFocused ? '0 0 0 2px #ea5521' : 'none',
+      margin: '10px 0 20px 0',
+      '&:hover': {
+        borderColor: '#ea5521',
+      },
+    }),
+    option: (provided : any, state : any) => ({
+      ...provided,
+      backgroundColor: state.isFocused ? '#ea5521' : 'white',
+      color: state.isFocused ? 'white' : 'black',
+      fontFamily: "Helvetica",
+      fontStyle: 'normal', 
+      fontSize : '14px',
+      fontWeight: '600',
+    }),
+    menu: (provided : any) => ({
+      ...provided,
+      marginTop: 0,
+    }),
+    placeholder: (provided: any) => ({
+      ...provided,
+      fontFamily: "Helvetica",
+      fontStyle: 'normal', 
+      color: '#111F28',
+      fontSize : '14px',
+      fontWeight: '600',
+    }),
+  };
+  /**
+   * передадим объект пропсами в селект
+   */
+  const options = [
+    { value: 'Без подписки', label: 'Без подписки' },
+    { value: 'Месячная подписка', label: 'Месячная подписка' },
+    { value: 'Недельная подписка', label: 'Недельная подписка' },
+    { value: 'Дневная подписка', label: 'Дневная подписка' },
+  ];
     return (
         <div className={style.container}>
             <div className={style.wrapper}>
@@ -110,7 +157,11 @@ const Cabinet = () => {
                        до 12.12.2023
                      </span>
                    </div>
-                   <input type="text" placeholder='Название тарифа' className={style.rateInput}/>
+                   <Select 
+                   options={options}
+                   styles={customStyles}
+                   placeholder="Название тарифа"
+                   />
                    <button className={style.btn}>
                      ИЗМЕНИТЬ ТАРИФ
                    </button>
