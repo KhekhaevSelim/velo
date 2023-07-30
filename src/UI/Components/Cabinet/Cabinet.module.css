@@ -505,3 +505,206 @@ padding: 0 15px 0 0;
 .btnsContainer button:nth-child(3){
     margin-bottom: 0;
 }
+.mobileNavPart{
+    padding: 40px 20px;
+    width: 100%;
+    position: absolute;
+    justify-content: space-evenly;
+    align-items: center;
+    display: none;
+}
+.mobileNavPart a {
+    font-size: 32px;
+    font-weight: 600;
+    color: black;
+    text-align: center;
+    transition: 300ms;
+}
+
+.mobileNavPart a:nth-child(3) {
+    color: var(--main-color);
+}
+
+.mobileNavPart a:hover,
+.mobileNavPart a.active {
+    color: var(--main-color);
+}
+.mobileNavFul{
+    padding: 40px 20px;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    color: black;
+    z-index: 9999;
+    background-color: white;
+}
+
+.mobileNavHeader{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.mobileNavHeader h3{
+    color: var(--main-color);
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.mobileNavFul a {
+    font-size: 22px;
+    font-weight: 600;
+    color: black;
+    text-align: center;
+    transition: 300ms;
+}
+
+.mobileNavFul a:nth-child(8) {
+    color: var(--main-color);
+}
+
+.mobileNavFul a:hover,
+.mobileNavFul a.active {
+    color: var(--main-color);
+}
+@media screen and (max-width: 1240px) {
+    .wrapper {
+        width: 895px;
+        height: auto;
+    }
+    .navItem{
+      font-size: 18px;
+      margin: 30px 20px 30px 
+    }
+}
+
+@media screen and (max-width: 920px) {
+    .line h1{
+        font-size: 34px;
+    }
+    .wrapper {
+        width: 85vw;
+    }
+    .contentFlexBox{
+        flex-direction: column;
+        align-items: center;
+    }
+    .navBar{
+        display: none;
+    }
+    .mobileNavPart {
+        padding: 12px 5px;
+        width: 100%;
+        position: relative;
+        display: flex;
+        justify-content: space-around;
+    }
+    .mobileNavFul{
+        padding: 12px 20px;
+        width: 100%;
+        position: absolute;
+        display: flex;
+    }
+    .mobileNavPart a {
+        font-size: 18px;
+        font-weight: 600;
+        color: black;
+        text-align: center;
+        transition: 300ms;
+    }
+
+    .mobileNavPart a:nth-child(3) {
+        color: var(--main-color);
+    }
+
+    .mobileNavPart a:hover,
+    .mobileNavPart a.active {
+        color: var(--main-color);
+    }
+    .mobileNavFul a {
+        font-size: 20px;
+        font-weight: 600;
+        color: black;
+        text-align: center;
+        transition: 300ms;
+    }
+    .mobileNavHeader h3{
+        font-size: 35px;
+    }
+    .mobileNavFul a:nth-child(8) {
+        color: var(--main-color);
+    }
+
+    .mobileNavFul a:hover,
+    .mobileNavFul a.active {
+        color: var(--main-color);
+    }
+    #menuIcon{
+        display: block;
+        z-index: 9999;
+        font-size: 65px;
+        /*top: 13px;*/
+        /*left: 5px;*/
+    }
+}
+@media screen and (max-width: 620px) {
+    #menuIcon{
+        font-size: 35px;
+        top: 13px;
+        left: 5px;
+    }
+    .mobileNavPart a {
+        font-size: 18px;
+    }
+    .mobileNavFul a {
+        font-size: 18px;
+    }
+    .mobileNavHeader h3{
+        font-size: 35px;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    #menuIcon{
+        font-size: 30px;
+        top: 13px;
+        left: 5px;
+    }
+
+    .mobileNavPart a {
+        font-size: 18px;
+    }
+    .mobileNavFul a {
+        font-size: 18px;
+    }
+    .mobileNavHeader h3{
+        font-size: 35px;
+    }
+    .line {
+        flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    }
+    .btnsContainer{
+        width: 320px;
+    }
+    .emailNotifySetting{
+        width: 320px;
+    }
+}
+@media screen and (max-width: 420px) {
+
+    .mobileNavPart a {
+        font-size: 18px;
+    }
+    .mobileNavFul a {
+        font-size: 18px;
+    }
+    .mobileNavHeader h3{
+        font-size: 35px;
+    }
+}

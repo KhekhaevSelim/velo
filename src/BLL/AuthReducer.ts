@@ -12,9 +12,9 @@ export const authReducer = ( state : InitialStateType = profile, action : Profil
         //При регистрации возращается только логин(емайл)
         case "SetLogin" : 
         return {...state, profileData : {
-            ...state.profileData, login : action.login 
+            ...state.profileData, email : action.login 
         }}
-        // При входе возвращается вся инфа о пользователе 
+        // При входе возвращается вся инфа о пользователе
         case "SetUserData" :
             return {...state, profileData : action.userData}
         case "SetErrorMessage" :
@@ -59,7 +59,7 @@ export const createUserProfile = (createUserData : CreateUserArgType) : AppThunk
            .catch(e => {
             console.log(e.message)
             dispatch(setErrorMessageAC(e.message))
-        })
+        })  
 }}
 
 // ActionCreator types

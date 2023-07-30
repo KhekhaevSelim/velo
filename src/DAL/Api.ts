@@ -22,13 +22,17 @@ export const APItodolist = {
 // Response types
 
 export type GetUserProfileResType = {
+    name : string
     username: string,
-    login: string,
+    email: string,
+    is_activated : boolean,
     created_at: string,
     subscribes: Array<any>
 }
 
-
+export type CreateUserResType = {
+    login : string
+}
 
 export type ActivateUserResType = {
     name: string,

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import style from "./Cabinet.module.css";
 import {NavLink} from "react-router-dom";
 import notify from "../../../assets/icons/notifyIcon.svg";
@@ -12,6 +12,30 @@ import { AppRootStateType } from '../../../BLL/Store';
 import { GetUserProfileResType } from '../../../DAL/Api';
 
 const Cabinet = () => {
+  /**
+     хук для условного рендеринга иконки меню
+     */
+     const [isActiveMenu, setIsActiveMenu] = useState<boolean>(false);
+     /**
+      * хук для условного рендеринга активного и неактивного мобильного меню
+      */
+     const [isActiveNav, setIsActiveNav] = useState<boolean>(false);
+     /**
+      * функции для данмического изменения внешнего вида и иконки мобильного меню
+      */
+     const handleClickMenu = () => {
+         setIsActiveMenu(!isActiveMenu)
+         setIsActiveNav(!isActiveNav)
+     }
+     const handleClickLink = () => {
+         setIsActiveMenu(!isActiveMenu)
+         setIsActiveNav(!isActiveNav)
+     }
+
+
+     /**
+      * Достаем из стейта данные пользователя
+      */
   const profileData = useSelector<AppRootStateType, GetUserProfileResType>(state => state.AuthReducer.profileData)
   /**
    * костамизируем селект из библиотеки 'react-select' под наш дизайн
@@ -60,6 +84,35 @@ const Cabinet = () => {
   ];
     return (
         <div className={style.container}>
+          {
+                /**
+                 * условный рендеринг мобильного меню : свернутое и развернутое при клике по иконке меню
+                 */
+                isActiveNav ?
+                    <nav className={style.mobileNavFul}>
+                        <div className={style.mobileNavHeader}>
+                            <h3>WattAttack</h3>
+                            <i className={`bx ${isActiveMenu ? "bx-x" : "bx-menu"}`} id={style.menuIcon}
+                               onClick={handleClickMenu}></i>
+                        </div>
+                        <NavLink to="/#howStart" onClick={handleClickLink}>КАК НАЧАТЬ</NavLink>
+                        <NavLink to="/#routes" onClick={handleClickLink}>МАРШРУТЫ</NavLink>
+                        <NavLink to="/#training" onClick={handleClickLink}>ТРЕНИРОВКИ</NavLink>
+                        <NavLink to="/#about" onClick={handleClickLink}>О НАС</NavLink>
+                        <NavLink to="/#help" onClick={handleClickLink}>ПОМОЩЬ</NavLink>
+                        <NavLink to={"/login"}>ВОЙТИ</NavLink>
+                        <NavLink to={"/download"}>СКАЧАТЬ</NavLink>
+
+                    </nav>
+                    :
+                    <nav className={style.mobileNavPart}>
+                        <NavLink to={"/#howStart"}>КАК НАЧАТЬ</NavLink>
+                        <NavLink to={"/login"}>ВОЙТИ</NavLink>
+                        <NavLink to={"/download"}>СКАЧАТЬ</NavLink>
+                        <i className={`bx ${isActiveMenu ? "bx-x" : "bx-menu"}`} id={style.menuIcon}
+                           onClick={handleClickMenu}></i>
+                    </nav>
+            }
             <div className={style.wrapper}>
               <div className={style.navBar}>
                     <NavLink className={style.navItem} to="/#howStart">КАК НАЧАТЬ</NavLink>
