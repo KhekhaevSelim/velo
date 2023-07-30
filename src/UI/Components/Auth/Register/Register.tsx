@@ -5,6 +5,8 @@ import {useFormik} from "formik";
 import {NavLink} from "react-router-dom";
 import closeIcon from "../../../../assets/icons/+.svg";
 import {useNavigate} from "react-router-dom"
+import { useAppDispatch } from '../../../../CustomHooks/UseAppDispatch';
+import { createUserProfile } from '../../../../BLL/AuthReducer';
 
 type ErrorsType = {
     email: string
@@ -12,6 +14,11 @@ type ErrorsType = {
     confirmPassword : string
 }
 const Register = () => {
+     /**
+     * импортируем кастомный хук чтобы мы могли диспатчить любые экшены, в том числе и санки
+     */
+     const dispatch = useAppDispatch();
+     
     /**
      * локальный стейт для показа ошибок валидации формы тольок при клике
      */
@@ -26,40 +33,7 @@ const Register = () => {
 
     const navigate = useNavigate()
 
-    /**
-     * локальный стейт для тогглинга мадалки восстановления пароля .. заглушка, пока нет бэка
-     */
-    const [showNewPassModal, setShowNewPassModal] = useState<boolean>(false)
 
-    /**
-     * функция для отображения мадолки восстановления пароля ... заглушка, пока нет бэка
-     */
-    const showModal2 = () => {
-        setShowNewPassModal(true)
-    }
-    /**
-     * функция для закрытия модалки
-     */
-    const closeModal2 = () => {
-        setShowNewPassModal(false)
-    }
-    /**
-     * локальный стейт для тогглинга мадалки восстановления пароля
-     */
-    const [showRecoverModal, setShowRecoverModal] = useState<boolean>(false)
-
-    /**
-     * функция для отображения мадолки восстановления пароля
-     */
-    const showModal = () => {
-        setShowRecoverModal(true)
-    }
-    /**
-     * функция для закрытия модалки
-     */
-    const closeModal = () => {
-        setShowRecoverModal(false)
-    }
     /**
      * локальный стейт для тогглинга иконки скрытия пароля
      */
@@ -94,7 +68,11 @@ const Register = () => {
             isChecked : false
         },
         onSubmit: values => {
-            alert(JSON.stringify(values, null, 2));
+            const requstData = {
+                login : values.email,
+                password : values.password
+             }
+             dispatch(createUserProfile(requstData))
             formik.resetForm()
         },
         validate: (values) => {
@@ -120,141 +98,9 @@ const Register = () => {
             return errors;
         },
     });
-    const formik2 = useFormik({
-        initialValues: {
-            emailRecoverPassword: ''
-        },
-        onSubmit: values => {
-            alert(JSON.stringify(values, null, 2));
-            formik2.resetForm()
-            setTimeout(()=> {
-                closeModal()
-                showModal2()
-            })
-        },
-        validate: (values) => {
-            const errors: any = {};
-
-            if (!values.emailRecoverPassword) {
-                errors.emailRecoverPassword = "Пожалуйста, введите обязательное поле e-mail";
-            } else if (!isValidEmail(values.emailRecoverPassword)) {
-                errors.emailRecoverPassword = "Пожалуйста, введите корректный e-mail";
-            }
-            console.log(errors)
-            return errors;
-        }
-    });
-    const formik3 = useFormik({
-        initialValues: {
-            newPassword: '',
-            confirmNewPass : ''
-        },
-        onSubmit: values => {
-            alert(JSON.stringify(values, null, 2));
-            formik2.resetForm()
-            closeModal2()
-            navigate("/login")
-        },
-        validate: (values) => {
-            const errors: any = {};
-
-            if (!values.newPassword) {
-                errors.newPassword = "Пожалуйста, введите пароль";
-            }
-            if(!values.confirmNewPass){
-                errors.confirmNewPass = "Пожалуйста, подтвердите пароль";
-            } else if (values.confirmNewPass && values.newPassword !== values.confirmNewPass) {
-                errors.confirmNewPass = "Пароли не совпадают. Попробуйте еще раз";
-            }
-            console.log(errors)
-            return errors;
-        }
-    });
+ 
     return (
         <div className={style.container}>
-            <div className={ showNewPassModal ? style.recoverModalBg : style.hiddenRecoverModalBg} onClick={closeModal2}>
-                <div className={style.recoverModal} style={{height : '320px'}} onClick={(e)=> e.stopPropagation()}>
-                    <h3>ВОССТАНОВЛЕНИЕ ПАРОЛЯ</h3>
-                    <form onSubmit={formik3.handleSubmit} className={style.form}>
-                        {/**
-                         * данный инпут имеет изначально display : none, поэтому мы напрямую передает value и обработчики событий
-                         **/
-                        }
-                        <input
-                            id={"newPassword"}
-                            type="password"
-                            placeholder={"Введите новый пароль"}
-                            value={formik3.values.newPassword}
-                            onChange={formik3.handleChange}
-                            onBlur={formik3.handleBlur}
-
-                            className={
-                                formik3.touched.newPassword && formik3.errors.newPassword
-                                    ? style.recoverErrorInput
-                                    : style.recoverInput
-                            }
-                        />
-                        {formik3.touched.newPassword && formik3.errors.newPassword && (
-                            <div className={style.errorMessage}>
-                                {formik3.errors.newPassword}
-                            </div>
-                        )}
-                        <input
-                            id={"confirmNewPass"}
-                            type="password"
-                            placeholder={"Введите новый пароль"}
-                            value={formik3.values.confirmNewPass}
-                            onChange={formik3.handleChange}
-                            onBlur={formik3.handleBlur}
-
-                            className={
-                                formik3.touched.confirmNewPass && formik3.errors.confirmNewPass
-                                    ? style.recoverErrorInput
-                                    : style.recoverInput
-                            }
-                        />
-                        {formik3.touched.confirmNewPass && formik3.errors.confirmNewPass && (
-                            <div className={style.errorMessage}>
-                                {formik3.errors.confirmNewPass}
-                            </div>
-                        )}
-                        <button type="submit" className={style.recoverBtn} style={{marginTop : "10px"}}>ВОССТАНОВИТЬ</button>
-                    </form>
-                    <img src={closeIcon} alt={"close"} onClick={closeModal2} className={style.closeIcon}/>
-                </div>
-            </div>
-            <div className={ showRecoverModal ? style.recoverModalBg : style.hiddenRecoverModalBg} onClick={closeModal}>
-                <div className={style.recoverModal} onClick={(e)=> e.stopPropagation()}>
-                    <h3>ВОССТАНОВЛЕНИЕ ПАРОЛЯ</h3>
-                    <form onSubmit={formik2.handleSubmit} className={style.form}>
-                        {/**
-                         * данный инпут имеет изначально display : none, поэтому мы напрямую передает value и обработчики событий
-                         **/
-                        }
-                        <input
-                            id={"emailRecoverPassword"}
-                            type="email"
-                            placeholder={"Ваш e-mail"}
-                            value={formik2.values.emailRecoverPassword}
-                            onChange={formik2.handleChange}
-                            onBlur={formik2.handleBlur}
-
-                            className={
-                                formik2.touched.emailRecoverPassword && formik2.errors.emailRecoverPassword
-                                    ? style.recoverErrorInput
-                                    : style.recoverInput
-                            }
-                        />
-                        {formik2.touched.emailRecoverPassword && formik2.errors.emailRecoverPassword && (
-                            <div className={style.errorMessage}>
-                                {formik2.errors.emailRecoverPassword}
-                            </div>
-                        )}
-                        <button type="submit" className={style.recoverBtn} style={{marginTop : "10px"}}>ВОССТАНОВИТЬ</button>
-                    </form>
-                    <img src={closeIcon} alt={"close"} onClick={closeModal} className={style.closeIcon}/>
-                </div>
-            </div>
             <AuthHeader/>
             <div className={style.registerContainer}>
                 <div className={style.registerFormContainer}>
@@ -326,7 +172,7 @@ const Register = () => {
                     </form>
                     <div className={style.footer}>
                         <NavLink to={"/login"} className={style.loginLink}>Уже зарегистрированы? Войти</NavLink>
-                        <a href={"#recoverPassword"} className={style.recoverLink} onClick={showModal}>Забыли пароль?</a>
+                        <NavLink to={"/user/:id/recovery/:token"} className={style.recoverLink}>Забыли пароль?</NavLink>
                     </div>
                 </div>
             </div>

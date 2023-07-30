@@ -4,6 +4,8 @@ import './index.css';
 import App from './App';
 import {BrowserRouter, Route} from "react-router-dom";
 import Paths from "./UI/Components/Routes/Paths";
+import { store } from './BLL/Store';
+import { Provider } from 'react-redux';
 
 
 const root = ReactDOM.createRoot(
@@ -11,7 +13,9 @@ const root = ReactDOM.createRoot(
 );
 root.render(
     <BrowserRouter>
-        <App />
+        <Provider store={store}>
+          <App />
+        </Provider>
     </BrowserRouter>
 );
 

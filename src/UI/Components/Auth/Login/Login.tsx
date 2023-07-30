@@ -5,6 +5,8 @@ import AuthHeader from "../Header/AuthHeader";
 import {useFormik} from "formik";
 import closeIcon from "../../../../assets/icons/Close_MD.svg"
 import { log } from 'console';
+import { useAppDispatch } from '../../../../CustomHooks/UseAppDispatch';
+import { createUserProfile, getUserProfileTC } from '../../../../BLL/AuthReducer';
 
 
 
@@ -17,6 +19,10 @@ type ErrorsType = {
     password: string
 }
 const Login = () => {
+    /**
+     * импортируем кастомный хук чтобы мы могли диспатчить любые экшены, в том числе и санки
+     */
+    const dispatch = useAppDispatch()
     /**
      * локальный стейт для показа ошибок валидации формы тольок при клике
      */
@@ -58,6 +64,11 @@ const Login = () => {
             password: ''
         },
         onSubmit: values => {
+                 const requstData = {
+                    login : values.email,
+                    password : values.password
+                 }
+                 dispatch(getUserProfileTC(requstData))
                  navigate("/cabinet")
                  formik.resetForm()
         },
@@ -122,7 +133,7 @@ const Login = () => {
                     <div className={style.footer}>
                         <NavLink to={"/register"} className={style.registerLink}>Нет аккаунта?
                             Зарегистрируйтесь</NavLink>
-                        <NavLink to={"/recoverPassword"} className={style.recoverLink}>Забыли пароль?</NavLink>
+                        <NavLink to={"/user/:id/recovery/:token"} className={style.recoverLink}>Забыли пароль?</NavLink>
                     </div>
                 </div>
             </div>

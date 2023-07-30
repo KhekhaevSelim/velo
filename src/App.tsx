@@ -17,7 +17,7 @@ function App() {
                 <Route path={"/velo"} element={<VeloSite/>}/>
                 <Route path={"/login"} element={<Login/>}/>
                 <Route path={"/register"} element={<Register/>}/>
-                <Route path={"/recoverPassword"} element={<RecoverPassword/>}/>
+                <Route path={"/user/:id/recovery/:token"} element={<RecoverPassword/>}/>
                 <Route path={"/cabinet"} element={<Cabinet/>}/>
             </Routes>
         </div>

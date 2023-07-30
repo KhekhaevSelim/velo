@@ -1,7 +1,7 @@
 import axios from "axios"
 
 const instance = axios.create({
-    baseURL: "http://velo-api.com/",
+    baseURL: "https://gdl-test-02.site/",
     withCredentials: true
 })
 
@@ -11,7 +11,7 @@ export const APItodolist = {
         return instance.post<GetUserProfileResType>("user", getUserModel)
     },
     createUserProfile(createUserModel : CreateUserArgType) {
-        return instance.post<CreateUserResType>("user/create", createUserModel)
+        return instance.post<string>("user/create", createUserModel)
     },
     activateUserProfile(activateUserModel : ActivateUserArgType) {
         return instance.post<ActivateUserResType>("user/activate", activateUserModel)
@@ -28,10 +28,7 @@ export type GetUserProfileResType = {
     subscribes: Array<any>
 }
 
-export type CreateUserResType = {
-    name: string,
-    login:string
-}
+
 
 export type ActivateUserResType = {
     name: string,
@@ -47,8 +44,7 @@ export type GetUserArgType = {
 }
 
 export type CreateUserArgType = {
-    name: string,
-    login:string,
+    login : string
     password: string
     }
 
