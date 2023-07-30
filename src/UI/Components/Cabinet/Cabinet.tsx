@@ -101,7 +101,7 @@ const Cabinet = () => {
                    <input type="text" placeholder='Имя'/>
                    <input type="text" placeholder='Фамилия'/>
                    <input type="email" placeholder='E-mail'/>
-                   <div className={style.password}>
+                   {/* <div className={style.password}>
                      <span>Пароль</span>
                      <span>Забыли пароль?</span>
                    </div>
@@ -110,9 +110,9 @@ const Cabinet = () => {
                    <input type="password" placeholder='Подтвердите новый пароль'/>
                    <button className={style.btn}>
                         ИЗМЕНИТЬ ПАРОЛЬ
-                   </button>
+                   </button> */}
                  </div>
-                 <div className={style.clubData}>
+                 {/* <div className={style.clubData}>
                    <div className={style.title}>
                        <p>
                        Клуб, команда и тренер
@@ -146,7 +146,7 @@ const Cabinet = () => {
                       </div>
                     </div>
                    </div>
-                 </div>
+                 </div> */}
                  <div className={style.rateData}>
                    <div className={style.title}>
                      <p>
@@ -175,7 +175,7 @@ const Cabinet = () => {
                             </label>
                             <span className={style.autoRenewal}>Автопродление включено</span>
                     </div>
-                    <span className={style.pushNotify}>
+                    {/* <span className={style.pushNotify}>
                        Push-уведомления на телефон
                     </span>
                     <div className={style.approval}>
@@ -189,8 +189,8 @@ const Cabinet = () => {
                             <span className={style.pushNotifyText}>
                                 Мои события (напоминания)
                             </span>
-                    </div>
-                    <div className={style.approval}>
+                    </div> */}
+                    {/* <div className={style.approval}>
                             <label htmlFor="" className={style.customCheckBox}>
                                 <input 
                                 // checked={formik.values.isChecked}
@@ -201,8 +201,8 @@ const Cabinet = () => {
                             <span className={style.pushNotifyText}>
                                Начало тренировки друга
                             </span>
-                    </div>
-                    <div className={style.approval}>
+                    </div> */}
+                    {/* <div className={style.approval}>
                             <label htmlFor="" className={style.customCheckBox}>
                                 <input 
                                 // checked={formik.values.isChecked}
@@ -213,11 +213,11 @@ const Cabinet = () => {
                             <span className={style.pushNotifyText}>
                                Сообщения от клуба/команды/тренера
                             </span>
-                    </div>
-                    <input type="password" placeholder='Номер телефона' className={style.phoneNumInput}/>
+                    </div> */}
+                    {/* <input type="password" placeholder='Номер телефона' className={style.phoneNumInput}/> */}
                  </div>
                  <div className={style.emailNotifySetting}>
-                    <div className={style.title}>
+                    {/* <div className={style.title}>
                       <p>
                         Уведомления на e-mail
                       </p>
@@ -269,7 +269,7 @@ const Cabinet = () => {
                             <span className={style.pushNotifyText}>
                                Предложения и подсказки (скидки, магазин и т.д.)
                             </span>
-                    </div>
+                    </div> */}
                     <div className={style.btnsContainer}>
                         <button className={style.btn}>
                             ИСТОРИЯ ПОКУПОК И ОПЛАТ
@@ -277,9 +277,9 @@ const Cabinet = () => {
                         <button className={style.btn}>
                             СОХРАНИТЬ ВСЕ ИЗМЕНЕНИЯ
                         </button>
-                        <button className={style.btn}>
+                        {/* <button className={style.btn}>
                            УДАЛИТЬ АККАУНТ
-                        </button>
+                        </button> */}
                     </div>
                  </div>
                </div>

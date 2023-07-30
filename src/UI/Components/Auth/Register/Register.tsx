@@ -12,7 +12,20 @@ type ErrorsType = {
     confirmPassword : string
 }
 const Register = () => {
+    /**
+     * локальный стейт для показа ошибок валидации формы тольок при клике
+     */
+
+      const [showErrors, setShowErrors] = useState(false);
+      const handleClickShowErrors = () => {
+        setShowErrors(true);
+      };
+    /**
+     * хук для редиректа
+     */
+
     const navigate = useNavigate()
+
     /**
      * локальный стейт для тогглинга мадалки восстановления пароля .. заглушка, пока нет бэка
      */
@@ -257,12 +270,12 @@ const Register = () => {
                                     : style.input
                             }
                         />
-                        {formik.touched.email && formik.errors.email && (
+                        {formik.errors.email && showErrors && (
                             <div className={style.errorMessage}>
                                 {formik.errors.email}
                             </div>
                         )}
-                        <div className={formik.touched.password && formik.errors.password
+                        <div className={formik.touched.password && formik.errors.password 
                             ? style.errorInput
                             : style.input}>
                             <input
@@ -276,7 +289,7 @@ const Register = () => {
                             {/*<span onClick={handleClickShowPassword}><img src="../../../../assets/icons/showPassSvg.svg" /></span>*/}
                         </div>
 
-                        {formik.touched.password && formik.errors.password && (
+                        { formik.errors.password && showErrors && (
                             <div className={style.errorMessage}>
                                 {formik.errors.password}
                             </div>
@@ -295,7 +308,7 @@ const Register = () => {
                             {/*<span onClick={handleClickShowPassword}><img src="../../../../assets/icons/showPassSvg.svg" /></span>*/}
                         </div>
 
-                        {formik.touched.confirmPassword && formik.errors.confirmPassword && (
+                        {formik.errors.confirmPassword && showErrors && (
                             <div className={style.errorMessage}>
                                 {formik.errors.confirmPassword}
                             </div>
@@ -309,7 +322,7 @@ const Register = () => {
                             </label>
                             <NavLink to={"/login"} className={style.loginLink} style={{marginLeft : "10px"}}>Согласен на обработку персональных данных</NavLink>
                         </div>
-                        <button type="submit" className={style.btn}>РЕГИСТРАЦИЯ</button>
+                        <button type="submit" className={style.btn} onClick={handleClickShowErrors}>РЕГИСТРАЦИЯ</button>
                     </form>
                     <div className={style.footer}>
                         <NavLink to={"/login"} className={style.loginLink}>Уже зарегистрированы? Войти</NavLink>

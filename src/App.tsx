@@ -5,6 +5,7 @@ import Login from "./UI/Components/Auth/Login/Login";
 import VeloSite from "./UI/Components/VeloSite/VeloSite";
 import Register from "./UI/Components/Auth/Register/Register";
 import Cabinet from "./UI/Components/Cabinet/Cabinet";
+import RecoverPassword from './UI/Components/Auth/RecoverPassword/RecoverPassword';
 
 
 
@@ -16,6 +17,7 @@ function App() {
                 <Route path={"/velo"} element={<VeloSite/>}/>
                 <Route path={"/login"} element={<Login/>}/>
                 <Route path={"/register"} element={<Register/>}/>
+                <Route path={"/recoverPassword"} element={<RecoverPassword/>}/>
                 <Route path={"/cabinet"} element={<Cabinet/>}/>
             </Routes>
         </div>
