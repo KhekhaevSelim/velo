@@ -1,13 +1,15 @@
-import React, {MouseEventHandler, useEffect, useRef, useState} from 'react';
+import React, { useEffect, useRef, useState} from 'react';
 import style from "./Login.module.css";
 import {NavLink, useNavigate} from "react-router-dom";
 import AuthHeader from "../Header/AuthHeader";
 import {useFormik} from "formik";
-import closeIcon from "../../../../assets/icons/Close_MD.svg"
-import { log } from 'console';
 import { useAppDispatch } from '../../../../CustomHooks/UseAppDispatch';
-import { createUserProfile, getUserProfileTC } from '../../../../BLL/AuthReducer';
-
+import { getUserProfileTC } from '../../../../BLL/AuthReducer';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { useSelector } from 'react-redux';
+import { AppRootStateType } from '../../../../BLL/Store';
+import { GetUserProfileResType } from '../../../../DAL/Api';
 
 
 
@@ -19,12 +21,18 @@ type ErrorsType = {
     password: string
 }
 const Login = () => {
+    const profileData = useSelector<AppRootStateType, GetUserProfileResType | null>(state => state.AuthReducer.profileData );
+    const errorMessage = useSelector<AppRootStateType, string>(state => state.AuthReducer.errorMessage );
+    // const showToast = useSelector<AppRootStateType, boolean>(state => state.AuthReducer.showToast);
+    // const isInitialized = useSelector<AppRootStateType, boolean>(state => state.AuthReducer.isInitialized);
+    
+    
     /**
      * импортируем кастомный хук чтобы мы могли диспатчить любые экшены, в том числе и санки
      */
     const dispatch = useAppDispatch()
     /**
-     * локальный стейт для показа ошибок валидации формы тольок при клике
+     * локальный стейт для показа ошибок валидации формы тольko при клике
      */
     const [showErrors, setShowErrors] = useState(false);
     const handleClickShowErrors = () => {
@@ -64,12 +72,7 @@ const Login = () => {
             password: ''
         },
         onSubmit: values => {
-                 const requstData = {
-                    login : values.email,
-                    password : values.password
-                 }
-                 dispatch(getUserProfileTC(requstData))
-                 navigate("/cabinet")
+                 dispatch(getUserProfileTC(values))        
                  formik.resetForm()
         },
         validate: (values) => {
@@ -88,9 +91,28 @@ const Login = () => {
             return errors;
         }
     });
+    /**
+     * при успешном ответе от сервера мы задичпатчили в санке ответ в стейт, и если в стейте полe profileData не равно инициализационному null, то мы редиректим в ЛК и уведомляем юзера
+     * также уведомляем при отсутствии искомого юзера либо при отсутствии сети
+     */
+    useEffect(()=> {
+        if(profileData !== null){
+            toast.success("Вы успешно залогинились")
+            setTimeout(()=> {
+                navigate("/cabinet");
+            },1500)
+            
+        } else if(errorMessage === "User not found") {
+            toast.error("Пользователь с таким E-mail или паролем не найден")
+        } else if (errorMessage === "Network Error"){
+            toast.error("Ошибка сети, проверьте соединение")
+        }
+    }, [profileData,errorMessage])
+    
     return (
         <div className={style.container}>
             <AuthHeader/>
+            <ToastContainer />
             <div className={style.loginContainer}>
                 <div className={style.loginFormContainer}>
                     <h3>АВТОРИЗАЦИЯ</h3>

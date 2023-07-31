@@ -1,4 +1,4 @@
-import React, {ChangeEvent, useState} from 'react';
+import React, {ChangeEvent, useEffect, useState} from 'react';
 import style from "./Register.module.css";
 import AuthHeader from "../Header/AuthHeader";
 import {useFormik} from "formik";
@@ -7,6 +7,10 @@ import closeIcon from "../../../../assets/icons/+.svg";
 import {useNavigate} from "react-router-dom"
 import { useAppDispatch } from '../../../../CustomHooks/UseAppDispatch';
 import { createUserProfile } from '../../../../BLL/AuthReducer';
+import { useSelector } from 'react-redux';
+import { AppRootStateType } from '../../../../BLL/Store';
+import { ToastContainer, toast } from 'react-toastify';
+import { CreateUserResType } from '../../../../DAL/Api';
 
 type ErrorsType = {
     email: string
@@ -14,6 +18,11 @@ type ErrorsType = {
     confirmPassword : string
 }
 const Register = () => {
+    /**
+     * Получаем данные об ошибках из стейта
+     */
+    const errorMessage = useSelector<AppRootStateType, string>(state => state.AuthReducer.errorMessage );
+    const regUserData = useSelector<AppRootStateType, CreateUserResType | null>(state => state.AuthReducer.regData );
      /**
      * импортируем кастомный хук чтобы мы могли диспатчить любые экшены, в том числе и санки
      */
@@ -68,11 +77,11 @@ const Register = () => {
             isChecked : false
         },
         onSubmit: values => {
-            const requstData = {
-                login : values.email,
+            const regData = {
+                email : values.email,
                 password : values.password
-             }
-             dispatch(createUserProfile(requstData))
+            }
+             dispatch(createUserProfile(regData))
             formik.resetForm()
         },
         validate: (values) => {
@@ -94,13 +103,30 @@ const Register = () => {
             }
             if(!values.isChecked){
                 errors.isChecked = "error"
-            }
+            }          
             return errors;
         },
     });
- 
+ /**
+     * при успешном ответе от сервера мы задичпатчили в санке ответ в стейт, и если в стейте полe profileData не равно инициализационному null, то мы редиректим в ЛК и уведомляем юзера
+     * также уведомляем при отсутствии искомого юзера либо при отсутствии сети
+     */
+ useEffect(()=> {
+    if(regUserData !== null){
+        toast.success("Вы успешно зарегистрировались, Вам на почту отправлена ссылка на подтверждение E-mail")
+        setTimeout(()=> {
+            navigate("/login");
+        },3000)
+    } else if(errorMessage === "User already created"){
+        toast.error("Такой пользователь существует")
+    } else if (errorMessage === "Network Error"){
+        toast.error("Ошибка сети, проверьте соединение")
+    }
+}, [regUserData,errorMessage])
+
     return (
         <div className={style.container}>
+             <ToastContainer />
             <AuthHeader/>
             <div className={style.registerContainer}>
                 <div className={style.registerFormContainer}>

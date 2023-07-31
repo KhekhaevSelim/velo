@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import style from "./Cabinet.module.css";
 import {NavLink} from "react-router-dom";
 import notify from "../../../assets/icons/notifyIcon.svg";
@@ -10,8 +10,15 @@ import Select from 'react-select';
 import { useSelector } from 'react-redux';
 import { AppRootStateType } from '../../../BLL/Store';
 import { GetUserProfileResType } from '../../../DAL/Api';
+import { useAppDispatch } from '../../../CustomHooks/UseAppDispatch';
 
 const Cabinet = () => {
+  /**
+      * Достаем из стейта данные пользователя
+      */
+  const profileData = useSelector<AppRootStateType, GetUserProfileResType | null>(state => state.AuthReducer.profileData);
+  console.log(profileData)
+
   /**
      хук для условного рендеринга иконки меню
      */
@@ -32,11 +39,8 @@ const Cabinet = () => {
          setIsActiveNav(!isActiveNav)
      }
 
-
-     /**
-      * Достаем из стейта данные пользователя
-      */
-  const profileData = useSelector<AppRootStateType, GetUserProfileResType>(state => state.AuthReducer.profileData)
+    
+   
   /**
    * костамизируем селект из библиотеки 'react-select' под наш дизайн
    */
@@ -82,6 +86,8 @@ const Cabinet = () => {
     { value: 'Недельная подписка', label: 'Недельная подписка' },
     { value: 'Дневная подписка', label: 'Дневная подписка' },
   ];
+  
+ 
     return (
         <div className={style.container}>
           {
@@ -133,16 +139,14 @@ const Cabinet = () => {
                     <div className={style.lineRight}>
                         <div className={style.lineRightTop}>
                           <div className={style.userDara}>
-                             {/* <span className={style.name}>{profileData.username}</span> */}
-                             <span className={style.name}>name surname</span>
+                             <span className={style.name}>{profileData?.name} {profileData?.surname}</span>
                           </div>
                           <div className={style.lineBtns}>
                             <img src={notify} alt="notify"/>
                             <img src={exit} alt="exit" />
                           </div>
                         </div>
-                        {/* <span className={style.email}>{profileData.login}</span> */}
-                        <span className={style.email}>seme@mail.ru</span>
+                        <span className={style.email}>{profileData?.email}</span>           
                     </div>
                 </div>
               </div>
@@ -157,9 +161,8 @@ const Cabinet = () => {
                      </p>
                      <img src={attention} alt="attention" />
                    </div>
-                   <input type="text" placeholder='Имя'/>
-                   {/* <input type="text" placeholder={profileData.username}/> */}
-                   <input type="text" placeholder='Фамилия'/>
+                   <input type="text" placeholder={profileData?.name}/>
+                   <input type="text" placeholder={profileData?.surname}/>
                    <input type="email" placeholder='E-mail' disabled/>
                    {/* <div className={style.password}>
                      <span>Пароль</span>
