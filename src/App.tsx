@@ -28,8 +28,9 @@ function App() {
 
     return (
         <div className="App">
-           {appState.isLoading && <LinearProgress/>} 
+            
            <ToastContainer />
+           {appState.isLoading && <LinearProgress/>}
             <Routes>
                 <Route path={"/"} element={<VeloSite/>}/>
                 <Route path={"/velo"} element={<VeloSite/>}/>

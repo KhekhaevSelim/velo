@@ -57,8 +57,8 @@ export const getUserProfileTC = (getUserData : GetUserArgType) : AppThunkType =>
         /**
         * Убираем линию прогресса
         */
-        dispatch(setLoadingAC(false))
-        }
+            dispatch(setLoadingAC(false))
+         }
         }) 
         .catch(e=> {
          if(e.message === "Network Error"){

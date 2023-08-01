@@ -91,7 +91,7 @@ const Login = () => {
             dispatch(setNotifyMessageOkAC("Вы успешно залогинились"))
            const timer = setTimeout(()=> {
                 navigate("/cabinet");
-            },1500)
+            })
             return () => clearTimeout(timer)
         } 
     }, [profileData])
