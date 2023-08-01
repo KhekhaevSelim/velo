@@ -1,10 +1,15 @@
 import React, {useEffect, useState} from 'react';
 import style from "./PathsItem.module.css";
 import {RoutesDataType} from "../Paths";
+// jest-ignore
 import 'react-tippy/dist/tippy.css';
+// jest-ignore
 import Tippy from '@tippyjs/react';
+// jest-ignore
 import 'tippy.js/dist/tippy.css';
+// jest-ignore
 import 'tippy.js/themes/light.css';
+// jest-ignore
 import 'tippy.js/animations/perspective.css';
 import {Ribbon, RibbonContainer} from "react-ribbons";
 type RouteItemPropsType = {

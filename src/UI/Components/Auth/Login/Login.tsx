@@ -5,28 +5,19 @@ import AuthHeader from "../Header/AuthHeader";
 import {useFormik} from "formik";
 import { useAppDispatch } from '../../../../CustomHooks/UseAppDispatch';
 import { getUserProfileTC } from '../../../../BLL/AuthReducer';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 import { useSelector } from 'react-redux';
 import { AppRootStateType } from '../../../../BLL/Store';
 import { GetUserProfileResType } from '../../../../DAL/Api';
+import { setNotifyMessageOkAC } from '../../../../BLL/AppReducer';
 
 
 
 /**
  * Типизация объекта ошибки валидации
  */
-type ErrorsType = {
-    email: string
-    password: string
-}
+
 const Login = () => {
-    const profileData = useSelector<AppRootStateType, GetUserProfileResType | null>(state => state.AuthReducer.profileData );
-    const errorMessage = useSelector<AppRootStateType, string>(state => state.AuthReducer.errorMessage );
-    // const showToast = useSelector<AppRootStateType, boolean>(state => state.AuthReducer.showToast);
-    // const isInitialized = useSelector<AppRootStateType, boolean>(state => state.AuthReducer.isInitialized);
-    
-    
+    const profileData = useSelector<AppRootStateType, GetUserProfileResType | null>(state => state.AuthReducer.profileData ); 
     /**
      * импортируем кастомный хук чтобы мы могли диспатчить любые экшены, в том числе и санки
      */
@@ -93,26 +84,21 @@ const Login = () => {
     });
     /**
      * при успешном ответе от сервера мы задичпатчили в санке ответ в стейт, и если в стейте полe profileData не равно инициализационному null, то мы редиректим в ЛК и уведомляем юзера
-     * также уведомляем при отсутствии искомого юзера либо при отсутствии сети
+     * 
      */
     useEffect(()=> {
         if(profileData !== null){
-            toast.success("Вы успешно залогинились")
-            setTimeout(()=> {
+            dispatch(setNotifyMessageOkAC("Вы успешно залогинились"))
+           const timer = setTimeout(()=> {
                 navigate("/cabinet");
             },1500)
-            
-        } else if(errorMessage === "User not found") {
-            toast.error("Пользователь с таким E-mail или паролем не найден")
-        } else if (errorMessage === "Network Error"){
-            toast.error("Ошибка сети, проверьте соединение")
-        }
-    }, [profileData,errorMessage])
+            return () => clearTimeout(timer)
+        } 
+    }, [profileData])
     
     return (
         <div className={style.container}>
             <AuthHeader/>
-            <ToastContainer />
             <div className={style.loginContainer}>
                 <div className={style.loginFormContainer}>
                     <h3>АВТОРИЗАЦИЯ</h3>

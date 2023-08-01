@@ -7,9 +7,7 @@ import route4 from "../../../assets/image/route4.bmp"
 import route5 from "../../../assets/image/route5.png"
 import attention from "../../../assets/icons/attention.svg"
 import PathsItem from "./PathsItem/PathsItem";
-import {Ribbon} from "react-ribbons";
-import Tippy from "@tippyjs/react";
-import {render} from "@testing-library/react";
+
 
 export type RoutesDataType = {
     img: string

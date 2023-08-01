@@ -1,9 +1,11 @@
 import { AnyAction, applyMiddleware, combineReducers, createStore } from "redux"
 import thunk, { ThunkAction } from "redux-thunk"
 import { authReducer } from "./AuthReducer"
+import { appReducer } from "./AppReducer"
 
 const rootReducer = combineReducers({
- AuthReducer : authReducer
+ AuthReducer : authReducer,
+ AppReducer : appReducer
 })
 
 export const store = createStore(rootReducer, applyMiddleware(thunk))
