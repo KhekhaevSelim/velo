@@ -17,9 +17,23 @@
     font-weight: 600;
     font-size: 30px;
 }
-#plusIcon{
+/* #plusIcon{
     font-size: 30px;
     color: var(--main-color);
+} */
+
+.closeIcon{
+    color: var(--main-color);   
+    transform: rotate(45deg);
+    width: 20px;
+ 
+    font-size: 32px;
+}
+.openIcon{
+    color: var(--main-color);   
+    width: 20px;
+ 
+    font-size: 32px;
 }
 .answerShow{
     display: block;

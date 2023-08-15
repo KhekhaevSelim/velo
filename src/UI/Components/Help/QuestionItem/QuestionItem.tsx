@@ -16,9 +16,11 @@ const QuestionItem = (props: QuestionItemPropsType) => {
                     {props.questionData.question}
                 </p>
                 {props.showAnswer ?
-                    <i className="bx bx-x" id={style.plusIcon} onClick={()=>props.handleQuestionClickClose(props.index)}></i>
+                    // <i className="bx bx-x" id={style.plusIcon} onClick={()=>props.handleQuestionClickClose(props.index)}></i>
+                    <span className={style.closeIcon} onClick={()=>props.handleQuestionClickClose(props.index)}>+</span>
                     :
-                    <i className="bx bx-plus" id={style.plusIcon} onClick={()=>props.handleQuestionClickOpen(props.index)}></i>
+                    // <i className="bx bx-plus" id={style.plusIcon} onClick={()=>props.handleQuestionClickOpen(props.index)}></i>
+                    <span className={style.openIcon} onClick={()=>props.handleQuestionClickOpen(props.index)}>+</span>
                 }
             </div>
             <div className={`${props.showAnswer ? style.answerShow : style.answerHidden}`}>
