@@ -1,7 +1,7 @@
 import axios from "axios"
 
 const instance = axios.create({
-    baseURL: "https://api.wattattack.ru/",
+    baseURL: "http://velo-api.com/",
     withCredentials: true
 })
 
