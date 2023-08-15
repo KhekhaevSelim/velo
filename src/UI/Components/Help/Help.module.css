@@ -128,7 +128,7 @@
     height: 175px;
     color: var(--main-color);
     font-weight: 700;
-    font-size: 40px;
+    font-size: 39px;
     width: 80%;
     padding: 26px 0 8px 0;
     border-bottom: solid;
@@ -184,15 +184,15 @@
 }
 
 .filesContainer h3 {
-    height: 165px;
+    height: 150px;
     color: var(--main-color);
     font-weight: 700;
-    font-size: 40px;
+    font-size: 39px;
     width: 80%;
     padding: 20px 0 22px 0;
     border-bottom: solid;
     line-height: 42px;
-    margin-top: 10px;
+    margin-top: 6px;
 }
 
 .filesContainer p, .filesContainer span {
