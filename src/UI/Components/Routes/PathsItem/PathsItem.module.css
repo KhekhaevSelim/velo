@@ -50,11 +50,12 @@
     -moz-box-shadow: 0px 7px 8px 7px rgba(34, 60, 80, 0.07);
     box-shadow: 0px 7px 8px 7px rgba(34, 60, 80, 0.07);
     z-index: 2;
+    height: 54px;
 }
 
 .routeItemFooter span {
     font-weight: 600;
-    font-size: 26px;
+    font-size: 21px;
     color: var(--main-color);
     z-index: 1;
 }
@@ -121,7 +122,7 @@
         height: 182px;
     }
     .routeItemFooter span{
-        font-size: 21px;
+        font-size: 19px;
     }
 }
 @media screen and (max-width: 1116px) {

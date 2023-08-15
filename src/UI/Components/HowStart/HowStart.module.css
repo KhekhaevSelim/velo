@@ -215,6 +215,9 @@
     .title {
         padding: 54px 10px 30px 10px;
     }
+    .title h3{
+        font-size: 42px;
+    }
     .title p{
         font-size: 15px;
         margin-top: 4px;

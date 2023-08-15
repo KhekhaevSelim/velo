@@ -87,6 +87,9 @@
     .title {
         margin-top: 50px;
     }
+    .title h3{
+        font-size: 42px;
+    }
     .routesContainer{
         display: flex;
         flex-direction: column;

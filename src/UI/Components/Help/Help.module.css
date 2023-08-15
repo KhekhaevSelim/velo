@@ -344,6 +344,9 @@ li {
         padding: 0;
 
     }
+    .equipmentContainer{
+        margin-bottom: 6px;
+    }
 .simulatorContainer{
     width: 100%;
 }
@@ -366,10 +369,29 @@ li {
         margin-right: 0;
     }
 }
+
+@media screen and (max-width: 866px) {
+    .equipmentContainer{
+        margin-bottom: 14px;
+    }
+}
+@media screen and (max-width: 852px) {
+    .equipmentContainer{
+        margin-bottom: 30px;
+    }
+}
+@media screen and (max-width: 811px) {
+    .equipmentContainer{
+        margin-bottom: 48px;
+    }
+}
 @media screen and (max-width: 760px) {
     .systemContainer h3, .equipmentContainer h3, .simulatorContainer h3, .filesContainer h3{
         font-size: 20px;
         width: 90%;
+    }
+    .equipmentContainer{
+        margin-bottom: 6px;
     }
     .systemContainer p, .systemContainer li, .equipmentContainer p, .equipmentContainer li, .simulatorContainer li, .filesContainer p, .filesContainer span{
         font-size: 10px;
@@ -379,6 +401,9 @@ li {
     }
     .questionsTitle{
         margin: 170px 0 0 0;
+    }
+    .questionsTitle h3{
+        font-size: 42px;
     }
     .helpFooter h3{
         font-size: 20px;
@@ -398,21 +423,64 @@ li {
     .filesInfo{
         width: 97%;
     }
+    
+.titleContainer h3 {
+    font-size: 42px;
+    margin: 40px 0 40px 0;
 }
-
+}
+@media screen and (max-width: 683px) {
+    .equipmentContainer{
+        margin-bottom: 16px;
+    }
+}
 @media screen and (max-width: 590px) {
     .wrapper{
         margin-top: 82px;
+    }
+    .equipmentContainer{
+        margin-bottom: -6px;
+    }
+}
+@media screen and (max-width: 562px) {
+    .equipmentContainer{
+        margin-bottom: 15px;
     }
 }
 @media screen and (max-width: 547px){
     .wrapper{
         margin-top: 105px;
     }
+    .equipmentContainer{
+        margin-bottom: -9px;
+    }
+}
+@media screen and (max-width: 526px){
+    .equipmentContainer{
+        margin-bottom: 13px;
+    }
 }
 @media screen and (max-width: 455px){
     .wrapper{
         margin-top: 135px;
+    }
+    .equipmentContainer{
+        margin-bottom: -17px;
+    }
+}
+@media screen and (max-width: 401px){
+    .equipmentContainer{
+        margin-bottom: -7px;
+    }
+}
+@media screen and (max-width: 395px){
+    .equipmentContainer{
+        margin-bottom: -3px;
+    }
+}
+@media screen and (max-width: 360px){
+    .equipmentContainer{
+        margin-bottom: 13px;
     }
 }
 @media screen and (max-width: 372px){
