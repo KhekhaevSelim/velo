@@ -1,0 +1,28 @@
+.burgerMenuContainer{
+    width: 22px;
+    height: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    position: relative;
+    top: -2px;
+}
+
+.burgerMenuLine{
+    width: 100%;
+    height: 3px;
+    background-color: #ffffff;
+}
+
+@media screen and (max-width: 760px) {
+    .burgerMenuContainer{
+        /* display: block; */
+        z-index: 9999;
+    }
+}
+
+.closeIcon{
+    font-size: 37px;
+    transform: rotate(45deg);
+}

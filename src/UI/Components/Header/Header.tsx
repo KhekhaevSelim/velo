@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import style from './Header.module.css';
 import {NavLink, useLocation} from "react-router-dom";
 import bg from "../../../assets/image/bg-image-1.svg"
+import { BurgerMenu } from '../../Common/burgerMenu/BurgerMenu';
 
 function Header() {
     /**
@@ -48,11 +49,14 @@ function Header() {
     }, [location.hash]);
 
     return (
-
+        <div className={style.wrapper2}>
         <header className={style.home}>
+           
             <div className={style.homeImg}>
                 {/*<img src={bg} alt=""/>*/}
             </div>
+           
+            
             {
                 /**
                  * условный рендеринг мобильного меню : свернутое и развернутое при клике по иконке меню
@@ -61,8 +65,9 @@ function Header() {
                     <nav className={style.mobileNavFul}>
                         <div className={style.mobileNavHeader}>
                             <h3>WattAttack</h3>
-                            <i className={`bx ${isActiveMenu ? "bx-x" : "bx-menu"}`} id={style.menuIcon}
-                               onClick={handleClickMenu}></i>
+                            {/* <i className={`bx ${isActiveMenu ? "bx-x" : "bx-menu"}`} id={style.menuIcon}
+                               onClick={handleClickMenu}></i> */}
+                               <BurgerMenu isActiveMenu={isActiveMenu} handleClickMenu={handleClickMenu}/>
                         </div>
                         <a href="#howStart" onClick={handleClickLink}>КАК НАЧАТЬ</a>
                         <a href="#routes" onClick={handleClickLink}>МАРШРУТЫ</a>
@@ -78,8 +83,9 @@ function Header() {
                         <a href="#howStart">КАК НАЧАТЬ</a>
                         <NavLink to={"/login"}>ВОЙТИ</NavLink>
                         <NavLink to={"/download"}>СКАЧАТЬ</NavLink>
-                        <i className={`bx ${isActiveMenu ? "bx-x" : "bx-menu"}`} id={style.menuIcon}
-                           onClick={handleClickMenu}></i>
+                        {/* <i className={`bx ${isActiveMenu ? "bx-x" : "bx-menu"}`} id={style.menuIcon}
+                           onClick={handleClickMenu}></i> */}
+                           <BurgerMenu isActiveMenu={isActiveMenu} handleClickMenu={handleClickMenu}/>
                     </nav>
             }
             {/**
@@ -104,7 +110,7 @@ function Header() {
             </div>
 
         </header>
-
+        </div>
 
     );
 }
