@@ -26,13 +26,13 @@
     color: var(--main-color);   
     transform: rotate(45deg);
     width: 20px;
- 
+    cursor: pointer;
     font-size: 32px;
 }
 .openIcon{
     color: var(--main-color);   
     width: 20px;
- 
+    cursor: pointer;
     font-size: 32px;
 }
 .answerShow{
