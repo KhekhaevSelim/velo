@@ -11,13 +11,17 @@ import { useSelector } from 'react-redux';
 import { AppRootStateType } from '../../../BLL/Store';
 import { GetUserProfileResType } from '../../../DAL/Api';
 import { useAppDispatch } from '../../../CustomHooks/UseAppDispatch';
+import { useFormik } from 'formik';
+import { changeUserName, getUserProfileTC } from '../../../BLL/AuthReducer';
+import { setNotifyMessageOkAC } from '../../../BLL/AppReducer';
 
 const Cabinet = () => {
+  const dispatch = useAppDispatch();
   /**
       * Достаем из стейта данные пользователя
       */
   const profileData = useSelector<AppRootStateType, GetUserProfileResType | null>(state => state.AuthReducer.profileData);
-  console.log(profileData)
+
 
   /**
      хук для условного рендеринга иконки меню
@@ -87,9 +91,35 @@ const Cabinet = () => {
     { value: 'Дневная подписка', label: 'Дневная подписка' },
   ];
   
- 
+  const formik = useFormik({
+    initialValues: {
+        name: profileData?.name,
+        surname: profileData?.surname
+    },
+    onSubmit: values => {
+      const storedPassword = localStorage.getItem('userPassword');
+      const reqData = {
+        email : profileData?.email as string,
+        password : storedPassword as string,
+        name : values.name  ? values.name : profileData?.name as string,
+        surname : values.surname ? values.surname : profileData?.surname as string
+      }
+             dispatch(changeUserName(reqData))     
+            //  formik.resetForm()
+    },
+});
+useEffect(()=> {
+  const storedPassword = localStorage.getItem('userPassword');
+  const storedEmail = localStorage.getItem('userEmail');
+  const reqData = {
+    email : storedEmail as string,
+    password : storedPassword as string
+  }
+dispatch(getUserProfileTC(reqData))
+},[])
     return (
         <div className={style.container}>
+          
           {
                 /**
                  * условный рендеринг мобильного меню : свернутое и развернутое при клике по иконке меню
@@ -151,6 +181,7 @@ const Cabinet = () => {
                 </div>
               </div>
             </div>
+            <form onSubmit={formik.handleSubmit} className={style.form}>
             <div className={style.content}>
                <div className={style.wrapper}>
                 <div className={style.contentFlexBox}>
@@ -161,8 +192,23 @@ const Cabinet = () => {
                      </p>
                      <img src={attention} alt="attention" />
                    </div>
-                   <input type="text" placeholder={profileData?.name}/>
-                   <input type="text" placeholder={profileData?.surname}/>
+                   {/* <input type="text" placeholder={profileData?.name}/>
+                    */}
+                    
+                   <input
+                            type="text"
+                            placeholder={profileData?.name}
+                            {...formik.getFieldProps("name")}
+                            />
+                   {/* <input type="text" placeholder={profileData?.surname}/> */}
+
+                   <input
+                            type="text"
+                            placeholder={profileData?.surname}
+                            {...formik.getFieldProps("surname")}
+                            />
+
+
                    <input type="email" placeholder='E-mail' disabled/>
                    {/* <div className={style.password}>
                      <span>Пароль</span>
@@ -337,17 +383,21 @@ const Cabinet = () => {
                         <button className={style.btn}>
                             ИСТОРИЯ ПОКУПОК И ОПЛАТ
                         </button>
-                        <button className={style.btn}>
+                        <button className={style.btn} type='submit'>
                             СОХРАНИТЬ ВСЕ ИЗМЕНЕНИЯ
                         </button>
+                       
                         {/* <button className={style.btn}>
                            УДАЛИТЬ АККАУНТ
                         </button> */}
                     </div>
                  </div>
                </div>
+               
                </div>
+               
             </div>
+            </form>
         </div>
     );
 };

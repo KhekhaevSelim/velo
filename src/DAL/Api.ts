@@ -16,6 +16,9 @@ export const APItodolist = {
     activateUserProfile(activateUserModel : ActivateUserArgType) {
         return instance.post<ActivateUserResType>("user/activate", activateUserModel)
     },
+    changeUserName(changeUserNameModel : changeUserNameArgType) {
+        return instance.post("user/name", changeUserNameModel)
+    }
 }
 
 
@@ -54,11 +57,17 @@ export type CreateUserArgType = {
     password: string
     }
 
+export type changeUserNameArgType = {
+   email : string,
+   password : string,
+   name : string,
+   surname : string
+    }
+
 export type ActivateUserArgType = {
     login: string,
     password: string
     }
-
     ///http://velo-api.com/user/change смена пароля {
 // "login":"string",
 // "password":"string",
