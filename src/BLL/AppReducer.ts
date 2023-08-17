@@ -1,7 +1,7 @@
 export type AppStateType = {
     isLoading : boolean,
     notifyMessageFailed : string,
-    notifyMessageOk : string
+    notifyMessageOk : string,
 }
 
 const appState : AppStateType = {

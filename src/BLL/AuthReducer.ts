@@ -161,7 +161,6 @@ export const getCodeForRecoverTC = (email : string) : AppThunkType=> {
     return (dispatch) => {
         dispatch(setNotifyMessageFailedAC(""))
         dispatch(setNotifyMessageOkAC(""))
-       
         dispatch(setLoadingAC(true))
         
        APItodolist.getCodeForRecover(email)

@@ -23,10 +23,10 @@ export const APItodolist = {
         return instance.post("user/name", changeUserNameModel)
     },
     getCodeForRecover(email : string) {
-        return instance.post("user/password/send ", {email})
+        return instance.post("user/password/send", {email})
     },
     recoverPassword(recoverPasswordModel : recoverPasswordArgType) {
-        return instance.post<string>("user/password ", recoverPasswordModel)
+        return instance.post<string>("user/password", recoverPasswordModel)
     },
 }
 

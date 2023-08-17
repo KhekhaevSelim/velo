@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 import style from "./RecoverPassword.module.css"
 import { useFormik } from "formik";
 import AuthHeader from "../Header/AuthHeader";
@@ -56,10 +56,7 @@ const RecoverPassword = () => {
         onSubmit: values => {
             formik.resetForm()
             setShowErrors(false);
-            dispatch(getCodeForRecoverTC(values.emailRecoverPassword));
-            if(notifyMessageOk !== ""){
-                showNewPassModalFunc()
-            }
+            dispatch(getCodeForRecoverTC(values.emailRecoverPassword));         
         },
         validate: (values) => {
             const errors: any = {};
@@ -88,10 +85,7 @@ const RecoverPassword = () => {
             }
             formik2.resetForm()
             dispatch(recoverPasswordTC(reqData))
-            if(notifyMessageOk !== ""){
-                closeNewPassModalFunc();
-                navigate("/login");
-            }
+            
         },
         validate: (values) => {
             const errors: any = {};
@@ -115,6 +109,15 @@ const RecoverPassword = () => {
             return errors;
         }
     });
+    useEffect(()=> {
+        if(notifyMessageOk === "Вам на почту отправлен код"){
+            setShowNewPassModal(true)
+        } else if(notifyMessageOk === "Вы успешно сменили пароль"){
+            closeNewPassModalFunc();
+            navigate("/login");
+        }
+    },[notifyMessageOk])
+    
     return (
         <div className={style.container}>
             <div className={showNewPassModal ? style.recoverModalBg : style.hiddenRecoverModal} onClick={closeNewPassModalFunc}>
