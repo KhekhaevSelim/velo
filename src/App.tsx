@@ -34,7 +34,7 @@ function App() {
             <Routes>
                 <Route path={"/"} element={<VeloSite/>}/>
                 <Route path={"/velo"} element={<VeloSite/>}/>
-                <Route path={"wattattack.ru/login"} element={<Login/>}/>
+                <Route path={"/login"} element={<Login/>}/>
                 <Route path={"/register"} element={<Register/>}/>
                 <Route path={"/user/:id/recovery/:token"} element={<RecoverPassword/>}/>
                 <Route path={"/cabinet"} element={<Cabinet/>}/>

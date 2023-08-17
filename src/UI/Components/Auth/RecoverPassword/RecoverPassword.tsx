@@ -4,7 +4,13 @@ import { useFormik } from "formik";
 import AuthHeader from "../Header/AuthHeader";
 import closeIcon from "../../../../assets/icons/+.svg";
 import { useNavigate } from "react-router-dom";
+import { useAppDispatch } from "../../../../CustomHooks/UseAppDispatch";
+import { getCodeForRecoverTC, recoverPasswordTC } from "../../../../BLL/AuthReducer";
+import { useSelector } from "react-redux";
+import { AppRootStateType } from "../../../../BLL/Store";
 const RecoverPassword = () => {
+    const dispatch = useAppDispatch();
+    const notifyMessageOk = useSelector<AppRootStateType, string>(state => state.AppReducer.notifyMessageOk);
      /**
      * хук для редиректа
      */
@@ -48,12 +54,12 @@ const RecoverPassword = () => {
             emailRecoverPassword: ''
         },
         onSubmit: values => {
-            alert(JSON.stringify(values, null, 2));
             formik.resetForm()
             setShowErrors(false);
-            setTimeout(()=> {
+            dispatch(getCodeForRecoverTC(values.emailRecoverPassword));
+            if(notifyMessageOk !== ""){
                 showNewPassModalFunc()
-            })
+            }
         },
         validate: (values) => {
             const errors: any = {};
@@ -63,21 +69,29 @@ const RecoverPassword = () => {
             } else if (!isValidEmail(values.emailRecoverPassword)) {
                 errors.emailRecoverPassword = "Пожалуйста, введите корректный e-mail";
             }
-            console.log(errors)
             return errors;
         }
     });
 
     const formik2 = useFormik({
         initialValues: {
+            code : '',
+            email : '',
             newPassword: '',
             confirmNewPass : ''
         },
         onSubmit: values => {
-            alert(JSON.stringify(values, null, 2));
+            const reqData = {
+                code : values.code,
+                email : values.email,
+                password : values.newPassword
+            }
             formik2.resetForm()
-            closeNewPassModalFunc()
-            navigate("/login")
+            dispatch(recoverPasswordTC(reqData))
+            if(notifyMessageOk !== ""){
+                closeNewPassModalFunc();
+                navigate("/login");
+            }
         },
         validate: (values) => {
             const errors: any = {};
@@ -90,19 +104,65 @@ const RecoverPassword = () => {
             } else if (values.confirmNewPass && values.newPassword !== values.confirmNewPass) {
                 errors.confirmNewPass = "Пароли не совпадают. Попробуйте еще раз";
             }
+            if (!values.email) {
+                errors.email = "Пожалуйста, введите обязательное поле e-mail";
+            } else if (!isValidEmail(values.email)) {
+                errors.email = "Пожалуйста, введите корректный e-mail";
+            }
+            if(!values.code){
+                errors.code = "Пожалуйста, введите код"
+            }
             return errors;
         }
     });
     return (
         <div className={style.container}>
             <div className={showNewPassModal ? style.recoverModalBg : style.hiddenRecoverModal} onClick={closeNewPassModalFunc}>
-                <div className={style.recoverModal} style={{height : '320px'}} onClick={(e)=> e.stopPropagation()}>
+                <div className={style.recoverModal} onClick={(e)=> e.stopPropagation()}>
                     <h3>ВОССТАНОВЛЕНИЕ ПАРОЛЯ</h3>
                     <form onSubmit={formik2.handleSubmit} className={style.form}>
                         {/**
                          * данный инпут имеет изначально display : none, поэтому мы напрямую передает value и обработчики событий
                          **/
                         }
+                         <input
+                            id={"code"}
+                            type="text"
+                            placeholder={"Введите код из сообщения"}
+                            value={formik2.values.code}
+                            onChange={formik2.handleChange}
+                            onBlur={formik2.handleBlur}
+
+                            className={
+                                formik2.errors.code
+                                    ? style.recoverErrorInput
+                                    : style.recoverInput
+                            }
+                        />
+                        {formik2.errors.code && showErrors &&(
+                            <div className={style.errorMessage}>
+                                {formik2.errors.code}
+                            </div>
+                        )}
+                        <input
+                            id={"email"}
+                            type="email"
+                            placeholder={"Введите Ваш E-mail"}
+                            value={formik2.values.email}
+                            onChange={formik2.handleChange}
+                            onBlur={formik2.handleBlur}
+
+                            className={
+                                formik2.errors.email
+                                    ? style.recoverErrorInput
+                                    : style.recoverInput
+                            }
+                        />
+                        {formik2.errors.email && showErrors &&(
+                            <div className={style.errorMessage}>
+                                {formik2.errors.email}
+                            </div>
+                        )}
                         <input
                             id={"newPassword"}
                             type="password"
@@ -125,7 +185,7 @@ const RecoverPassword = () => {
                         <input
                             id={"confirmNewPass"}
                             type="password"
-                            placeholder={"Введите новый пароль"}
+                            placeholder={"Подтвердите новый пароль"}
                             value={formik2.values.confirmNewPass}
                             onChange={formik2.handleChange}
                             onBlur={formik2.handleBlur}

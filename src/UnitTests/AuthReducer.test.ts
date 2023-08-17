@@ -15,7 +15,9 @@ test("when user sign in profileData should be contain him data", ()=> {
    email : "selim16695@mail.ru",
    is_activated : false,
    created_at : "01.01.2023",
-   subscribes : []}))
+   subscribes : [],
+   token : "qwerty123"
+}))
 
    expect(startState).not.toEqual(endState);
    expect(startState.profileData).toBe(null);

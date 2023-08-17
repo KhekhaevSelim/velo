@@ -1,21 +1,20 @@
 import React, { useEffect, useState } from 'react';
 import style from "./Cabinet.module.css";
-import {NavLink} from "react-router-dom";
+import {NavLink, useNavigate} from "react-router-dom";
 import notify from "../../../assets/icons/notifyIcon.svg";
 import exit from "../../../assets/icons/exitIcon.svg";
 import attention from "../../../assets/icons/attention.svg";
-import close from "../../../assets/icons/Close_MD.svg";
-import done from "../../../assets/icons/done.svg";
 import Select from 'react-select';
 import { useSelector } from 'react-redux';
 import { AppRootStateType } from '../../../BLL/Store';
 import { GetUserProfileResType } from '../../../DAL/Api';
 import { useAppDispatch } from '../../../CustomHooks/UseAppDispatch';
 import { useFormik } from 'formik';
-import { changeUserName, getUserProfileTC } from '../../../BLL/AuthReducer';
-import { setNotifyMessageOkAC } from '../../../BLL/AppReducer';
+import { changeUserName, logoutAC, meTC } from '../../../BLL/AuthReducer';
+
 
 const Cabinet = () => {
+  const navigate = useNavigate();
   const dispatch = useAppDispatch();
   /**
       * Достаем из стейта данные пользователя
@@ -43,7 +42,11 @@ const Cabinet = () => {
          setIsActiveNav(!isActiveNav)
      }
 
-    
+    const logout = () => {
+      localStorage.removeItem('jwtToken');
+      dispatch(logoutAC())
+      navigate("/login");
+    }
    
   /**
    * костамизируем селект из библиотеки 'react-select' под наш дизайн
@@ -97,25 +100,19 @@ const Cabinet = () => {
         surname: profileData?.surname
     },
     onSubmit: values => {
-      const storedPassword = localStorage.getItem('userPassword');
+      const token  = localStorage.getItem('jwtToken') as string;
       const reqData = {
-        email : profileData?.email as string,
-        password : storedPassword as string,
+        token : token as string,
         name : values.name  ? values.name : profileData?.name as string,
         surname : values.surname ? values.surname : profileData?.surname as string
       }
              dispatch(changeUserName(reqData))     
-            //  formik.resetForm()
+            
     },
 });
 useEffect(()=> {
-  const storedPassword = localStorage.getItem('userPassword');
-  const storedEmail = localStorage.getItem('userEmail');
-  const reqData = {
-    email : storedEmail as string,
-    password : storedPassword as string
-  }
-dispatch(getUserProfileTC(reqData))
+const token  = localStorage.getItem('jwtToken') as string;
+dispatch(meTC(token))
 },[])
     return (
         <div className={style.container}>
@@ -173,7 +170,7 @@ dispatch(getUserProfileTC(reqData))
                           </div>
                           <div className={style.lineBtns}>
                             <img src={notify} alt="notify"/>
-                            <img src={exit} alt="exit" />
+                            <img src={exit} alt="exit" onClick={logout}/>
                           </div>
                         </div>
                         <span className={style.email}>{profileData?.email}</span>           

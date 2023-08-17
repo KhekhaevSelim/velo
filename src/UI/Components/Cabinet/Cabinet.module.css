@@ -90,6 +90,9 @@
 .lineBtns img:nth-child(1){
     margin-right: 10px;
 }
+.lineBtns img{
+    cursor: pointer;
+}
 .name {
     color: #ffffff;
     font-family: "Bahnschrift-SemiLightSemiCondensed", Helvetica;

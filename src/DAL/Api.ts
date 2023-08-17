@@ -8,17 +8,26 @@ const instance = axios.create({
 // user-API
 export const APItodolist = {
     getUserProfile(getUserModel : GetUserArgType) {
-        return instance.post<GetUserProfileResType>("user", getUserModel)
+        return instance.post<GetUserProfileResType>("user/auth", getUserModel)
     },
     createUserProfile(createUserModel : CreateUserArgType) {
         return instance.post<CreateUserResType>("user/create", createUserModel)
+    },
+    me(token : string){
+        return instance.post<meResType>("user", { token } )
     },
     activateUserProfile(activateUserModel : ActivateUserArgType) {
         return instance.post<ActivateUserResType>("user/activate", activateUserModel)
     },
     changeUserName(changeUserNameModel : changeUserNameArgType) {
         return instance.post("user/name", changeUserNameModel)
-    }
+    },
+    getCodeForRecover(email : string) {
+        return instance.post("user/password/send ", {email})
+    },
+    recoverPassword(recoverPasswordModel : recoverPasswordArgType) {
+        return instance.post<string>("user/password ", recoverPasswordModel)
+    },
 }
 
 
@@ -31,7 +40,9 @@ export type GetUserProfileResType = {
     is_activated ?: boolean,
     created_at ?: string,
     subscribes ?: Array<any>
+    token : string | null
 }
+export type meResType = Omit<GetUserProfileResType, "token">
 
 export type CreateUserResType = {
     id: number,
@@ -58,8 +69,7 @@ export type CreateUserArgType = {
     }
 
 export type changeUserNameArgType = {
-   email : string,
-   password : string,
+   token : string | null
    name : string,
    surname : string
     }
@@ -68,6 +78,11 @@ export type ActivateUserArgType = {
     login: string,
     password: string
     }
+export type recoverPasswordArgType = {
+    code: string,
+    email:string,
+    password: string
+}
     ///http://velo-api.com/user/change смена пароля {
 // "login":"string",
 // "password":"string",

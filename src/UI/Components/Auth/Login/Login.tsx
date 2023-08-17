@@ -78,7 +78,6 @@ const Login = () => {
               if (!values.password) {
                   errors.password = "Пожалуйста, введите пароль";
               }
-            console.log(errors)
             return errors;
         }
     });
