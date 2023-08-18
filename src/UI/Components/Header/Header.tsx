@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import style from './Header.module.css';
 import {NavLink, useLocation} from "react-router-dom";
-import bg from "../../../assets/image/bg-image-1.svg"
+import bg from "../../../assets/image/bg-image-1.png"
 import { BurgerMenu } from '../../Common/burgerMenu/BurgerMenu';
 
 function Header() {

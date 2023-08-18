@@ -10,7 +10,7 @@ const CompetitionsItem = (props : CompetitionsItemPropsType) => {
     return (
         <div className={style.competitionsItem}>
 
-            <img src={props.competitionsData.image} alt=""/>
+            <img src={props.competitionsData.image} alt="" loading='lazy'/>
 
             <div className={style.footer}>
                 <h3>

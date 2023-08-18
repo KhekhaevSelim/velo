@@ -57,7 +57,7 @@ const PathsItem = (props : RouteItemPropsType) => {
                       ""
                   }
 
-                <img src={props.routeData.img} alt="" className={style.routeImage} />
+                <img src={props.routeData.img} loading='lazy' alt="" className={style.routeImage} />
               </div>
             <div className={style.routeItemFooter}>
                 <span>{props.routeData.title}</span>

@@ -1,10 +1,10 @@
 import React, {useEffect, useState} from 'react';
 import style from "./Paths.module.css"
 import route1 from "../../../assets/image/route1.jpeg"
-import route2 from "../../../assets/image/route2.jpeg"
-import route3 from "../../../assets/image/route3.jpeg"
-import route4 from "../../../assets/image/route4.bmp"
-import route5 from "../../../assets/image/route5.png"
+import route2 from "../../../assets/image/route2.webp"
+import route3 from "../../../assets/image/route3.webp"
+import route4 from "../../../assets/image/route4.webp"
+import route5 from "../../../assets/image/route5.webp"
 import attention from "../../../assets/icons/attention.svg"
 import PathsItem from "./PathsItem/PathsItem";
 

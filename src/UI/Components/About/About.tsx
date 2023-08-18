@@ -61,8 +61,8 @@ const About = () => {
                         </div>
                         <div className={style.right}>
                             <div className={style.imageContainer}>
-                                <img src={about1} alt="" style={{marginRight : "8px"}}/>
-                                <img src={about2} alt="" style={{marginLeft : "8px"}}/>
+                                <img src={about1} alt="" style={{marginRight : "8px"}} loading='lazy'/>
+                                <img src={about2} alt="" style={{marginLeft : "8px"}} loading='lazy'/>
                             </div>
                             <h3>
                                 ЧТО ВЫ ПОЛУЧИТЕ

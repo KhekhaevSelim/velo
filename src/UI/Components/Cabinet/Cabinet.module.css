@@ -280,7 +280,7 @@
 }
 
 .box1 {
-    background-image: url("../../../assets/image/strava.svg");
+    background-image: url("../../../assets/image/strava.webp");
     background-repeat: no-repeat;
     background-position: center;
     background-color: #111f28;
@@ -321,7 +321,7 @@
     align-items: center;
 }
 .box3{
-    background-image: url("../../../assets/image/trainingPeaks.svg");
+    background-image: url("../../../assets/image/trainingPeaks.webp");
     background-repeat: no-repeat;
     background-position: center;
     background-color: #111f28;
