@@ -17,7 +17,7 @@
     color: var(--main-color);
     font-weight: 700;
     margin: 110px 0 69px 0;
-    font-size: 50px;
+    font-size: 42px;
 }
 
 .systemContainer {
@@ -210,7 +210,7 @@
 .questionsTitle h3 {
     font-weight: 700;
     color: var(--main-color);
-    font-size: 50px;
+    font-size: 42px;
     text-align: center;
 }
 
@@ -386,8 +386,15 @@ li {
     }
 }
 @media screen and (max-width: 760px) {
-    .systemContainer h3, .equipmentContainer h3, .simulatorContainer h3, .filesContainer h3{
-        font-size: 20px;
+    .systemContainer h3, .equipmentContainer h3{
+        font-size: 15px;
+        width: 90%;
+        /* line-height: 20px; */
+        white-space: nowrap;
+    }
+    .simulatorContainer h3, .filesContainer h3{
+        font-size: 15px;
+           line-height: 20px;
         width: 90%;
     }
     .equipmentContainer{
@@ -403,7 +410,7 @@ li {
         margin: 170px 0 0 0;
     }
     .questionsTitle h3{
-        font-size: 42px;
+        font-size: 32px;
     }
     .helpFooter h3{
         font-size: 20px;
@@ -425,7 +432,7 @@ li {
     }
     
 .titleContainer h3 {
-    font-size: 42px;
+    font-size: 32px;
     margin: 40px 0 40px 0;
 }
 }

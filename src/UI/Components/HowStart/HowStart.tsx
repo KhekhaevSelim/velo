@@ -66,7 +66,8 @@ const HowStart = () => {
                 <div className={style.topSection}>
                     <div className={style.title} id={"howStart"}>
                         <h3>КАК НАЧАТЬ</h3>
-                        <p>Если следовать нашей инструкции, уже через 10 минут начнется ваша первая тренировка с
+                        <p>Если следовать нашей инструкции, уже через 10 минут начнется</p>
+                        <p> ваша первая тренировка с
                             WattAttack</p>
                     </div>
                 </div>
@@ -76,7 +77,10 @@ const HowStart = () => {
                         <div className={style.square1}>
                             <h3>ШАГ 1</h3>
                             <p>
-                                Давайте познакомимся! Пройдите простую регистрацию
+                                Давайте познакомимся! Пройдите 
+                            </p>
+                            <p>
+                               простую регистрацию
                             </p>
                             <button className={style.btn}>РЕГИСТРАЦИЯ</button>
                         </div>

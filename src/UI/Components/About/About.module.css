@@ -43,7 +43,7 @@
 .title h3 {
     color: var(--main-color);
     font-weight: 700;
-    font-size: 50px;
+    font-size: 42px;
 }
 
 .aboutContainer {
@@ -298,7 +298,7 @@
         margin: 60px 0 30px 0;
     }
     .title h3 {
-        font-size: 42px;
+        font-size: 32px;
     }
     .btn {
         font-size: 19px;

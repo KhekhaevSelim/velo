@@ -17,7 +17,7 @@
     margin-top: 103px;
 }
 .header p{
-  font-size: 50px;
+  font-size: 42px;
     font-weight: 700;
     color: black;
 }
@@ -131,7 +131,7 @@
         position: relative;
     }
     .header p{
-        font-size: 42px;
+        font-size: 32px;
       }
    .header span {
        font-size: 18px;

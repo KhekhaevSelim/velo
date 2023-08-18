@@ -19,7 +19,7 @@
     margin-bottom: 30px;
     color : var(--text-color);
     font-weight: 700;
-    font-size: 50px;
+    font-size: 42px;
 }
 .competitionsContainer{
     display: flex;
@@ -41,6 +41,7 @@
 .footer span{
 color: var(--main-color);
     margin-top: 21px;
+    font-weight: 700;
 }
 
 @media screen and (max-width: 1200px) {
@@ -66,7 +67,7 @@ color: var(--main-color);
         align-items: center;
     }
     .header h3{
-        font-size: 35px;
+        font-size: 32px;
         margin-top: 60px;
         margin-bottom: 10px;
     }
@@ -75,6 +76,7 @@ color: var(--main-color);
     }
      .footer span{
          text-align: center;
+         white-space: nowrap;
      }
 }
 @media screen and (max-width: 370px) {

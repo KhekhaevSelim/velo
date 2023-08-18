@@ -649,9 +649,24 @@ padding: 0 15px 0 0;
     #menuIcon{
         display: block;
         z-index: 9999;
-        font-size: 65px;
+        font-size: 45px;
         /*top: 13px;*/
         /*left: 5px;*/
+    }
+    .lineBtns img{
+        margin-right: 16px;
+    }
+}
+@media screen and (max-width : 768px) {
+    .line h1{
+        display: none;
+    }
+    .lineRightTop {
+        width: 83vw;
+    }
+    .lineBtns img{
+        margin-right: 0;
+        margin-left: 4px;
     }
 }
 @media screen and (max-width: 620px) {
@@ -689,7 +704,7 @@ padding: 0 15px 0 0;
     }
     .line {
         flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: start;
     }
     .btnsContainer{

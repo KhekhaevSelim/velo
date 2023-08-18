@@ -165,6 +165,7 @@
     font-size: 32px;
     font-weight: 400;
     text-align: center;
+    margin-top: 10px;
 }
 .btn{
     display: flex;
@@ -341,8 +342,10 @@
         left: 5px;
     }
 }
-@media screen and (max-width: 420px) {
-
+@media screen and (max-width: 330px) {
+.home{
+    height: 90vh;
+}
 }
 @media screen and (max-height: 1380px) {
     #menuIcon{
