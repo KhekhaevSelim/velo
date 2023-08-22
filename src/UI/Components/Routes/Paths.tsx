@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import style from "./Paths.module.css"
-import route1 from "../../../assets/image/route1.jpeg"
+import route1 from "../../../assets/image/route1.webp"
 import route2 from "../../../assets/image/route2.webp"
 import route3 from "../../../assets/image/route3.webp"
 import route4 from "../../../assets/image/route4.webp"

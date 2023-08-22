@@ -1,13 +1,13 @@
-.trainsItem{
+/* .trainsItem{
     width: 50%;
     height: 40%;
     margin-bottom: 15px;
-}
-.top{
+} */
+/* .top{
     display: flex;
     align-items: center;
-}
-.top span{
+} */
+/* .top span{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -24,7 +24,7 @@
     font-weight: 700;
     color: var(--text-color);
     margin-left: 40px;
-}
+} 
 
 .bottom{
     width: 80%;
@@ -83,4 +83,4 @@
     .bottom{
         left: 55px;
     }
-}
+} */

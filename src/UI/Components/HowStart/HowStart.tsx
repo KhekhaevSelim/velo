@@ -1,6 +1,6 @@
 import React from 'react';
 import style from "./HowStart.module.css"
-import route1 from "../../../assets/image/route1.jpeg"
+import route1 from "../../../assets/image/route1.webp"
 import route2 from "../../../assets/image/route2.webp"
 import route3 from "../../../assets/image/route3.webp"
 import route4 from "../../../assets/image/route4.webp"
@@ -70,6 +70,12 @@ const HowStart = () => {
                         <p> ваша первая тренировка с
                             WattAttack</p>
                     </div>
+                    <div className={style.title_mob} id={"howStart"}>
+                        <h3>КАК НАЧАТЬ</h3>
+                        <p>Если следовать нашей инструкции,</p>
+                        <p>уже через 10 минут начнется ваша</p>
+                        <p>первая тренировка с WattAttack</p>
+                    </div>
                 </div>
                 <div className={style.photoSection}>
                     {/*<img src={bg2} alt=""/>*/}
@@ -84,6 +90,19 @@ const HowStart = () => {
                             </p>
                             <button className={style.btn}>РЕГИСТРАЦИЯ</button>
                         </div>
+                        <div className={style.square1_tab}>
+                            <h3>ШАГ 1</h3>
+                            <p>
+                                Давайте познакомимся!  
+                            </p>
+                            <p>
+                            Пройдите простую 
+                            </p>
+                            <p>
+                            регистрацию
+                            </p>
+                            <button className={style.btn}>РЕГИСТРАЦИЯ</button>
+                        </div>
                         <div className={style.square2}>
                             <h3>ШАГ 2</h3>
                             <p>Скачайте приложение. Запустите скачивание</p>  
@@ -91,15 +110,30 @@ const HowStart = () => {
                             </p>
                             <button className={style.btn}>СКАЧАТЬ</button>
                         </div>
+                        <div className={style.square2_tab}>
+                            <h3>ШАГ 2</h3>
+                            <p>Скачайте приложение. Запустите</p>   
+                            <p>скачивание приложения, оно</p> 
+                            <p>автоматически вас узнает </p>
+                            <button className={style.btn}>СКАЧАТЬ</button>
+                        </div>
                         <div className={style.square3}>
                             <h3>ШАГ 3</h3>
                             <p>
                                 Введите логин и пароль
                                 </p>
-                                <p> и начинайте пользоваться приложением
+                                <p> и начинайте пользоваться
                             </p>
                             <button className={style.btn}>ВОЙТИ</button>
                         </div>
+                        <div className={style.square3_tab}>
+                            <h3>ШАГ 3</h3>
+                            <p>Введите логин и пароль</p>
+                            <p>и начинайте пользоваться</p>
+                            <p>приложением</p>
+                            <button className={style.btn}>ВОЙТИ</button>
+                        </div>
+                       
                     </div>
                     <Paths/>
                 </div>

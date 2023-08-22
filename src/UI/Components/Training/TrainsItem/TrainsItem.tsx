@@ -7,21 +7,22 @@ type TrainsItemPropsType = {
 }
 const TrainsItem = (props : TrainsItemPropsType) => {
     return (
-        <div className={style.trainsItem}>
-            <div className={style.top}>
-                      <span>
-{props.trainsData.num}
-                      </span>
-                <h3>
-                    {props.trainsData.title}
-                </h3>
-            </div>
-            <div className={style.bottom}>
-                         <span>
-                             {props.trainsData.subtitle}
-                         </span>
-            </div>
-        </div>
+//         <div className={style.trainsItem}>
+//             <div className={style.top}>
+//                       <span>
+// {props.trainsData.num}
+//                       </span>
+//                 <h3>
+//                     {props.trainsData.title}
+//                 </h3>
+//             </div>
+//             <div className={style.bottom}>
+//                          <span>
+//                              {props.trainsData.subtitle}
+//                          </span>
+//             </div>
+//         </div>
+<></>
     );
 };
 

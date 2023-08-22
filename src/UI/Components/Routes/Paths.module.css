@@ -13,9 +13,11 @@
 }
 .title h3{
     color: var(--text-color);
-    font-size: 42px;
+    font-size: 50px;
     font-weight: 700;
     margin-bottom: 10px;
+    font-variation-settings: 'wght' 700 , 'wdth' 75;
+    line-height: 47px;
 }
 .routesContainer{
     display: grid;
@@ -23,93 +25,143 @@
     text-align: center;
     grid-template-rows: repeat(2, 394px);
     flex-wrap: wrap;
-    padding: 40px;
+    padding: 13px 15px 13px 13px;
+    margin-right: 15px;
 }
+/* .routesContainer :nth-child(3){
+    width: 385px;
+    height: 364px;
+    display: flex;
+    flex-direction: column;
+    margin: 16px;
+    margin-left: 23px;
+} */
 .wrapper{
     max-width: 1440px;
 }
 .staticItem{
-    margin-top: 40%;
-    padding: 0 10%;
+    margin-top: 44%;
+    padding: 0 0 0 20%;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: end;
     text-align: center;
 }
-.staticItem p{
-
-    font-size: 26px;
+/* .staticItem p{
+    font-size: 40px;
     font-weight: 700;
     z-index: 1;
     white-space: nowrap;
+    font-variation-settings: 'wght' 700 , 'wdth' 75;
+} */
+.staticItem :nth-child(1){
+    font-size: 40px;
+    font-weight: 700;
+    z-index: 1;
+    white-space: nowrap;
+    font-variation-settings: 'wght' 700 , 'wdth' 75;
+    line-height: 60px;
+}
+.staticItem :nth-child(2){
+    font-size: 40px;
+    font-weight: 700;
+    z-index: 1;
+    white-space: nowrap;
+    font-variation-settings: 'wght' 700 , 'wdth' 75;
+    line-height: 21px;
 }
 .staticItem span{
-    font-size: 26px;
+    font-size: 40px;
     color: rgba(253, 89, 0, 1);
     font-weight: 700;
     z-index: 1;
     white-space: nowrap;
+    font-variation-settings: 'wght' 700 , 'wdth' 75;
+    line-height: 62px;
 }
+/* .staticItem span{
+    font-size: 40px;
+    color: rgba(253, 89, 0, 1);
+    font-weight: 700;
+    z-index: 1;
+    white-space: nowrap;
+    font-variation-settings: 'wght' 700 , 'wdth' 75
+} */
 
 
 
 
-@media screen and (max-width: 1320px) {
-    .routesContainer{
-        grid-template-columns: repeat(3,345px);
-        grid-template-rows: repeat(2, 329px);
+@media screen and (max-width : 1439px) {
+    .title h3{
+    line-height: 0px;
+    position: relative;
+    top: -6px;
     }
-    .staticItem p, .staticItem span{
+    .routesContainer{
+        display: grid;
+        grid-template-columns: repeat(3,208px);
+        text-align: center;
+        grid-template-rows: repeat(2, 200px);
+        flex-wrap: wrap;
+        padding: 13px 15px 13px 13px;
+        margin-right: 15px;
+    }
+
+    .staticItem :nth-child(1){
         font-size: 20px;
+        position: relative;
+        top: -12px;
     }
-    .staticItem {
-        margin-top: 35%;
+    .staticItem :nth-child(2){
+        font-size: 20px;
+        position: relative;
+        top: -31px;
     }
-
-}
-@media screen and (max-width: 1116px) {
-    .routesContainer{
-        grid-template-columns: repeat(3,315px);
-        grid-template-rows: repeat(2, 299px);
+    .staticItem span{
+        font-size: 20px;
+        position: relative;
+        top: -53px;
     }
-}
-@media screen and (max-width: 1030px) {
-    .routesContainer{
-        grid-template-columns: repeat(3,232px);
-        grid-template-rows: repeat(2, 212px);
-    }
-    .staticItem p, .staticItem span{
-        font-size: 18px;
-    }
-    .staticItem {
-        margin-top: 49%;
-        margin-left: 43px;
-    }
-
+    
 }
 @media screen and (max-width: 760px) {
     .title {
         margin-top: 50px;
     }
     .title h3{
-        font-size: 32px;
+        top: 39px;
     }
     .routesContainer{
         display: flex;
         flex-direction: column;
         align-items: center;
         flex-wrap: wrap;
-        padding: 0 50px 0 35px;
+        padding: 0 35px 0 35px;
         width: 100vw;
+        margin-right: 0px;
+        margin-top: 60px;
     }
     .wrapper{
         background-color: #FFFFFF;
     }
     .staticItem {
-        margin-top: 28%;
+        margin-top: 10%;
         margin-left: 0;
         padding: 0;
     }
+    .staticItem :nth-child(1) {
+        top: -38px;
+        left: -8px;
+    }
+    .staticItem :nth-child(2) {
+        top: -54px;
+        left: -15px;
+    }
+    .staticItem :nth-child(3) {
+        top: -73px;
+        left: -6px;
+    }
+ 
 }
 /* static item fonts media*/
 

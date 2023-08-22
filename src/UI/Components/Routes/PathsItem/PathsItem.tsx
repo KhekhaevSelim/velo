@@ -75,7 +75,7 @@ const PathsItem = (props : RouteItemPropsType) => {
                             </div>
                         }
                     >
-                        <img src={props.routeData.icon} alt="" />
+                        <img src={props.routeData.icon} alt="" className={style.footerIcon}/>
                     </Tippy>
             </div>
         </div>
