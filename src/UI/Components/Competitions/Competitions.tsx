@@ -1,8 +1,8 @@
 import React from 'react';
 import style from "./Competitions.module.css"
-import comp1 from "../../../assets/image/competitions1.jpg"
-import comp2 from "../../../assets/image/competitions2.jpeg"
-import comp3 from "../../../assets/image/competitions3.jpg"
+import comp1 from "../../../assets/image/competitions1.webp"
+import comp2 from "../../../assets/image/competitions2.webp"
+import comp3 from "../../../assets/image/competitions3.webp"
 import comp4 from "../../../assets/image/competitions4.jpg"
 import CompetitionsItem from "./CompetitionsItem/CompetitionsItem";
 
@@ -46,7 +46,7 @@ const Competitions = () => {
                     {competitionsData.length > 0 ?
                         competitionsData.map((c, index) => {
                             return (
-                                <CompetitionsItem key={index} competitionsData={c}/>
+                                <CompetitionsItem key={index} competitionsData={c} />
                             )
                         })
                         :
@@ -55,10 +55,37 @@ const Competitions = () => {
                 </div>
                 <div className={style.footer}>
                     <h3>
+                        БРОСАЙ ВЫЗОВ СВОИМ ДРУЗЬЯМ, 
+                    </h3>
+                    <h3>
+                    ПРИСОЕДИНЯЙСЯ К ИХ ТРЕНИРОВКЕ
+                    </h3>
+                    <span>
+                    И ОПЕРЕЖАЙ ИХ В РЕЙТИНГЕ!
+                </span>
+                </div>
+
+                <div className={style.footer_tab}>
+                    <h3>
                         БРОСАЙ ВЫЗОВ СВОИМ ДРУЗЬЯМ, ПРИСОЕДИНЯЙСЯ К ИХ ТРЕНИРОВКЕ
                     </h3>
                     <span>
-                    И ОПЕРЕЖАЙ ИХ В РЕЙТИНГЕ
+                    И ОПЕРЕЖАЙ ИХ В РЕЙТИНГЕ!
+                </span>
+                </div>
+
+                <div className={style.footer_mob}>
+                    <h3>
+                        БРОСАЙ ВЫЗОВ СВОИМ 
+                    </h3>
+                    <h3>
+                    ДРУЗЬЯМ, ПРИСОЕДИНЯЙСЯ 
+                    </h3>
+                    <h3>
+                    К ИХ ТРЕНИРОВКЕ
+                    </h3>
+                    <span>
+                    И ОПЕРЕЖАЙ ИХ В РЕЙТИНГЕ!
                 </span>
                 </div>
             </div>

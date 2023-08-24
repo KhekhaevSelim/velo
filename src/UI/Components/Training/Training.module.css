@@ -595,7 +595,7 @@ width: 720px;
     font-size: 20px;
     color: var(--text-color);
     display: inline-block;
-    max-width: 310px;
+   
 }
 .footer_tab span, .footer_mob span{
     font-variation-settings: 'wght' 700 , 'wdth' 75;

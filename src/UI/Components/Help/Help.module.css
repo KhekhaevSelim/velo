@@ -331,9 +331,7 @@ li {
 }
 
 @media screen and (max-width: 1020px) {
-    .titleContainer h3 {
-        margin: 80px 0 30px 0;
-    }
+   
 
     .systemContainer, .equipmentContainer {
         height: auto;
@@ -431,10 +429,7 @@ li {
         width: 97%;
     }
     
-.titleContainer h3 {
-    font-size: 32px;
-    margin: 40px 0 40px 0;
-}
+
 }
 /* @media screen and (max-width: 683px) {
     .equipmentContainer{
