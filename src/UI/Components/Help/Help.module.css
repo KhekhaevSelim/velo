@@ -449,7 +449,7 @@
     display: none;
     flex-direction: column;
     align-items: center;
-    width: 80%;
+    width: 100%;
     text-align: center;
     margin: 0;
 }

@@ -14,7 +14,7 @@ const QuestionItem = (props: QuestionItemPropsType) => {
     return (
         <div className={style.questionItem}>
             <div className={style.question}>
-                <h3>
+                <h3 className={`${props.showAnswer ? style.withoutLine : ""}`}>
                     {props.questionData.question}
                 </h3>
                 {props.showAnswer ?
