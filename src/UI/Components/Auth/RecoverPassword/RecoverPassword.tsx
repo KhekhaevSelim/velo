@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react"
 import style from "./RecoverPassword.module.css"
 import { useFormik } from "formik";
 import AuthHeader from "../Header/AuthHeader";
-import closeIcon from "../../../../assets/icons/+.svg";
+import closeIcon from "../../../../assets/icons/close.png";
 import { useNavigate } from "react-router-dom";
 import { useAppDispatch } from "../../../../CustomHooks/UseAppDispatch";
 import { getCodeForRecoverTC, recoverPasswordTC } from "../../../../BLL/AuthReducer";

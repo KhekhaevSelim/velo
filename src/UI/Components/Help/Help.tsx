@@ -29,7 +29,7 @@ const Help = () => {
             subTitle : "Самая известная причина почему мощемер или пульсометр не находится заключается в том, что к нему уже присоединена " +
                 "другая программа по протоколу Bluetooth (Zwift, велокомпьютер, другой велосимулятор или даже сам Windows ," +
                 " если изначально вами было установлено сопряжение с мощемером через Windows)",
-            answer : ["— Для решения проблемы необходимо отключить программу от устройства, что высвободит его для нового подключения",
+            answer : ["— Для решения проблемы необходимо отключить программу от устройства, что высвободит его для нового подключения и он будет виден в Wattattack",
             "— Проверьте заряд батарей мощемера/пульсометра",
             "— Пододвиньте свой станок/велосипед ближе к компьютеру"]
         }
@@ -65,6 +65,7 @@ const Help = () => {
     //         window.removeEventListener('resize', handleResize);
     //     };
     // }, []);
+    
     return (
         <div className={style.container} id={"help"}>
             <div className={style.titleContainer}>
@@ -82,11 +83,11 @@ const Help = () => {
                             Минимальные
                         </p>
                         <ul>
-                            <li>64-битная Windows 10</li>
-                            <li>Процессор Intel Core i5-2500 или AMD Ryzen 3 1200</li>
-                            <li>8 Гб оперативной памяти</li>
-                            <li>Видеокарта Nvidia GTX 950 или AMD R9 380</li>
-                            <li>DirectX 11 и 10 Гб свободного места на жестком диске</li>
+                            <li>· 64-битная Windows 10</li>
+                            <li>· Процессор Intel Core i5-2500 или AMD Ryzen 3 1200</li>
+                            <li>· 8 Гб оперативной памяти</li>
+                            <li>· Видеокарта Nvidia GTX 950 или AMD R9 380</li>
+                            <li>· DirectX 11 и 10 Гб свободного места на жестком диске</li>
                         </ul>
                     </div>
                     <div className={style.recommend}>
@@ -94,11 +95,11 @@ const Help = () => {
                             Рекомендуемые
                         </p>
                         <ul>
-                            <li>64-битная Windows 11</li>
-                            <li>Процессор Intel Core i5-7600К или AMD Ryzen 5 1600</li>
-                            <li>16 Гб оперативной памяти</li>
-                            <li>Видеокарта Nvidia GTX 1060 или Radeon RX 570</li>
-                            <li>DirectX 12 и 20 Гб свободного места на SSD</li>
+                            <li>· 64-битная Windows 11</li>
+                            <li>· Процессор Intel Core i5-7600К или AMD Ryzen 5 1600</li>
+                            <li>· 16 Гб оперативной памяти</li>
+                            <li>· Видеокарта Nvidia GTX 1060 или Radeon RX 570</li>
+                            <li>· DirectX 12 и 20 Гб свободного места на SSD</li>
                         </ul>
                     </div>
                 </div>
@@ -113,8 +114,8 @@ const Help = () => {
                             Обязательное
                         </p>
                         <ul>
-                            <li>Наличие станка и/или мощемера c ANT и/или BLE 4.0</li>
-                            <li>Любой велосипед</li>
+                            <li>· Наличие станка и/или мощемера c ANT и/или BLE 4.0</li>
+                            <li>· Любой велосипед</li>
                         </ul>
                     </div>
                     <div className={style.recommend}>
@@ -122,20 +123,23 @@ const Help = () => {
                             Дополнительное
                         </p>
                         <ul style={{maxWidth : "423px"}}>
-                            <li>Переходник ANT USB-Stick для подключения по протоколу ANT</li>
-                            <li>ANT/BLE пульсометр</li>
+                            <li>· Переходник ANT USB-Stick для подключения по протоколу ANT</li>
+                            <li>· ANT/BLE пульсометр</li>
                         </ul>
                     </div>
                 </div>
             </div>
             <div className={style.wrapper}>
                 <div className={style.simulatorContainer}>
-                    <h3>
-                        ЗАПУСК СИМУЛЯТОРА ТРЕБУЕТ НАЛИЧИЯ
+                    <h3 className={style.h3First}>
+                        ЗАПУСК СИМУЛЯТОРА 
+                    </h3>
+                    <h3 className={style.h3Second}>
+                    ТРЕБУЕТ НАЛИЧИЯ
                     </h3>
                     <ul>
-                        <div className={style.simulatorIconWrapper}>
-                            <li>Последней версии DirectX (11 или 12)</li>
+                        <div className={style.simulatorIconWrapper1}>
+                            <li className={style.firstLi}>Последней версии DirectX (11 или 12)</li>
                             <Tippy
                                 className={style.info}
                                 offset={offset}
@@ -154,8 +158,8 @@ const Help = () => {
                             </Tippy>
 
                         </div>
-                        <div className={style.simulatorIconWrapper}>
-                            <li>Последней версии MS Visual Studio</li>
+                        <div className={style.simulatorIconWrapper2}>
+                            <li className={style.secondLi}>Последней версии MS Visual Studio</li>
                             <Tippy
                                 className={style.info}
                                 offset={offset}
@@ -173,8 +177,8 @@ const Help = () => {
                                 <img src={attention} alt="" />
                             </Tippy>
                         </div>
-                        <div className={style.simulatorIconWrapper}>
-                            <li>Свежих драйверов для видеокарты</li>
+                        <div className={style.simulatorIconWrapper3}>
+                            <li className={style.thirdLi}>Свежих драйверов для видеокарты</li>
                             <Tippy
                                 className={style.info}
                                 offset={offset}
@@ -197,8 +201,11 @@ const Help = () => {
                 </div>
 
                 <div className={style.filesContainer}>
-                    <h3>
-                        ДЛЯ ВЫГРУЗКИ ТРЕНИРОВОК В ФИТ ФАЙЛЫ
+                    <h3 className={style.h3First2}>
+                        ДЛЯ ВЫГРУЗКИ ТРЕНИРОВОК
+                    </h3>
+                    <h3 className={style.h3Second2}>
+                    В ФИТ ФАЙЛЫ
                     </h3>
                     <div className={style.filesInfo}>
                         <p>
@@ -209,6 +216,20 @@ const Help = () => {
                     </span>
                     </div>
 
+                    <div className={style.filesInfo_mob}>
+                        <p>
+                            Должна быть установлена последняя текущая версия языка Java
+                        </p>
+                        <span>
+                        Файл с установщиком находится по адресу:
+                    </span>
+                    <span>
+                    Папка с симулятором\ Windows\
+                    </span>
+                    <span>
+                    WattAttack\Java\jre-8u371-windows-x64.exe
+                    </span>
+                    </div>
                 </div>
             </div>
              <div className={style.questionsTitle}>
@@ -229,7 +250,50 @@ const Help = () => {
              </div>
             <div className={style.helpFooter}>
                 <h3>
-                    По всем остальным вопросам, относящимся к проблемам в работе приложения, а также предложениям по улучшению работы симулятора, пожалуйста, пишите на адрес
+                    ПО ВСЕМ ОСТАЛЬНЫМ ВОПРОСАМ, ОТНОСЯЩИМСЯ К ПРОБЛЕМАМ В РАБОТЕ ПРИЛОЖЕНИЯ, А ТАКЖЕ
+                </h3>
+                <h3>
+                    ПРЕДЛОЖЕНИЯМ ПО УЛУЧШЕНИЮ РАБОТЫ СИМУЛЯТОРА, ПОЖАЛУЙСТА, ПИШИТЕ НА АДРЕС
+                </h3>
+                <span>
+                    wattattack@wattattack.ru
+                </span>
+            </div>
+
+
+            <div className={style.helpFooter_tab}>
+                <h3>
+                    ПО ВСЕМ ОСТАЛЬНЫМ ВОПРОСАМ, ОТНОСЯЩИМСЯ К 
+                </h3>
+                <h3>
+                ПРОБЛЕМАМ В РАБОТЕ ПРИЛОЖЕНИЯ, А ТАКЖЕ
+                </h3>
+                <h3>
+                    ПРЕДЛОЖЕНИЯМ ПО УЛУЧШЕНИЮ РАБОТЫ СИМУЛЯТОРА, 
+                </h3>
+                <h3>
+                ПОЖАЛУЙСТА, ПИШИТЕ НА АДРЕС
+                </h3>
+                <span>
+                    wattattack@wattattack.ru
+                </span>
+            </div>
+
+            <div className={style.helpFooter_mob}>
+                <h3>
+                    ПО ВСЕМ ОСТАЛЬНЫМ ВОПРОСАМ, 
+                </h3>
+                <h3>
+                ОТНОСЯЩИМСЯ К ПРОБЛЕМАМ В РАБОТЕ 
+                </h3>
+                <h3>
+                ПРИЛОЖЕНИЯ, А ТАКЖЕ ПРЕДЛОЖЕНИЯМ ПО 
+                </h3>
+                <h3>
+                УЛУЧШЕНИЮ РАБОТЫ СИМУЛЯТОРА, 
+                </h3>
+                <h3>
+                ПОЖАЛУЙСТА, ПИШИТЕ НА АДРЕС
                 </h3>
                 <span>
                     wattattack@wattattack.ru
