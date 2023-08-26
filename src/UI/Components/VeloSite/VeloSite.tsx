@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Header from "../Header/Header";
 import HowStart from "../HowStart/HowStart";
 import Training from "../Training/Training";
@@ -9,9 +9,24 @@ import SendQuestion from "../SendQuestion/SendQuestion";
 import Footer from "../Footer/Footer";
 
 const VeloSite = () => {
+    let [yPos, setYpos] = useState<number>(window.scrollY);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            setYpos(window.scrollY);
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
+    
     return (
         <div>
-            <Header/>
+            <Header yPos={yPos}/>
             <HowStart/>
             <Training/>
             <Competitions/>
