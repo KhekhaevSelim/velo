@@ -9,7 +9,8 @@ import { useSelector } from 'react-redux';
 import { AppRootStateType } from '../../../../BLL/Store';
 import { GetUserProfileResType } from '../../../../DAL/Api';
 import { setNotifyMessageOkAC } from '../../../../BLL/AppReducer';
-
+import iconBorder from "../../../../assets/icons/showPassIconBorder.png";
+import iconBody from "../../../../assets/icons/showPassIconCircle.png";
 
 
 /**
@@ -126,7 +127,11 @@ const Login = () => {
                                     placeholder={"Введите пароль"}
                                     {...formik.getFieldProps("password")}
                                 />
-                                <i className='bx bx-show' onClick={handleClickShowPassword} onMouseDown={handleMouseDownPassword}></i>
+                                 <div className={style.customIconShowPass} onClick={handleClickShowPassword}>
+                                    <img src={iconBorder} alt="showPassIconBorder" />
+                                    <img src={iconBody} alt="showPassIconCircle" />
+                                 </div>
+                                {/* <i className='bx bx-show' onClick={handleClickShowPassword} onMouseDown={handleMouseDownPassword}></i> */}
                                 {/*<span onClick={handleClickShowPassword}><img src="../../../../assets/icons/showPassSvg.svg" /></span>*/}
                             </div>
 

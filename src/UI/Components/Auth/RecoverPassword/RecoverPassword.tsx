@@ -212,7 +212,7 @@ const RecoverPassword = () => {
             <AuthHeader/>
             <div className={style.recoverContainer}>
                 <div className={style.recoverFormContainer}>
-                    <h3>АВТОРИЗАЦИЯ</h3>
+                    <h3>ВОССТАНОВЛЕНИЕ ПАРОЛЯ</h3>
                     <form onSubmit={formik.handleSubmit} className={style.form}>
                         {/**
                          * данный инпут имеет изначально display : none, поэтому мы напрямую передает value и обработчики событий

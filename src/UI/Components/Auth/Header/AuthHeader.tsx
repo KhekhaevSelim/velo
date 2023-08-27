@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import style from "./AuthHeader.module.css";
 import {NavLink} from "react-router-dom";
+import { BurgerMenu } from '../../../Common/burgerMenu/BurgerMenu';
 
 const AuthHeader = () => {
     /**
@@ -32,8 +33,7 @@ const AuthHeader = () => {
                     <nav className={style.mobileNavFul}>
                         <div className={style.mobileNavHeader}>
                             <h3>WattAttack</h3>
-                            <i className={`bx ${isActiveMenu ? "bx-x" : "bx-menu"}`} id={style.menuIcon}
-                               onClick={handleClickMenu}></i>
+                            <BurgerMenu isFixedNav={false} isActiveMenu={isActiveMenu} handleClickMenu={handleClickMenu}/>
                         </div>
                         <NavLink to="/#howStart" onClick={handleClickLink}>КАК НАЧАТЬ</NavLink>
                         <NavLink to="/#routes" onClick={handleClickLink}>МАРШРУТЫ</NavLink>
@@ -49,8 +49,8 @@ const AuthHeader = () => {
                         <NavLink to={"/#howStart"}>КАК НАЧАТЬ</NavLink>
                         <NavLink to={"/login"}>ВОЙТИ</NavLink>
                         <NavLink to={"/download"}>СКАЧАТЬ</NavLink>
-                        <i className={`bx ${isActiveMenu ? "bx-x" : "bx-menu"}`} id={style.menuIcon}
-                           onClick={handleClickMenu}></i>
+                        <BurgerMenu isFixedNav={true} isActiveMenu={isActiveMenu} handleClickMenu={handleClickMenu}/>
+                       
                     </nav>
             }
             {/**
@@ -62,8 +62,8 @@ const AuthHeader = () => {
                     <NavLink to="/#routes" onClick={handleClickLink}>МАРШРУТЫ</NavLink>
                     <NavLink to="/#training" onClick={handleClickLink}>ТРЕНИРОВКИ</NavLink>
                     <NavLink to="/#about" onClick={handleClickLink}>О НАС</NavLink>
-                    <NavLink to="/#help" onClick={handleClickLink}>ПОМОЩЬ</NavLink>
-                    <NavLink to={"/login"}>ВОЙТИ</NavLink>
+                    <NavLink to="/#help" onClick={handleClickLink}>HELP</NavLink>
+                    <NavLink to={"/login"}>LOGIN</NavLink>
                     <NavLink to={"/download"}>СКАЧАТЬ</NavLink>
                 </div>
             </nav>

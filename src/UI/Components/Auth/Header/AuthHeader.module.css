@@ -1,8 +1,9 @@
 .container {
-
+display: flex;
+justify-content: center;
 }
 .navbar {
-    padding: 40px 50px;
+    padding: 63px 50px 0 50px;
     width: 100%;
     position: absolute;
     display: flex;
@@ -13,7 +14,7 @@
 .wrapper{
     width: 100%;
     height: 100%;
-    max-width: 1440px;
+    max-width: 1193px;
     display: flex;
     justify-content: space-between;
 }
@@ -26,8 +27,8 @@
     /*display: none;*/
 }
 .navbar a {
-    font-size: 32px;
-    font-weight: 600;
+    font-size: 20px;
+    font-variation-settings: 'wght' 600 , 'wdth' 75;
     color: black;
     text-align: center;
     transition: 300ms;
@@ -48,10 +49,11 @@
     justify-content: space-evenly;
     align-items: center;
     display: none;
+    max-width: 350px;
 }
 .mobileNavPart a {
-    font-size: 32px;
-    font-weight: 600;
+    font-size: 20px;
+    font-variation-settings: 'wght' 600 , 'wdth' 75;
     color: black;
     text-align: center;
     transition: 300ms;
@@ -66,17 +68,16 @@
     color: var(--main-color);
 }
 .mobileNavFul{
-    padding: 40px 20px;
+    padding: 17px 20px;
     width: 100%;
     height: 100%;
-    position: absolute;
-    display: none;
+    position: fixed;
+    display: flex;
     flex-direction: column;
     justify-content: start;
     align-items: start;
-    color: black;
-    z-index: 9999;
     background-color: white;
+    z-index: 9999;
 }
 
 .mobileNavHeader{
@@ -84,22 +85,25 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0 7px 0 0;
 }
 .mobileNavHeader h3{
     color: var(--main-color);
-    font-size: 30px;
-    font-weight: 600;
+    font-size: 35px;
+    font-variation-settings: 'wght' 700 , 'wdth' 75;
+    margin-bottom: 13px;
 }
 
 .mobileNavFul a {
-    font-size: 22px;
-    font-weight: 600;
-    color: black;
+    font-size: 20px;
+    font-variation-settings: 'wght' 600 , 'wdth' 75;
+    color: #111F28;
     text-align: center;
     transition: 300ms;
+    margin-bottom: 13px;
 }
 
-.mobileNavFul a:nth-child(8) {
+.mobileNavFul a:nth-child(9) {
     color: var(--main-color);
 }
 
@@ -107,38 +111,17 @@
 .mobileNavFul a.active {
     color: var(--main-color);
 }
-@media screen and (max-width: 1920px) {
-    .navbar a {
-        font-size: 28px;
-    }
-    .navbarActive a {
-        font-size: 28px;
-    }
-}
-@media screen and (max-width: 1470px) {
-    .navbar a {
-        font-size: 24px;
-    }
-    .navbarActive a {
-        font-size: 24px;
+
+@media screen and (max-width: 1439px) {
+    .wrapper{
+        width: 100%;
+        height: 100%;
+        max-width: 614px;
     }
 }
-@media screen and (max-width: 1280px) {
-    .navbar a {
-        font-size: 20px;
-    }
-    .navbarActive a {
-        font-size: 20px;
-    }
-}
-@media screen and (max-width: 940px) {
-    .navbar a {
-        font-size: 18px;
-    }
-    .navbarActive a {
-        font-size: 18px;
-    }
-}
+
+
+
 @media screen and (max-width: 760px) {
     .navbar {
         flex-direction: column;
@@ -147,7 +130,7 @@
         display: none;
     }
     .mobileNavPart {
-        padding: 12px 5px;
+        padding: 30px 5px;
         width: 100%;
         position: absolute;
         display: flex;
@@ -160,8 +143,6 @@
         display: flex;
     }
     .mobileNavPart a {
-        font-size: 18px;
-        font-weight: 600;
         color: black;
         text-align: center;
         transition: 300ms;
@@ -176,102 +157,18 @@
         color: var(--main-color);
     }
     .mobileNavFul a {
-        font-size: 20px;
-        font-weight: 600;
+       
         color: black;
         text-align: center;
         transition: 300ms;
     }
     .mobileNavHeader h3{
-        font-size: 35px;
+        
     }
     .mobileNavFul a:nth-child(8) {
         color: var(--main-color);
     }
 
-    .mobileNavFul a:hover,
-    .mobileNavFul a.active {
-        color: var(--main-color);
-    }
-    #menuIcon{
-        display: block;
-      
-        font-size: 65px;
-        /*top: 13px;*/
-        /*left: 5px;*/
-    }
 }
 
-@media screen and (max-width: 820px) {
-    #menuIcon{
-        font-size: 40px;
-        top: 9px;
-        left: 9px;
-    }
-    .mobileNavPart a {
-        font-size: 18px;
-    }
-    .mobileNavFul a {
-        font-size: 18px;
-        padding: 5px 0;
-    }
 
-}
-@media screen and (max-width: 620px) {
-    #menuIcon{
-        font-size: 35px;
-        top: 13px;
-        left: 5px;
-    }
-    .mobileNavPart a {
-        font-size: 18px;
-    }
-    .mobileNavFul a {
-        font-size: 18px;
-    }
-    .mobileNavHeader h3{
-        font-size: 35px;
-    }
-}
-
-@media screen and (max-width: 520px) {
-    #menuIcon{
-        font-size: 30px;
-        top: 13px;
-        left: 5px;
-    }
-
-    .mobileNavPart a {
-        font-size: 18px;
-    }
-    .mobileNavFul a {
-        font-size: 18px;
-    }
-    .mobileNavHeader h3{
-        font-size: 35px;
-    }
-}
-@media screen and (max-width: 420px) {
-
-    .mobileNavPart a {
-        font-size: 18px;
-    }
-    .mobileNavFul a {
-        font-size: 18px;
-    }
-    .mobileNavHeader h3{
-        font-size: 35px;
-    }
-}
-@media screen and (max-height: 1380px) {
-    #menuIcon{
-
-    }
-    .navbarActive {
-        padding: 20px;
-        gap: 3px;
-    }
-    /*.navbarActive a {*/
-    /*    font-size: 12px;*/
-    /*}*/
-}

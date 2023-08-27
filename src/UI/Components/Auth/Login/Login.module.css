@@ -24,8 +24,8 @@
 
 .loginFormContainer h3 {
     color: var(--main-color);
-    font-size: 42px;
-    font-weight: 700;
+    font-size: 50px;
+    font-variation-settings: 'wght' 700 , 'wdth' 75;
     margin-bottom: 20px;
 }
 
@@ -44,6 +44,7 @@
     margin: 10px 0;
     display: flex;
     align-items: center;
+    color: #A6A6A6;
 }
 
 .errorInput{
@@ -91,20 +92,28 @@
 .registerLink {
     color: #FD6E20;
     font-size: 15px;
-    font-weight: 350;
+    font-variation-settings: 'wght' 350 , 'wdth' 88;
     border-bottom: solid #FD6E20 1px;
 }
 
 .recoverLink {
 color: #B7B7B7;
     font-size: 15px;
-    font-weight: 350;
+    font-variation-settings: 'wght' 350 , 'wdth' 88;
     border-bottom: solid #B7B7B7 1px;
 }
 
 
-
-
+.customIconShowPass{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.customIconShowPass :nth-child(2){
+    position: relative;
+    right: 16px;
+}
 @media screen and (max-width: 760px) {
     .errorInput, .input, .btn {
         width: 310px;

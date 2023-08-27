@@ -11,7 +11,8 @@ import { useSelector } from 'react-redux';
 import { AppRootStateType } from '../../../../BLL/Store';
 import { CreateUserResType } from '../../../../DAL/Api';
 import { setNotifyMessageOkAC } from '../../../../BLL/AppReducer';
-
+import iconBorder from "../../../../assets/icons/showPassIconBorder.png";
+import iconBody from "../../../../assets/icons/showPassIconCircle.png";
 
 const Register = () => {
     /**
@@ -148,7 +149,11 @@ const Register = () => {
                                 {...formik.getFieldProps("password")}
 
                             />
-                            <i className='bx bx-show' onClick={handleClickShowPassword}></i>
+                            <div className={style.customIconShowPass} onClick={handleClickShowPassword}>
+                                    <img src={iconBorder} alt="showPassIconBorder" />
+                                    <img src={iconBody} alt="showPassIconCircle" />
+                                 </div>
+                            {/* <i className='bx bx-show' onClick={handleClickShowPassword}></i> */}
                             {/*<span onClick={handleClickShowPassword}><img src="../../../../assets/icons/showPassSvg.svg" /></span>*/}
                         </div>
 
@@ -167,7 +172,11 @@ const Register = () => {
                                 {...formik.getFieldProps("confirmPassword")}
 
                             />
-                            <i className='bx bx-show' onClick={handleClickShowPassword}></i>
+                            <div className={style.customIconShowPass} onClick={handleClickShowPassword}>
+                                    <img src={iconBorder} alt="showPassIconBorder" />
+                                    <img src={iconBody} alt="showPassIconCircle" />
+                                 </div>
+                            {/* <i className='bx bx-show' onClick={handleClickShowPassword}></i> */}
                             {/*<span onClick={handleClickShowPassword}><img src="../../../../assets/icons/showPassSvg.svg" /></span>*/}
                         </div>
 
@@ -183,7 +192,9 @@ const Register = () => {
                                        type="checkbox" className={style.hiddenInput}/>
                                 <span className={style.checkBoxIcon}></span>
                             </label>
-                            <NavLink to={"/login"} className={style.loginLink} style={{marginLeft : "10px"}}>Согласен на обработку персональных данных</NavLink>
+                            <NavLink to={"/login"} className={style.approvalLink} style={{marginLeft : "10px"}}>Согласен на <a href="" className={style.loginLink}>
+                                обработку персональных данных
+                                </a></NavLink>
                         </div>
                         <button type="submit" className={style.btn} onClick={handleClickShowErrors}>РЕГИСТРАЦИЯ</button>
                     </form>

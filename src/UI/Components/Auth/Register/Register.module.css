@@ -24,8 +24,8 @@
 
 .registerFormContainer h3 {
     color: var(--main-color);
-    font-size: 42px;
-    font-weight: 700;
+    font-size: 50px;
+    font-variation-settings: 'wght' 700 , 'wdth' 75;
     margin-bottom: 6px;
     padding-top: 32px;
 }
@@ -151,14 +151,18 @@
 .loginLink {
     color: #FD6E20;
     font-size: 15px;
-    font-weight: 350;
+    font-variation-settings: 'wght' 350 , 'wdth' 88;
     border-bottom: solid #FD6E20 1px;
 }
-
+.approvalLink{
+    color: #FD6E20;
+    font-size: 15px;
+    font-variation-settings: 'wght' 350 , 'wdth' 88;
+}
 .recoverLink {
     color: #B7B7B7;
     font-size: 15px;
-    font-weight: 350;
+    font-variation-settings: 'wght' 350 , 'wdth' 88;
     border-bottom: solid #B7B7B7 1px;
 }
 .hiddenRecoverModalBg{
@@ -208,6 +212,16 @@
     top: 5px;
     right: 5px;
     cursor: pointer;
+}
+.customIconShowPass{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.customIconShowPass :nth-child(2){
+    position: relative;
+    right: 16px;
 }
 @media screen and (max-width: 760px) {
     .recoverBtn{
