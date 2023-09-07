@@ -207,7 +207,7 @@ dispatch(meTC(token))
 
 
                    <input type="email" placeholder='E-mail' disabled/>
-                   {/* <div className={style.password}>
+                   <div className={style.password}>
                      <span>Пароль</span>
                      <span>Забыли пароль?</span>
                    </div>
@@ -216,9 +216,9 @@ dispatch(meTC(token))
                    <input type="password" placeholder='Подтвердите новый пароль'/>
                    <button className={style.btn}>
                         ИЗМЕНИТЬ ПАРОЛЬ
-                   </button> */}
+                   </button>
                  </div>
-                 {/* <div className={style.clubData}>
+                 <div className={style.clubData}>
                    <div className={style.title}>
                        <p>
                        Клуб, команда и тренер
@@ -236,23 +236,23 @@ dispatch(meTC(token))
                     <div className={style.boxWrapper}>
                       <div className={style.box1}></div>
                       <div className={style.ellipse1}>
-                         <img src={close} alt="close" />
+                         {/* <img src={close} alt="close" /> */}
                       </div>
                     </div>
                     <div className={style.boxWrapper}>
                       <div className={style.box2}></div>
                       <div className={style.ellipse2}>
-                         <img src={done} alt="close" />
+                         {/* <img src={done} alt="close" /> */}
                       </div>
                     </div>
                     <div className={style.boxWrapper}>
                       <div className={style.box3}></div>
                       <div className={style.ellipse3}>
-                         <img src={close} alt="close" />
+                         {/* <img src={close} alt="close" /> */}
                       </div>
                     </div>
                    </div>
-                 </div> */}
+                 </div>
                  <div className={style.rateData}>
                    <div className={style.title}>
                      <p>
@@ -281,7 +281,7 @@ dispatch(meTC(token))
                             </label>
                             <span className={style.autoRenewal}>Автопродление включено</span>
                     </div>
-                    {/* <span className={style.pushNotify}>
+                    <span className={style.pushNotify}>
                        Push-уведомления на телефон
                     </span>
                     <div className={style.approval}>
@@ -295,8 +295,8 @@ dispatch(meTC(token))
                             <span className={style.pushNotifyText}>
                                 Мои события (напоминания)
                             </span>
-                    </div> */}
-                    {/* <div className={style.approval}>
+                    </div>
+                    <div className={style.approval}>
                             <label htmlFor="" className={style.customCheckBox}>
                                 <input 
                                 // checked={formik.values.isChecked}
@@ -307,8 +307,8 @@ dispatch(meTC(token))
                             <span className={style.pushNotifyText}>
                                Начало тренировки друга
                             </span>
-                    </div> */}
-                    {/* <div className={style.approval}>
+                    </div>
+                    <div className={style.approval}>
                             <label htmlFor="" className={style.customCheckBox}>
                                 <input 
                                 // checked={formik.values.isChecked}
@@ -319,11 +319,11 @@ dispatch(meTC(token))
                             <span className={style.pushNotifyText}>
                                Сообщения от клуба/команды/тренера
                             </span>
-                    </div> */}
-                    {/* <input type="password" placeholder='Номер телефона' className={style.phoneNumInput}/> */}
+                    </div>
+                    <input type="password" placeholder='Номер телефона' className={style.phoneNumInput}/>
                  </div>
                  <div className={style.emailNotifySetting}>
-                    {/* <div className={style.title}>
+                    <div className={style.title}>
                       <p>
                         Уведомления на e-mail
                       </p>
@@ -375,7 +375,7 @@ dispatch(meTC(token))
                             <span className={style.pushNotifyText}>
                                Предложения и подсказки (скидки, магазин и т.д.)
                             </span>
-                    </div> */}
+                    </div>
                     <div className={style.btnsContainer}>
                         <button className={style.btn}>
                             ИСТОРИЯ ПОКУПОК И ОПЛАТ
@@ -384,9 +384,9 @@ dispatch(meTC(token))
                             СОХРАНИТЬ ВСЕ ИЗМЕНЕНИЯ
                         </button>
                        
-                        {/* <button className={style.btn}>
+                        <button className={style.btn}>
                            УДАЛИТЬ АККАУНТ
-                        </button> */}
+                        </button>
                     </div>
                  </div>
                </div>

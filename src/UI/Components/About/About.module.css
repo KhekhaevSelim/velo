@@ -33,6 +33,8 @@
     width: 100%;
     padding-top: 65px;
     height: 1020px;
+    position: relative;
+    bottom: 164px;
 }
 
 .title {
@@ -500,9 +502,9 @@
     margin-top: 44px;
     margin-left: 23px;
 }
-.footer {
+/* .footer {
     height: 100vh;
-}
+} */
 .footer h3 {
     font-size: 40px;
     font-weight: 700;
@@ -632,7 +634,84 @@
     box-shadow: none;
 }
 
+/* .rates{
+    width: 100%;
+    height: 125vh;
+    background-image: url("../../../assets/image/rates.webp");
+    background-position: 56%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.rates_wrapper{
+    width: 1143px;
+    height: 100%;
+    border: solid red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+} */
+/* .rates_title{
+    color : #F3F3F3;
+    font-size: 50px;
+    font-variation-settings: 'wght' 700 , 'wdth' 75;
+    margin: 100px 0 0 0;
+} */
 
+/* .rates_itemsContainer{
+    width: 1143px;
+    height: 287px;
+    border: solid red;
+    margin: 35px 0 30px 0;
+} */
+/* .rates__itemsContainer__item{
+    width: 361px;
+    height: 287px;
+    margin: 0 30px 30px 0 ;
+    border-radius: 8px;
+    backdrop-filter: blur(8px) saturate(120%);
+    background-color: #6e6e6e42;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.item_title{
+    color: #FFFFFF;
+    font-size: 40px;
+    font-variation-settings: 'wght' 700 , 'wdth' 75;
+    position: relative;
+    bottom: 5px;
+}
+.item_price{
+    color: #FD5900;
+    font-size: 60px;
+    font-variation-settings: 'wght' 700 , 'wdth' 75;
+}
+.item_description{
+    color: #FFFFFF;
+    font-size: 15px;
+    font-variation-settings: 'wght' 350 , 'wdth' 88;
+    position: relative;
+    bottom: 9px;
+}
+.item_btn{
+    width: 237px;
+    height: 53px;
+    background-color: #111F28;
+    font-size: 28px;
+    font-variation-settings: 'wght' 600 , 'wdth' 75;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    color: white;
+} */
 @media screen and (max-width: 1439px) {
     .leftTop, .leftBottom, .right {
         display: none;
@@ -1193,5 +1272,12 @@
 @media screen and (min-height: 1730px) and (min-width: 768px){
     .container{
         min-height: 99vh;
+    }
+}
+
+@media screen and (min-height: 1262px) and (min-width: 1440px){
+    .footer{
+        position: relative;
+        bottom: 270px;
     }
 }

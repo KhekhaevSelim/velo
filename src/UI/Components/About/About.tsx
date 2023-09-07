@@ -2,8 +2,56 @@ import React from 'react';
 import style from "./About.module.css"
 import about1 from "../../../assets/image/aboutImage1.webp";
 import about2 from "../../../assets/image/aboutImage2.webp";
+import Rates from '../rates/Rates';
+
+export type ratesDataType = {
+    title : string
+    price : string
+    decsription : string
+    disabled : boolean 
+}
 
 const About = () => {
+
+    const ratesData : Array<ratesDataType>= [
+        {
+           title : "ПОДПИСКА НА МЕСЯЦ",
+           price : "399 ₽",
+           decsription : "только в сентябре вместо 499₽",
+           disabled : false
+        },
+        {
+            title : "ПОДПИСКА НА ПОЛГОДА",
+            price : "2 490 ₽",
+            decsription : "415 ₽ / мес",
+            disabled : false
+         },
+         {
+            title : "ТАРИФ “ТРЕНИРОВКА”",
+            price : "99 ₽",
+            decsription : "тренировка ограничена 5 часами",
+            disabled : false
+         },
+         {
+            title : "ТАРИФ “ПОМИНУТНЫЙ”",
+            price : "1 ₽ / МИН",
+            decsription : "вносите любой размер депозита, счет минут начинается с момента старта тренировки",
+            disabled : false
+         },
+         {
+            title : "ТАРИФ “ТРЕНЕР”",
+            price : "no",
+            decsription : "SOON",
+            disabled : true
+         },
+         {
+            title : "ПОДПИСКА НА ГОД",
+            price : "no",
+            decsription : "SOON",
+            disabled : true
+         }
+    ]
+
     return (
         <div className={style.container} id={"about"}>
             <div className={style.wrapper}>
@@ -274,6 +322,33 @@ const About = () => {
                     </div>
                 </div>
             </div>
+            <Rates ratesData={ratesData}/>
+            {/* <div className={style.rates}>
+                <div className={style.rates_wrapper}>
+                     <span className={style.rates_title}>
+                     ТАРИФЫ
+                     </span>
+                   
+                     <div className={style.rates_itemsContainer}>
+                        <div className={style.rates__itemsContainer__item}>
+                            <span className={style.item_title}>
+                            ПОДПИСКА НА МЕСЯЦ
+                            </span>
+                            <span className={style.item_price}>
+                            399 ₽
+                            </span>
+                            <span className={style.item_description}>
+                            только в сентябре вместо 499₽
+                            </span>
+                            <button className={style.item_btn}>
+                                ПРИОБРЕСТИ
+                            </button>
+                        </div>
+                     </div>
+
+                    
+                </div>
+            </div> */}
                 <div className={style.footer}>
                     <div className={style.footerContainer}>
                         <h3>
