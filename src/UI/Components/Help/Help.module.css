@@ -16,7 +16,7 @@
 .titleContainer h3 {
     color: var(--main-color);
     font-variation-settings: 'wght' 700 , 'wdth' 75;
-    margin: 110px 0 69px 0;
+    margin: -20px 0 69px 0;
     font-size: 50px;
     position: relative;
     bottom: 63px;
@@ -513,7 +513,7 @@ li {
 
 @media screen and (max-width: 1439px) {
     .titleContainer h3{
-        margin: 86px 0 69px 0;
+        margin: -60px 0 69px 0;
     }
     .systemContainer {
         width: 515px;
@@ -630,7 +630,7 @@ li {
         width: 310px;
     }
     .titleContainer h3{
-        margin: 57px 0 69px 0;
+        margin: -95px 0 69px 0;
     }
     .systemContainer h3, .equipmentContainer h3, .simulatorContainer h3, .filesContainer h3{
         font-size: 20px;
