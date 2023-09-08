@@ -7,15 +7,22 @@ const Footer = () => {
             <div className={style.wrapper}>
                 <div className={style.col1}>
                     <div className={style.footerLeft}>
-                    <span>
-              WattAttack
-                   </span>
-                        <div className={style.mobileCol}>
+                     <span>
+                       WattAttack
+                     </span>
+                     <div className={style.executor}>
+                     <span className={style.executor_text}>Исполнитель — ИП ПОПОВ СЕРГЕЙ ЭДУАРДОВИЧ,</span>
+                     <span className={style.executor_text}>ОГРНИП 318732500016917, ИНН 732508819546,</span>
+                     <span className={style.executor_text}>юридический адрес: Ульяновская обл., г Ульяновск,</span>
+                     <span className={style.executor_text}>ул. Университетская набережная, д. 13, кв. 68, тел.: +7 (916) 389-61-68</span>
+                     </div>
+                     <div className={style.mobileCol}>
                             <p>Связаться с нами</p>
                             <span>wattattack@wattattack.ru</span>
                             <span>8 (999) 999-99-99</span>
-                        </div>
-                    </div>
+                     </div>
+
+                   </div>
 
                 </div>
                 <div className={style.col2}>
@@ -42,6 +49,12 @@ const Footer = () => {
                     <span>8 (999) 999-99-99</span>
                 </div>
             </div>
+            <div className={style.executor_mob}>
+                     <span className={style.executor_text_mob}>Исполнитель — ИП ПОПОВ СЕРГЕЙ ЭДУАРДОВИЧ,</span>
+                     <span className={style.executor_text_mob}>ОГРНИП 318732500016917, ИНН 732508819546,</span>
+                     <span className={style.executor_text_mob}>юридический адрес: Ульяновская обл., г Ульяновск,</span>
+                     <span className={style.executor_text_mob}>ул. Университетская набережная, д. 13, кв. 68, тел.: +7 (916) 389-61-68</span>
+                     </div>
         </div>
     );
 };
