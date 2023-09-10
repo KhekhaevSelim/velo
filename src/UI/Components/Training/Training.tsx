@@ -31,7 +31,10 @@ const Training = () => {
         },
     ]
     return (
+    
         <div className={style.container}>
+          
+           
             <div className={style.header}>
                 <p>
                     ТРЕНИРОВКИ
@@ -54,14 +57,14 @@ const Training = () => {
              
                     <div className={style.trainsContainer} id={"training"}>
                         <div className={style.wrapWrapper}>
-                        {/* {trainingData.length > 0 ? trainingData.map(t => {
+                         {trainingData.length > 0 ? trainingData.map(t => {
                                 return (
                                     <TrainsItem key={t.num} trainsData={t}/>
                                 )
                             })
                             :
                             ""
-                        } */}
+                        } 
                         <div className={style.trainsItem1}>
                          <div className={style.top}>
                            <div className={style.circle}>
@@ -426,7 +429,7 @@ const Training = () => {
                     </div>
             </div>
 
-        </div>
+         </div>
     );
 };
 

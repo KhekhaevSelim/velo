@@ -4,19 +4,34 @@
     /*display: flex;*/
     /*!* position: relative; *!*/
     /*flex-direction: column;*/
-    height: 110vh;
+    height: 1060px;
     
 }
-
+.shape{
+    clip-path: polygon(0 77%, 100% 0%, 100% 100%, 0% 100%);
+    /* border: solid red; */
+    height: 211px;
+    position: relative;
+    bottom: 245px;
+    background-color: white;
+}
 .header{
-    height: 10vh;
+    /* height: 10vh;
     background-color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-bottom: 16px;
-    margin-top: 180px;
+    margin-top: 180px; */
+
+
+    height: 0;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 .header_mob{
     background-color: white;
@@ -27,7 +42,7 @@
     margin-top: 60px;
         margin-bottom: 22px;
         position: relative;
-    top: 165px;
+        top: 333px;
     height: 0;
 }
 .header p{
@@ -89,15 +104,16 @@
     max-width: 1440px;
     display: flex;
     flex-wrap: wrap;
-    max-height: 1200px;
+    max-height: 840px;
     min-height: 700px;
+    align-items: center;
 }
 .wrapWrapper_tab{
     max-width: 620px;
     display: none;
     flex-wrap: wrap;
     position: relative;
-    top: 108px;
+    top: 232px;
 }
 .wrapWrapper_mob{
     max-width: 315px;
@@ -571,6 +587,7 @@ width: 720px;
     align-items: center;
     justify-content: center;
     padding-right: 17%; */
+    height: 1060px;
 }
 .footerContainer{
     display: flex;
@@ -686,17 +703,28 @@ width: 720px;
 }
 @media screen and (max-width: 1439px) {
     .container{
-    height: 80vh;
+    /* height: 80vh; */
+    height: 900px;
+    }
+    .shape{
+        clip-path: polygon(0 72%, 100% 0%, 100% 100%, -1% 100%);
+    /* border: solid red; */
+    height: 152px;
+    position: relative;
+    bottom: 186px;
     }
     .wrapper{
         background-position: 75% -89px;
         width: 100%;
-        height: 100%;
+ 
     }
     .trainsContainer{
-        height: 101vh;
+        /* height: 101vh;
         min-height: 759px;
-        max-height: 1115px;
+        max-height: 1115px; */
+   
+    height: 920px;
+
     }
 .circle {
     width: 57px;
@@ -717,7 +745,7 @@ width: 720px;
 }
 .footerContainer{
     position: relative;
-    top: 8px;
+    top: 211px;
 }
 }
 
@@ -728,17 +756,17 @@ width: 720px;
         .wrapper{
             background-position: 50% 0px;
             width: 100%;
-            height: 102%;
+            height: 1540px;
         }
-        .trainsContainer{
+        /* .trainsContainer{
             height: 101vh;
-        }
+        } */
     .header_mob{
         display: flex;
         
     }
     .trainsContainer{
-        height: 1130px;
+        height: 1540px;
         align-items: center;
     }
     .footer_tab{
@@ -757,7 +785,9 @@ width: 720px;
     .wrapWrapper_mob{
         display: flex;
     }
-   
+   .footerContainer{
+    top: -147px;
+   }
 
 }
 

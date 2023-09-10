@@ -1,7 +1,18 @@
 .container{
-
+display: flex;
+/* new */
+flex-direction: column;
+align-items: center;
 }
-
+.shape{
+    clip-path: polygon(0 77%, 100% 0%, 100% 100%, 0% 100%);
+    /* border: solid red; */
+    height: 310px;
+    position: relative;
+    top: -382px;
+    background-color: white;
+    width: 100vw;
+}
 .title{
     top: 170px;
     display: flex;
@@ -28,6 +39,8 @@
     padding: 13px 15px 13px 13px;
     margin-right: 15px;
 }
+
+
 /* .routesContainer :nth-child(3){
     width: 385px;
     height: 364px;
@@ -92,6 +105,11 @@
 
 
 @media screen and (max-width : 1439px) {
+ 
+    .shape{
+        height: 295px;
+        top: -243px;
+    }
     .title h3{
     line-height: 0px;
     position: relative;
@@ -129,7 +147,8 @@
         margin-top: 50px;
     }
     .title h3{
-        top: 39px;
+        top: -11px;
+        margin: 50px 0;
     }
     .routesContainer{
         display: flex;

@@ -1,9 +1,9 @@
 .home {
     width: 100%;
-    height: 91vh;
+    height: 104vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     align-items: center;
     gap: 30px;
     background-color : #1c1b1b6e;
@@ -14,11 +14,12 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-color: transparent;
+    background-position: 52% -10px;
 }
 
 
 .navbar {
-    padding: 60px 119.5px 0 120.5px;
+    padding: 50px 178.5px 0 176.5px;
     width: 100%;
     position: absolute;
     display: flex;
@@ -194,7 +195,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* margin-top: 50vh; */
+    margin-top: 37vh;
     margin-bottom: 146px;
 }
 .heading h1{
@@ -245,6 +246,7 @@
     }
     .home {
         height: 105vh;
+        position: relative;
     }
     
     .wrapper2{
@@ -269,7 +271,8 @@
         font-variation-settings: 'wght' 500 , 'wdth' 75
     }
     .heading{
-        margin-bottom: 160px;
+        position: absolute;
+        bottom: 145px;
     }
     .heading h1{
         font-size: 100px;
@@ -289,7 +292,7 @@
     
     .wrapper2{
         background-position: 50%;
-        height: 99vh;
+        height: 104vh;
     }
     .navbarFix{
         display: none;
@@ -318,5 +321,17 @@
 @media screen and (min-width: 768px) and (min-height: 380px) {
     .heading {
         margin-bottom: 60px;
+    }
+}
+
+@media screen and (max-height : 860px) {
+    .heading{
+        bottom: 55px;
+    }
+}
+
+@media screen and (max-height : 540px) and (max-width : 767px){
+    .heading{
+        bottom: 0;
     }
 }

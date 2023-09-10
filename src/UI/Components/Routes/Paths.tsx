@@ -105,8 +105,11 @@ const Paths = () => {
                         <span>СПЕЦИАЛЬНЫМ КАРТАМ</span>
                     </div>
                 </div>
+            
             </div>
+            <div className={style.shape}>
 
+            </div>
         </div>
     );
 };

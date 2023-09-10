@@ -256,7 +256,7 @@ const Help = () => {
                     ПРЕДЛОЖЕНИЯМ ПО УЛУЧШЕНИЮ РАБОТЫ СИМУЛЯТОРА, ПОЖАЛУЙСТА, ПИШИТЕ НА АДРЕС
                 </h3>
                 <span>
-                    wattattack@wattattack.ru
+                info@wattattack.ru
                 </span>
             </div>
 
@@ -275,7 +275,7 @@ const Help = () => {
                 ПОЖАЛУЙСТА, ПИШИТЕ НА АДРЕС
                 </h3>
                 <span>
-                    wattattack@wattattack.ru
+                info@wattattack.ru
                 </span>
             </div>
 
@@ -296,7 +296,7 @@ const Help = () => {
                 ПОЖАЛУЙСТА, ПИШИТЕ НА АДРЕС
                 </h3>
                 <span>
-                    wattattack@wattattack.ru
+                info@wattattack.ru
                 </span>
             </div>
         </div>

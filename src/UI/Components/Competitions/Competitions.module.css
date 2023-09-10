@@ -162,6 +162,7 @@ color: var(--main-color);
 @media screen and (max-width : 767px) {
     .container{
        height: auto;
+       margin: 209px 0 0 0;
     }
     .competitionsContainer{
         flex-direction: column;

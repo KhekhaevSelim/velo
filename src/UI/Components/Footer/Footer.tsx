@@ -45,8 +45,8 @@ const Footer = () => {
                 </div>
                 <div className={style.col4}>
                     <p>Связаться с нами</p>
-                    <span>wattattack@wattattack.ru</span>
-                    <span>8 (999) 999-99-99</span>
+                    <span>info@wattattack.ru</span>
+                    {/* <span>8 (999) 999-99-99</span> */}
                 </div>
             </div>
             <div className={style.executor_mob}>
