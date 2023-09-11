@@ -102,3 +102,99 @@
     position: relative;
     top: 15px;
 }
+
+@media screen and (max-width : 1439px) {
+    .item_title, .item_titleDisabled{
+        font-size: 20px;
+        top: 20px;
+    }
+    .item_price {
+        font-size: 30px;
+        position: relative;
+        top: 7px;
+    }
+    .item_description{
+        font-size: 12px;
+        word-wrap: break-word;
+        white-space: pre-wrap;
+        width: 200px;
+    }
+    .item_descriptionDisabled{
+        font-size: 30px;
+        bottom: -1px;
+    }
+
+    .item_btn{
+        width: 184px;
+        height: 36px;
+        font-size: 14px;
+        bottom: 20px;
+
+    }
+    .item_btnDisabled{
+        width: 184px;
+        height: 36px;
+        font-size: 14px;
+        top: -20px;
+    }
+    .rates__itemsContainer__item{
+        width: 212px;
+        height: 187px !important;
+        margin: 0 15px 15px 0 ;
+        justify-content: space-between;
+    }
+    .rates__itemsContainer__itemDisabled{
+        width: 212px;
+        height: 187px !important;
+        margin: 0 15px 15px 0;
+        justify-content: space-between;
+    }
+}
+
+@media screen and (max-width : 767px) {
+    .item_title, .item_titleDisabled{
+        font-size: 20px;
+        top: 20px;
+    }
+    .item_price {
+        font-size: 30px;
+        position: relative;
+        top: 7px;
+    }
+    .item_description{
+        font-size: 12px;
+        word-wrap: break-word;
+        white-space: pre-wrap;
+        width: 200px;
+    }
+    .item_descriptionDisabled{
+        font-size: 30px;
+        bottom: -1px;
+    }
+
+    .item_btn{
+        width: 184px;
+        height: 36px;
+        font-size: 14px;
+        bottom: 20px;
+
+    }
+    .item_btnDisabled{
+        width: 184px;
+        height: 36px;
+        font-size: 14px;
+        top: -20px;
+    }
+    .rates__itemsContainer__item{
+        width: 212px;
+        height: 187px !important;
+        margin: 0 0 15px 0 !important;
+        justify-content: space-between;
+    }
+    .rates__itemsContainer__itemDisabled{
+        width: 212px;
+        height: 187px !important;
+        margin: 0 0 15px 0 !important;
+        justify-content: space-between;
+    }
+}

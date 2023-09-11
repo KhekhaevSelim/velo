@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { ratesDataType } from "../About/About";
 import style from "./Rates.module.css";
 import RatesItem from "./ratesItem/RatesItem";
@@ -7,6 +8,7 @@ type RatesPropsType = {
 } 
 
 const Rates = (props : RatesPropsType) => {
+
     return (
         <div className={style.rates}>
                 <div className={style.rates_wrapper}>

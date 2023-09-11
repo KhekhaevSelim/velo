@@ -61,7 +61,7 @@ const PathsItem = (props : RouteItemPropsType) => {
               </div>
             <div className={style.routeItemFooter}>
                 <span>{props.routeData.title}</span>
-                    <Tippy
+                    {/* <Tippy
                         className={style.info}
                         offset={offset}
                         placement={"bottom"}
@@ -74,9 +74,9 @@ const PathsItem = (props : RouteItemPropsType) => {
                                 <p className={style.routeParams}>{props.routeData.params}</p>
                             </div>
                         }
-                    >
+                    > */}
                         <img src={props.routeData.icon} alt="" className={style.footerIcon}/>
-                    </Tippy>
+                    {/* </Tippy> */}
             </div>
         </div>
     );
