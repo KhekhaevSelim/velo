@@ -407,6 +407,11 @@ padding: 0 15px 0 0;
     justify-content: start;
     align-items: center;
 }
+.approval2{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
 .customCheckBox{
     display: flex;
     align-items: center;
@@ -586,6 +591,20 @@ padding: 0 15px 0 0;
 }
 
 @media screen and (max-width: 920px) {
+    .btnsContainer{
+        width: 320px;
+        align-items: start;
+        position: relative;
+    right: 14px;
+    margin-top: 20px;
+    }
+    .btnsContainer button:nth-child(1){
+        margin-top: 23px;
+        margin-bottom: 20px;
+    }
+    .emailNotifySetting{
+        width: 249px;
+    }
     .line h1{
         font-size: 34px;
     }
@@ -707,12 +726,13 @@ padding: 0 15px 0 0;
     justify-content: center;
     align-items: start;
     }
-    .btnsContainer{
+    /* .btnsContainer{
         width: 320px;
-    }
-    .emailNotifySetting{
+        align-items: start;
+    } */
+    /* .emailNotifySetting{
         width: 320px;
-    }
+    } */
 }
 @media screen and (max-width: 420px) {
 

@@ -207,7 +207,7 @@ dispatch(meTC(token))
 
 
                    <input type="email" placeholder='E-mail' disabled/>
-                   <div className={style.password}>
+                   {/* <div className={style.password}>
                      <span>Пароль</span>
                      <span>Забыли пароль?</span>
                    </div>
@@ -216,9 +216,9 @@ dispatch(meTC(token))
                    <input type="password" placeholder='Подтвердите новый пароль'/>
                    <button className={style.btn}>
                         ИЗМЕНИТЬ ПАРОЛЬ
-                   </button>
+                   </button> */}
                  </div>
-                 <div className={style.clubData}>
+                 {/* <div className={style.clubData}>
                    <div className={style.title}>
                        <p>
                        Клуб, команда и тренер
@@ -236,23 +236,23 @@ dispatch(meTC(token))
                     <div className={style.boxWrapper}>
                       <div className={style.box1}></div>
                       <div className={style.ellipse1}>
-                         {/* <img src={close} alt="close" /> */}
+                         <img src={close} alt="close" />
                       </div>
                     </div>
                     <div className={style.boxWrapper}>
                       <div className={style.box2}></div>
                       <div className={style.ellipse2}>
-                         {/* <img src={done} alt="close" /> */}
+                         <img src={done} alt="close" />
                       </div>
                     </div>
                     <div className={style.boxWrapper}>
                       <div className={style.box3}></div>
                       <div className={style.ellipse3}>
-                         {/* <img src={close} alt="close" /> */}
+                         <img src={close} alt="close" />
                       </div>
                     </div>
                    </div>
-                 </div>
+                 </div> */}
                  <div className={style.rateData}>
                    <div className={style.title}>
                      <p>
@@ -271,7 +271,7 @@ dispatch(meTC(token))
                    <button className={style.btn}>
                      ИЗМЕНИТЬ ТАРИФ
                    </button>
-                   <div className={style.approval}>
+                   {/* <div className={style.approval}>
                             <label htmlFor="" className={style.customCheckBox}>
                                 <input 
                                 // checked={formik.values.isChecked}
@@ -280,7 +280,7 @@ dispatch(meTC(token))
                                 <span className={style.checkBoxIcon}></span>
                             </label>
                             <span className={style.autoRenewal}>Автопродление включено</span>
-                    </div>
+                    </div> */}
                     <span className={style.pushNotify}>
                        Push-уведомления на телефон
                     </span>
@@ -328,7 +328,7 @@ dispatch(meTC(token))
                         Уведомления на e-mail
                       </p>
                     </div>
-                    <div className={style.approval}>
+                    <div className={style.approval2}>
                             <label htmlFor="" className={style.customCheckBox}>
                                 <input 
                                 // checked={formik.values.isChecked}
@@ -340,7 +340,7 @@ dispatch(meTC(token))
                                Мои события (напоминания)
                             </span>
                     </div>
-                    <div className={style.approval}>
+                    <div className={style.approval2}>
                             <label htmlFor="" className={style.customCheckBox}>
                                 <input 
                                 // checked={formik.values.isChecked}
@@ -352,7 +352,7 @@ dispatch(meTC(token))
                                Сообщения от клуба/команды/тренера
                             </span>
                     </div>
-                    <div className={style.approval}>
+                    <div className={style.approval2}>
                             <label htmlFor="" className={style.customCheckBox}>
                                 <input 
                                 // checked={formik.values.isChecked}
@@ -364,7 +364,7 @@ dispatch(meTC(token))
                                Объявления (выход новой версии, события и пр.)
                             </span>
                     </div>
-                    <div className={style.approval}>
+                    <div className={style.approval2}>
                             <label htmlFor="" className={style.customCheckBox}>
                                 <input 
                                 // checked={formik.values.isChecked}
@@ -377,16 +377,16 @@ dispatch(meTC(token))
                             </span>
                     </div>
                     <div className={style.btnsContainer}>
-                        <button className={style.btn}>
+                        {/* <button className={style.btn}>
                             ИСТОРИЯ ПОКУПОК И ОПЛАТ
-                        </button>
+                        </button> */}
                         <button className={style.btn} type='submit'>
                             СОХРАНИТЬ ВСЕ ИЗМЕНЕНИЯ
                         </button>
                        
-                        <button className={style.btn}>
+                        {/* <button className={style.btn}>
                            УДАЛИТЬ АККАУНТ
-                        </button>
+                        </button> */}
                     </div>
                  </div>
                </div>
