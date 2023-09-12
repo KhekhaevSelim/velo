@@ -320,7 +320,7 @@ dispatch(meTC(token))
                                Сообщения от клуба/команды/тренера
                             </span>
                     </div>
-                    <input type="password" placeholder='Номер телефона' className={style.phoneNumInput}/>
+                    {/* <input type="password" placeholder='Номер телефона' className={style.phoneNumInput}/> */}
                  </div>
                  <div className={style.emailNotifySetting}>
                     <div className={style.title}>
